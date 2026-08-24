@@ -172,11 +172,12 @@ function renderAll(){
   const totalDrops = Object.values((PUMP.stats||{}).filter_breakdown||{}).reduce((a,b)=>a+b,0) || 0;
   const smartTotal = (d.signals||[]).reduce((a,b)=>a+(b.buy_total_raw||0),0);
   const smartN = (d.signals||[]).filter(s => s.wallets).length;
+  const smartWallets = (d.signals||[]).reduce((a,b)=>a+(b.wallets||0),0);
   document.getElementById('stats').innerHTML = `
     <div class="stat"><div class="k">${esc(curChain.toUpperCase())} 新币精选</div><div class="v">${st.new_filtered ?? d.new_coins.length}</div><div class="s">本轮 · 五重筛选</div></div>
     <div class="stat"><div class="k">实时信号</div><div class="v purple">${st.signal_total ?? d.signals.length}</div><div class="s">聪明钱/KOL × 异动合并</div></div>
     <div class="stat"><div class="k">热榜留存</div><div class="v cyan">${(d.retention||[]).length}</div><div class="s">近24h · 20条分页</div></div>
-    <div class="stat"><div class="k">聪明钱买入额</div><div class="v green">$${(smartTotal/1000).toFixed(1)}K</div><div class="s">${smartN} 个标的</div></div>
+    <div class="stat"><div class="k">聪明钱钱包</div><div class="v cyan">${smartWallets}</div><div class="s">${smartN} 个标的${smartTotal>0?` · 买入 $${(smartTotal/1000).toFixed(1)}K`:''}</div></div>
     <div class="stat"><div class="k">全链已筛除</div><div class="v red">${totalDrops}</div><div class="s">三无/黑幕/权限/技术风险</div></div>
     <div class="stat"><div class="k">全链精选</div><div class="v cyan">${PUMP.stats?.new_filtered ?? 0}</div><div class="s">${(PUMP.chains||[]).join(' · ').toUpperCase()}</div></div>
   `;
