@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pump.md · 链上监测台 — 每15分钟自动刷新</title>
+<style>
+:root{--bg:#0b0e14;--card:#12161f;--card2:#171c28;--line:#232a3a;--txt:#e6e9f0;--dim:#8b93a7;--green:#2dd4a7;--red:#f87171;--cyan:#38bdf8;--yellow:#fbbf24;--purple:#a78bfa}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.5;padding-bottom:60px}
+header{position:sticky;top:0;z-index:10;background:rgba(11,14,20,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 20px}
+.hdr{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px}
+.logo b{color:var(--cyan)}
+.badge{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+.badge.live{color:var(--green);border-color:rgba(45,212,167,.4);display:inline-flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.nav{margin-left:auto;display:flex;gap:10px}
+.nav a{color:var(--dim);text-decoration:none;font-size:13px;padding:5px 10px;border-radius:8px;border:1px solid transparent}
+.nav a:hover{color:var(--txt);border-color:var(--line)}
+main{max-width:1100px;margin:0 auto;padding:20px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:20px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat .k{font-size:12px;color:var(--dim)}
+.stat .v{font-size:22px;font-weight:700;margin:4px 0}
+.stat .s{font-size:11px;color:var(--dim)}
+.green{color:var(--green)}.red{color:var(--red)}.cyan{color:var(--cyan)}.yellow{color:var(--yellow)}.purple{color:var(--purple)}
+.sec{margin-bottom:26px}
+.sec h2{font-size:15px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sec h2 .tag{font-size:11px;color:var(--dim);font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .2s}
+.card:hover{border-color:#33415e}
+.card .top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.card .top img{width:34px;height:34px;border-radius:50%;background:var(--card2);object-fit:cover}
+.card .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
+.card .nm .sym{color:var(--cyan);font-size:12px;margin-left:6px}
+.card .mc{font-size:12px;color:var(--dim)}
+.metrics{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.metric{background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:11px;color:var(--dim)}
+.metric b{color:var(--txt);font-weight:600}
+.social{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.social a{font-size:11px;color:var(--cyan);text-decoration:none;border:1px solid rgba(56,189,248,.3);border-radius:6px;padding:2px 8px}
+.social a:hover{background:rgba(56,189,248,.1)}
+.pad{padding:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:13px;color:var(--dim)}
+.sig-row{display:flex;align-items:center;gap:12px;padding:10px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:8px}
+.sig-row .type{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:600;white-space:nowrap}
+.t12{background:rgba(45,212,167,.12);color:var(--green)}
+.t20{background:rgba(251,191,36,.12);color:var(--yellow)}
+.sig-row .nm{font-weight:700;min-width:90px}
+.sig-row .dt{font-size:12px;color:var(--dim);display:flex;gap:10px;flex-wrap:wrap}
+.sig-row .dt span b{color:var(--txt)}
+.cluster{font-size:10px;color:var(--purple);border:1px solid rgba(167,139,250,.4);border-radius:6px;padding:2px 6px;font-weight:700}
+.passed{font-size:10px;color:var(--green);border:1px solid rgba(45,212,167,.4);border-radius:6px;padding:2px 6px;font-weight:700}
+footer{max-width:1100px;margin:30px auto 0;padding:0 20px}
+.foot{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:12px;color:var(--dim)}
+.foot h3{font-size:13px;color:var(--txt);margin-bottom:10px}
+.foot ul{margin-left:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:4px 20px}
+.foot li{margin-bottom:4px}
+.foot .hl{color:var(--green)}
+#freshness{font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<header>
+  <div class="hdr">
+    <div class="logo">pump.<b>md</b></div>
+    <span class="badge live"><span class="dot"></span>LIVE · 15分钟自动刷新</span>
+    <span class="badge" id="freshness">数据更新于 --</span>
+    <span class="badge">GMGN OpenAPI</span>
+    <nav class="nav">
+      <a href="https://jinse.md/">jinse.md 总览</a>
+      <a href="https://arb.md/">arb.md 套利</a>
+      <a href="https://hunt.md/">hunt.md 雷达</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="stats" id="stats"></div>
+
+  <section class="sec">
+    <h2>🔥 新币热榜 <span class="tag">GMGN trenches · 四重精选 · 最新上架</span></h2>
+    <div class="grid" id="newCoins"></div>
+  </section>
+
+  <section class="sec">
+    <h2>⚡ 实时信号流 <span class="tag">聪明钱 / KOL 买入 · 已过精选</span></h2>
+    <div id="signals"></div>
+  </section>
+
+  <section class="sec">
+    <h2>🫀 聪明钱异动 <span class="tag">追踪钱包买入聚合</span></h2>
+    <div id="smartMoney"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot" id="footNote"></div>
+</footer>
+
+<script>
+const PUMP = __PUMP_DATA__;
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const age = ts => { if(!ts) return '--'; const m = Math.max(0, Math.floor((Date.now()/1000 - ts)/60)); return m < 1 ? '刚刚' : m < 60 ? `${m}分钟前` : `${Math.floor(m/60)}小时前`; };
+const fresh = s => { if(!s) return '--'; const m = Math.max(0, Math.floor((Date.now() - new Date(s.replace('UTC','')+' UTC').getTime())/60000)); return m < 1 ? '刚刚' : m < 60 ? `${m}分钟前` : `${Math.floor(m/60)}小时前`; };
+const socialBtns = s => {
+  if(!s) return '';
+  const b = [];
+  const twUrl = v => (!v ? '' : /^https?:\/\//.test(v) ? v : `https://x.com/${v}`);
+  const tgUrl = v => (!v ? '' : /^https?:\/\//.test(v) ? v : `https://t.me/${v.replace(/^@/,'')}`);
+  const webUrl = v => (!v ? '' : /^https?:\/\//.test(v) ? v : `https://${v}`);
+  if(s.twitter) b.push(`<a href="${esc(twUrl(s.twitter))}" target="_blank" rel="noopener">𝕏 推特</a>`);
+  if(s.website) b.push(`<a href="${esc(webUrl(s.website))}" target="_blank" rel="noopener">🌐 官网</a>`);
+  if(s.telegram) b.push(`<a href="${esc(tgUrl(s.telegram))}" target="_blank" rel="noopener">✈️ 电报</a>`);
+  return b.length ? `<div class="social">${b.join('')}</div>` : '';
+};
+
+// 统计条
+(function(){
+  const st = PUMP.stats || {};
+  const s = document.getElementById('stats');
+  const smartTotal = (PUMP.smart_money || []).reduce((a,b)=>a+(b.total_raw||0),0);
+  const breakdown = st.filter_breakdown || {};
+  const drops = Object.values(breakdown).reduce((a,b)=>a+b,0) || 0;
+  s.innerHTML = `
+    <div class="stat"><div class="k">新币精选</div><div class="v">${st.new_filtered ?? 0}</div><div class="s">四重筛选 · 宁缺毋滥</div></div>
+    <div class="stat"><div class="k">实时信号</div><div class="v purple">${st.signal_total ?? 0}</div><div class="s">聪明钱/KOL 买入</div></div>
+    <div class="stat"><div class="k">聪明钱买入额</div><div class="v green">$${(smartTotal/1000).toFixed(1)}K</div><div class="s">${(PUMP.smart_money||[]).length} 个标的</div></div>
+    <div class="stat"><div class="k">已筛除</div><div class="v red">${drops}</div><div class="s">三无/黑幕/权限问题/技术风险</div></div>
+    <div class="stat"><div class="k">监控链</div><div class="v cyan">${esc(PUMP.chain||'sol')}</div><div class="s">GMGN OpenAPI</div></div>
+  `;
+})();
+
+// 新币热榜
+(function(){
+  const el = document.getElementById('newCoins');
+  const coins = PUMP.new_coins || [];
+  if(!coins.length){ el.innerHTML = '<div class="pad">当前无通过全部精选的标的 — 宁缺毋滥</div>'; return; }
+  el.innerHTML = coins.map(c => `
+    <div class="card">
+      <div class="top">
+        ${c.logo?`<img src="${esc(c.logo)}" alt="" onerror="this.style.display='none'">`:'<img src="" style="display:none">'}
+        <div>
+          <div class="nm">${esc(c.name)}<span class="sym">${esc(c.symbol)}</span></div>
+          <div class="mc">市值 ${c.mcap} · 24h量 ${c.vol24h}</div>
+        </div>
+      </div>
+      <div class="metrics">
+        <span class="metric">池子 <b>${esc(c.liquidity)}</b></span>
+        <span class="metric">聪明钱 <b class="green">${c.smart_degen}</b></span>
+        <span class="metric">持有人 <b>${c.holders}</b></span>
+        <span class="metric">上线 <b>${c.age_min}分钟</b></span>
+        <span class="metric">完成度 <b>${c.progress}%</b></span>
+      </div>
+      ${socialBtns(c.social)}
+    </div>`).join('');
+})();
+
+// 实时信号流
+(function(){
+  const el = document.getElementById('signals');
+  const sigs = PUMP.signals || [];
+  if(!sigs.length){ el.innerHTML = '<div class="pad">近窗口无过筛信号 — 持续监听中</div>'; return; }
+  el.innerHTML = sigs.map(s => `
+    <div class="sig-row">
+      <span class="type ${s.type==='KOL买入'?'t20':'t12'}">${esc(s.type)}</span>
+      <span class="nm">${esc(s.symbol)}${s.name?`<span style="color:var(--dim);font-weight:400;font-size:11px"> · ${esc(s.name)}</span>`:''}</span>
+      <div class="dt">
+        <span>触发市值 <b>${esc(s.trigger_mc)}</b></span>
+        <span>当前 <b>${esc(s.mc)}</b></span>
+        <span>ATH <b>${esc(s.ath)}</b></span>
+        <span>${age(s.ts)}</span>
+      </div>
+    </div>`).join('');
+})();
+
+// 聪明钱异动
+(function(){
+  const el = document.getElementById('smartMoney');
+  const sm = PUMP.smart_money || [];
+  if(!sm.length){ el.innerHTML = '<div class="pad">近窗口无聪明钱买入</div>'; return; }
+  el.innerHTML = sm.map(s => `
+    <div class="sig-row">
+      <span class="nm">${esc(s.symbol)}</span>
+      ${s.cluster?'<span class="cluster">🫀 CLUSTER</span>':''}
+      ${s.passed?'<span class="passed">✅ 已过精选</span>':''}
+      <div class="dt">
+        <span>买入 <b class="green">${esc(s.total)}</b></span>
+        <span>钱包 <b>${s.wallets}</b> 个</span>
+        <span>单笔最大 <b>${esc(s.max)}</b></span>
+        <span>${age(s.ts)}</span>
+      </div>
+    </div>`).join('');
+})();
+
+// 页脚：精选规则透明
+(function(){
+  const st = PUMP.stats || {};
+  const bd = st.filter_breakdown || {};
+  const rows = Object.entries(bd).map(([k,v]) => `<li>${esc(k)} × ${v}</li>`).join('');
+  document.getElementById('footNote').innerHTML = `
+    <h3>✅ 精选规则（GMGN 数据 · 四重筛选 · 宁缺毋滥）</h3>
+    <ul>
+      <li><span class="hl">① 有真实身份</span> — 官网 / 推特 / 电报至少一个，三无产品直接筛除</li>
+      <li><span class="hl">② 权限干净</span> — SOL 铸币权+冻结权双放弃；EVM 所有权 renounce、非貔貅盘、合约开源</li>
+      <li><span class="hl">③ 无黑幕</span> — 非洗盘交易、rug风险≤0.3、bundler≤0.3、老鼠仓≤0.3、筹码集中度≤50%</li>
+      <li><span class="hl">④ 无技术问题</span> — 买卖税≤10%、市值≥1万、有真实流动性</li>
+      <li><span class="hl">⑤ 有行为背书</span> — 聪明钱/KOL 买入信号流同样过筛，cluster 信号单独标注</li>
+    </ul>
+    <h3 style="margin-top:10px">📊 本窗口筛除明细</h3>
+    <ul>${rows || '<li>本轮无筛除（或数据为空）</li>'}</ul>
+    <p style="margin-top:10px">数据源: GMGN OpenAPI · 更新于 ${esc(PUMP.scanned_at||'--')} · 每15分钟自动刷新</p>
+  `;
+  document.getElementById('freshness').textContent = '数据更新于 ' + fresh(PUMP.scanned_at);
+})();
+</script>
+</body>
+</html>
