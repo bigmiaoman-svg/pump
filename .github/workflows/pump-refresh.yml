@@ -34,8 +34,8 @@ jobs:
           printf 'GMGN_API_KEY=%s\n' "${{ secrets.GMGN_API_KEY }}" > ~/.config/gmgn/.env
           chmod 600 ~/.config/gmgn/.env
 
-      - name: Fetch GMGN data (multi-chain)
-        run: python3 pump_fetch.py --chains sol,bsc,base,eth --limit 8
+      - name: Fetch GMGN data
+        run: python3 pump_fetch.py --limit 8
 
       - name: Build site
         run: python3 build_pump_site.py
