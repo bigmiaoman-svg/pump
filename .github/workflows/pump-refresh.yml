@@ -1,0 +1,53 @@
+name: pump-refresh
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pump-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install gmgn-cli
+        run: npm install -g gmgn-cli@1.5.7
+
+      - name: Configure GMGN key
+        run: |
+          mkdir -p ~/.config/gmgn
+          printf 'GMGN_API_KEY=%s\n' "${{ secrets.GMGN_API_KEY }}" > ~/.config/gmgn/.env
+          chmod 600 ~/.config/gmgn/.env
+
+      - name: Fetch GMGN data
+        run: python3 pump_fetch.py --chain sol --limit 12
+
+      - name: Build site
+        run: python3 build_pump_site.py
+
+      - name: Commit & push (skip ci)
+        run: |
+          git config user.name "jinse-bot"
+          git config user.email "bot@jinse.md"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "无变更，跳过推送"
+          else
+            git commit -m "pump refresh [skip ci]"
+            git push origin HEAD:main
+          fi
