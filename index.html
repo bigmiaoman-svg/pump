@@ -3,21 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>pump.md</title>
-<meta name="description" content="pump.md — 项目占位页">
-<meta http-equiv="refresh" content="0; url=https://jinse.md">
+<title>pump.md · 链上监测台 — 24H 更新</title>
 <style>
-  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-    display: flex; align-items: center; justify-content: center; min-height: 100vh;
-    background: #0d1117; color: #c9d1d9; margin: 0; }
-  .box { text-align: center; padding: 24px; }
-  a { color: #58a6ff; }
+:root{
+  --bg:#0a0d13; --bg2:#0d1119; --card:#10161f; --card2:#0d1320;
+  --line:#1d2734; --line2:#2a3a4e; --txt:#e7edf5; --dim:#8fa0b8; --dim2:#5c6c84;
+  --gold:#f0b90b; --cyan:#22d3ee; --green:#34d399; --red:#f87171; --purple:#a78bfa;
+  --mono:'SF Mono','JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+/* 亮色主题 */
+[data-theme="light"]{
+  --bg:#f4f7fb; --bg2:#eef2f8; --card:#ffffff; --card2:#f1f5fa;
+  --line:#e2e8f0; --line2:#cbd5e1; --txt:#0f172a; --dim:#475569; --dim2:#94a3b8;
+  --gold:#b8860b; --cyan:#0e7490; --green:#059669; --red:#dc2626; --purple:#7c3aed;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);font:14px/1.6 -apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+  background-image:radial-gradient(900px 380px at 85% -5%,rgba(34,211,238,.07),transparent),radial-gradient(700px 300px at 5% -5%,rgba(240,185,11,.06),transparent);
+  min-height:100vh;
+}
+[data-theme="light"] body,[data-theme="light"]{
+  background-image:radial-gradient(900px 380px at 85% -5%,rgba(14,116,144,.05),transparent),radial-gradient(700px 300px at 5% -5%,rgba(184,134,11,.04),transparent);
+}
+a{color:var(--cyan);text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:18px}
+.topbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.logo{font-weight:800;font-size:18px;letter-spacing:.5px}
+.logo b{color:var(--gold)}
+.nav{display:flex;gap:6px;align-items:center}
+.nav a{padding:6px 14px;border:1px solid var(--line);border-radius:8px;color:var(--dim);font-size:13px;transition:.2s}
+.nav a:hover{color:var(--txt);border-color:var(--line2)}
+.nav a.on{color:var(--gold);border-color:var(--line2);background:var(--card2)}
+.theme-btn{background:var(--card);border:1px solid var(--line2);color:var(--txt);width:32px;height:32px;border-radius:8px;cursor:pointer;margin-left:6px}
+.statusbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 4px;color:var(--dim);font-size:12px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:6px;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.badge-24h{background:rgba(240,185,11,.12);color:var(--gold);border:1px solid rgba(240,185,11,.3);padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600}
+.mono{font-family:var(--mono);font-size:12px}
+/* 总览 */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:14px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat .k{color:var(--dim);font-size:12px}
+.stat .v{font-size:24px;font-weight:800;margin-top:2px;font-family:var(--mono)}
+.stat .v.gold{color:var(--gold)} .stat .v.green{color:var(--green)} .stat .v.red{color:var(--red)} .stat .v.cyan{color:var(--cyan)}
+.stat .s{color:var(--dim2);font-size:11px;margin-top:2px}
+/* tabs */
+.tabs{display:flex;gap:6px;margin:16px 0 12px}
+.tab{padding:8px 18px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--dim);cursor:pointer;font-size:13px;transition:.2s}
+.tab:hover{color:var(--txt)}
+.tab.on{color:var(--gold);border-color:var(--line2);background:var(--card2)}
+.tab .n{font-family:var(--mono);font-size:11px;margin-left:6px;color:var(--dim2)}
+/* 币卡 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;transition:.2s}
+.card:hover{border-color:var(--line2);transform:translateY(-1px)}
+.card-top{display:flex;align-items:center;gap:10px}
+.card-top img{width:34px;height:34px;border-radius:9px;background:var(--card2)}
+.card-top .nm{font-weight:700;font-size:14px}
+.card-top .launch{color:var(--dim2);font-size:11px}
+.card-top .rank{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--dim2)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+.metric .k{color:var(--dim2);font-size:11px}
+.metric .v{font-size:13px;font-weight:600;font-family:var(--mono)}
+.metric .v.gold{color:var(--gold)} .metric .v.green{color:var(--green)} .metric .v.red{color:var(--red)}
+.smart-tag{display:inline-block;background:rgba(240,185,11,.1);border:1px solid rgba(240,185,11,.25);color:var(--gold);font-size:11px;padding:2px 8px;border-radius:6px}
+.risks{margin-top:8px;display:flex;flex-wrap:wrap;gap:5px}
+.risk{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.25);color:var(--red);font-size:11px;padding:2px 8px;border-radius:6px}
+.addr{font-family:var(--mono);font-size:10px;color:var(--dim2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:8px}
+/* 聪明钱列表 */
+.sm-list{display:flex;flex-direction:column;gap:10px}
+.sm{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;display:flex;align-items:center;gap:14px}
+.sm .sym{font-weight:800;font-size:15px;min-width:110px}
+.sm .clu{color:var(--purple);border:1px solid rgba(167,139,250,.35);background:rgba(167,139,250,.1);font-size:11px;padding:2px 8px;border-radius:6px}
+.sm .det{display:flex;gap:18px;flex-wrap:wrap;color:var(--dim);font-size:12px}
+.sm .det b{color:var(--green);font-family:var(--mono)}
+.sm .ts{margin-left:auto;color:var(--dim2);font-size:11px;font-family:var(--mono)}
+footer{margin-top:30px;padding:16px 0;border-top:1px solid var(--line);color:var(--dim2);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:640px){.metrics{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-  <div class="box">
-    <p>pump.md — 占位中</p>
-    <p><a href="https://jinse.md">前往 jinse.md →</a></p>
+<div class="container">
+  <div class="topbar">
+    <div class="logo">pump<b>.md</b> · 链上监测台</div>
+    <div class="nav">
+      <a href="https://jinse.md/">jinse.md</a>
+      <a href="#" class="on">pump.md</a>
+      <a href="https://arb.md/">arb.md</a>
+      <a href="https://hunt.md/">hunt.md</a>
+      <button class="theme-btn" id="themeBtn" title="切换深浅色">🌙</button>
+    </div>
   </div>
+
+  <div class="statusbar">
+    <span><span class="dot"></span>GMGN 链上数据 · <span class="mono" id="scanAt">--</span></span>
+    <span class="badge-24h">24H 更新一次</span>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="tabs">
+    <button class="tab on" data-t="coins">🆕 新币热榜<span class="n" id="nCoins">0</span></button>
+    <button class="tab" data-t="smart">🫀 聪明钱异动<span class="n" id="nSmart">0</span></button>
+  </div>
+
+  <div id="view"></div>
+
+  <footer>
+    <span>pump.md · © 2026 张诚顺 · GMGN 精华过滤</span>
+    <span class="mono" id="footNote">--</span>
+  </footer>
+</div>
+
+<script>
+/* ===== 数据注入 ===== */
+const PUMP = {"scanned_at": "2026-08-24 11:05 UTC", "chain": "sol", "new_coins": [{"name": "The Starlink Heist", "symbol": "Heist", "address": "3eRRw6YTftaYC7ETBcQYnPotWqU57nERYTzHQY51pump", "price": 3.3675329e-06, "mcap": "$3.4K", "mcap_raw": 3366.69, "vol24h": "$107.4K", "vol24h_raw": 107417.74, "liquidity": "$6.4K", "swaps_24h": 2905, "holders": 54, "smart_degen": 18, "renowned": 4, "progress": 15.3, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/2f27c6020c86f34f83099a6c6aad611b_v2.webp", "age_min": 128, "risk": ["bundler集中"]}, {"name": "Justice for Kim", "symbol": "Kim", "address": "2chKoaAUsyAf4Sx35HcJ8W9552ZBqEpm6HwTZkw4pump", "price": 3.0801924e-06, "mcap": "$3.1K", "mcap_raw": 3080.19, "vol24h": "$82.6K", "vol24h_raw": 82554.19, "liquidity": "$6.1K", "swaps_24h": 2002, "holders": 43, "smart_degen": 11, "renowned": 7, "progress": 9.1, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-va/8d516988ccea85c111bc793bfd045d08_v2.webp", "age_min": 16, "risk": ["bundler集中"]}, {"name": "HODL", "symbol": "HODL", "address": "BQGD5gnrdtbBAgfAjZC3tTxdfWU1uPS8XzWNM1Qvpump", "price": 2.7642889e-06, "mcap": "$2.8K", "mcap_raw": 2764.24, "vol24h": "$52.4K", "vol24h_raw": 52386.2, "liquidity": "$5.8K", "swaps_24h": 1107, "holders": 15, "smart_degen": 11, "renowned": 2, "progress": 2.7, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/5816a0e2598251a5e5e3f1579dd5e0cb_v2.webp", "age_min": 117, "risk": ["bundler集中"]}, {"name": "The Ukraine Girl", "symbol": "Girl", "address": "B334yXhzZMgTgoJTem9ep9ChHpSQqzgUmWZZpu3Xpump", "price": 1.5104651e-05, "mcap": "$15.1K", "mcap_raw": 15104.65, "vol24h": "$109.5K", "vol24h_raw": 109499.68, "liquidity": "$13.4K", "swaps_24h": 2417, "holders": 273, "smart_degen": 10, "renowned": 5, "progress": 78.1, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/d9bac516a758a3e372fce55a38864dfd_v2.webp", "age_min": 4, "risk": ["bundler集中"]}, {"name": "Pet Rock", "symbol": "Rock", "address": "8UBebNwZTUbQsLBiCa8J1ViReo3mZd9goi2ivyTSpump", "price": 1.1604185e-05, "mcap": "$11.6K", "mcap_raw": 11604.18, "vol24h": "$114.5K", "vol24h_raw": 114523.39, "liquidity": "$11.9K", "swaps_24h": 3152, "holders": 185, "smart_degen": 10, "renowned": 3, "progress": 70.7, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/7e585e5acf2b50dfd14c29dd4b403757_v2.webp", "age_min": 25, "risk": ["bundler集中"]}, {"name": "Runni Plushies", "symbol": "Runni", "address": "5wSB91CK2mGmwe3oWK3W8aaDhLhmjrh3m4eqeUFWpump", "price": 4.0471848e-06, "mcap": "$4.0K", "mcap_raw": 4047.18, "vol24h": "$69.6K", "vol24h_raw": 69553.28, "liquidity": "$7.2K", "swaps_24h": 1728, "holders": 27, "smart_degen": 8, "renowned": 2, "progress": 25.8, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/49345c3ef49e6d48e798901594ca2afb_v2.webp", "age_min": 80, "risk": ["bundler集中"]}, {"name": "Dog in Bag", "symbol": "DIB", "address": "4NmHsEcw68b9EbEv68CCPqJJaPqfJQFc67UcwUGLpump", "price": 3.820366e-06, "mcap": "$3.8K", "mcap_raw": 3820.37, "vol24h": "$143.5K", "vol24h_raw": 143531.64, "liquidity": "$6.9K", "swaps_24h": 3035, "holders": 65, "smart_degen": 8, "renowned": 3, "progress": 23.2, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/362aab4a0ff7b13e0e41d0f6d75e3a61_v2.webp", "age_min": 97, "risk": ["bundler集中"]}, {"name": "FOMO Asset", "symbol": "Asset", "address": "FwPYdUydKgCBZzvtAkPquBJPtvLMjrHDyXoKVhpKpump", "price": 6.2855285e-06, "mcap": "$6.3K", "mcap_raw": 6285.53, "vol24h": "$137.4K", "vol24h_raw": 137445.93, "liquidity": "$8.7K", "swaps_24h": 3545, "holders": 95, "smart_degen": 8, "renowned": 7, "progress": 47.3, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/fbd0d23840f6fc8e4858b3ca5e0206e4_v2.webp", "age_min": 102, "risk": ["bundler集中"]}, {"name": "L'Ukraine En Marche", "symbol": "Marche", "address": "C6fgfVpVUZjz2spU8xJgDyy6Ybo3krmJRrsvsPeQpump", "price": 1.4363518e-05, "mcap": "$14.4K", "mcap_raw": 14363.52, "vol24h": "$27.1K", "vol24h_raw": 27127.91, "liquidity": "$13.2K", "swaps_24h": 509, "holders": 84, "smart_degen": 6, "renowned": 3, "progress": 77.0, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/ecb9dec5c7982ca26df0c0cd73f4877f_v2.webp", "age_min": 3, "risk": ["bundler集中"]}, {"name": "The Ukraine Girl", "symbol": "Girl", "address": "5NkbtLvcRjv2qghVgVQS2GWxMs4Va25DxRkaRXEBpump", "price": 3.0298328e-06, "mcap": "$3.0K", "mcap_raw": 3029.83, "vol24h": "$35.9K", "vol24h_raw": 35868.74, "liquidity": "$6.1K", "swaps_24h": 713, "holders": 20, "smart_degen": 6, "renowned": 2, "progress": 8.8, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/4f6ea25c643b4e652d56a706ba4a1dcd_v2.webp", "age_min": 4, "risk": ["bundler集中"]}, {"name": "For You Token", "symbol": "FYT", "address": "Aa3opbQ6TL9JVSRV2nvvB85Sv5D5mPmgQhvjJCHCpump", "price": 2.8797151e-06, "mcap": "$2.9K", "mcap_raw": 2879.72, "vol24h": "$59.4K", "vol24h_raw": 59377.27, "liquidity": "$5.9K", "swaps_24h": 1104, "holders": 25, "smart_degen": 6, "renowned": 2, "progress": 5.8, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/e2b1a856b58bafea0b637ca42e9e28ad_v2.webp", "age_min": 37, "risk": ["bundler集中"]}, {"name": "シュシュとミコ", "symbol": "Life", "address": "HtQ7K6uph2htAT5YH4oBgwsE3CHeg9MMbtXWHGSHpmke", "price": 2.7827349e-05, "mcap": "$27.8K", "mcap_raw": 27827.33, "vol24h": "$54.5K", "vol24h_raw": 54508.95, "liquidity": "$18.5K", "swaps_24h": 971, "holders": 118, "smart_degen": 6, "renowned": 2, "progress": 93.4, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/b1900ae7100c995f1faf4fbf90209eae_v2.webp", "age_min": 40, "risk": ["bundler集中"]}], "smart_money": [{"symbol": "KIM", "address": "7p54ZAUkpPJCkAE4oKQXqqshbBmnFz76ATq4dyUrpump", "total": "$510", "total_raw": 510.1, "wallets": 2, "max": "$277", "ts": 1787569496, "launchpad": "pump", "cluster": false}, {"symbol": "CYBERLEEK", "address": "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg", "total": "$471", "total_raw": 471.0, "wallets": 1, "max": "$471", "ts": 1787569472, "launchpad": "", "cluster": false}, {"symbol": "Marche", "address": "C6fgfVpVUZjz2spU8xJgDyy6Ybo3krmJRrsvsPeQpump", "total": "$370", "total_raw": 369.5, "wallets": 3, "max": "$185", "ts": 1787569516, "launchpad": "pump", "cluster": true}], "stats": {"new_filtered": 12, "new_raw": 60, "smart_total": 3}};
+
+/* ===== 主题切换 ===== */
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('themeBtn').textContent = t === 'dark' ? '☀️' : '🌙';
+}
+const saved = localStorage.getItem('rd-theme') || 'dark';
+applyTheme(saved);
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(cur); localStorage.setItem('rd-theme', cur);
+});
+
+/* ===== 渲染 ===== */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function fmtTs(ts){
+  if(!ts) return '--';
+  const d = new Date(ts * 1000);
+  const p = n => String(n).padStart(2,'0');
+  return `${p(d.getMonth()+1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+function renderStats(){
+  const s = PUMP.stats || {};
+  const smartTotal = (PUMP.smart_money || []).reduce((a,b)=>a+(b.total_raw||0),0);
+  $('#stats').innerHTML = `
+    <div class="stat"><div class="k">新币精华（过滤后）</div><div class="v gold">${s.new_filtered||0}</div><div class="s">原始 ${s.new_raw||0} 个 → 仅保留 ${s.new_filtered||0}</div></div>
+    <div class="stat"><div class="k">聪明钱买入额</div><div class="v green">$${(smartTotal/1000).toFixed(1)}K</div><div class="s">${(PUMP.smart_money||[]).length} 个标的</div></div>
+    <div class="stat"><div class="k">监控链</div><div class="v cyan">${esc(PUMP.chain||'sol')}</div><div class="s">GMGN OpenAPI</div></div>
+  `;
+}
+
+function renderCoins(){
+  const coins = PUMP.new_coins || [];
+  $('#nCoins').textContent = coins.length;
+  $('#view').innerHTML = `<div class="grid">${coins.map((c,i)=>`
+    <div class="card">
+      <div class="card-top">
+        <img src="${esc(c.logo)}" onerror="this.style.visibility='hidden'">
+        <div>
+          <div class="nm">${esc(c.name)} <span class="launch">${esc(c.launchpad)}</span></div>
+          <div class="smart-tag">✦ ${c.smart_degen} 聪明钱关注</div>
+        </div>
+        <div class="rank">#${i+1}</div>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="k">市值</div><div class="v">${esc(c.mcap)}</div></div>
+        <div class="metric"><div class="k">24h量</div><div class="v gold">${esc(c.vol24h)}</div></div>
+        <div class="metric"><div class="k">流动性</div><div class="v">${esc(c.liquidity)}</div></div>
+        <div class="metric"><div class="k">24h交易</div><div class="v">${c.swaps_24h||0}</div></div>
+        <div class="metric"><div class="k">持有人</div><div class="v">${c.holders||0}</div></div>
+        <div class="metric"><div class="k">创建</div><div class="v">${c.age_min||'--'}m前</div></div>
+      </div>
+      ${c.risks && c.risks.length ? `<div class="risks">${c.risks.map(r=>`<span class="risk">⚠ ${esc(r)}</span>`).join('')}</div>` : ''}
+      <div class="addr">${esc(c.address||'')}</div>
+    </div>`).join('') || '<div style="color:var(--dim);padding:20px">暂无数据</div>'}</div>`;
+}
+
+function renderSmart(){
+  const sm = PUMP.smart_money || [];
+  $('#nSmart').textContent = sm.length;
+  $('#view').innerHTML = `<div class="sm-list">${sm.map(s=>`
+    <div class="sm">
+      <div class="sym">${esc(s.symbol)}</div>
+      ${s.cluster ? '<span class="clu">CLUSTER 多钱包共振</span>' : ''}
+      <div class="det">
+        <span>买入 <b>${esc(s.total)}</b></span>
+        <span>${s.wallets} 钱包</span>
+        <span>最大单 ${esc(s.max)}</span>
+      </div>
+      <div class="ts">${fmtTs(s.ts)}</div>
+    </div>`).join('') || '<div style="color:var(--dim);padding:20px">暂无异动</div>'}</div>`;
+}
+
+$('#stats').innerHTML = '';
+renderStats();
+$('#nSmart').textContent = (PUMP.smart_money || []).length;
+renderCoins();
+$('#footNote').textContent = `过滤规则: smart-money preset + 24h量≥20K + 风控标记 · ${esc(PUMP.scanned_at||'')}`;
+
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('on'));
+  t.classList.add('on');
+  t.dataset.t === 'coins' ? renderCoins() : renderSmart();
+}));
+</script>
 </body>
 </html>
