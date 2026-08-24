@@ -3,209 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>pump.md · 链上监测台 — 24H 更新</title>
+<title>pump.md · 链上监测台 — 每15分钟自动刷新</title>
 <style>
-:root{
-  --bg:#0a0d13; --bg2:#0d1119; --card:#10161f; --card2:#0d1320;
-  --line:#1d2734; --line2:#2a3a4e; --txt:#e7edf5; --dim:#8fa0b8; --dim2:#5c6c84;
-  --gold:#f0b90b; --cyan:#22d3ee; --green:#34d399; --red:#f87171; --purple:#a78bfa;
-  --mono:'SF Mono','JetBrains Mono',ui-monospace,Menlo,monospace;
-}
-/* 亮色主题 */
-[data-theme="light"]{
-  --bg:#f4f7fb; --bg2:#eef2f8; --card:#ffffff; --card2:#f1f5fa;
-  --line:#e2e8f0; --line2:#cbd5e1; --txt:#0f172a; --dim:#475569; --dim2:#94a3b8;
-  --gold:#b8860b; --cyan:#0e7490; --green:#059669; --red:#dc2626; --purple:#7c3aed;
-}
+:root{--bg:#0b0e14;--card:#12161f;--card2:#171c28;--line:#232a3a;--txt:#e6e9f0;--dim:#8b93a7;--green:#2dd4a7;--red:#f87171;--cyan:#38bdf8;--yellow:#fbbf24;--purple:#a78bfa}
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:var(--bg);color:var(--txt);font:14px/1.6 -apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
-  background-image:radial-gradient(900px 380px at 85% -5%,rgba(34,211,238,.07),transparent),radial-gradient(700px 300px at 5% -5%,rgba(240,185,11,.06),transparent);
-  min-height:100vh;
-}
-[data-theme="light"] body,[data-theme="light"]{
-  background-image:radial-gradient(900px 380px at 85% -5%,rgba(14,116,144,.05),transparent),radial-gradient(700px 300px at 5% -5%,rgba(184,134,11,.04),transparent);
-}
-a{color:var(--cyan);text-decoration:none}
-.container{max-width:1180px;margin:0 auto;padding:18px}
-.topbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-radius:14px}
-.logo{font-weight:800;font-size:18px;letter-spacing:.5px}
-.logo b{color:var(--gold)}
-.nav{display:flex;gap:6px;align-items:center}
-.nav a{padding:6px 14px;border:1px solid var(--line);border-radius:8px;color:var(--dim);font-size:13px;transition:.2s}
-.nav a:hover{color:var(--txt);border-color:var(--line2)}
-.nav a.on{color:var(--gold);border-color:var(--line2);background:var(--card2)}
-.theme-btn{background:var(--card);border:1px solid var(--line2);color:var(--txt);width:32px;height:32px;border-radius:8px;cursor:pointer;margin-left:6px}
-.statusbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 4px;color:var(--dim);font-size:12px}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:6px;animation:pulse 1.8s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.badge-24h{background:rgba(240,185,11,.12);color:var(--gold);border:1px solid rgba(240,185,11,.3);padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600}
-.mono{font-family:var(--mono);font-size:12px}
-/* 总览 */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:14px 0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.5;padding-bottom:60px}
+header{position:sticky;top:0;z-index:10;background:rgba(11,14,20,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 20px}
+.hdr{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px}
+.logo b{color:var(--cyan)}
+.badge{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+.badge.live{color:var(--green);border-color:rgba(45,212,167,.4);display:inline-flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.nav{margin-left:auto;display:flex;gap:10px}
+.nav a{color:var(--dim);text-decoration:none;font-size:13px;padding:5px 10px;border-radius:8px;border:1px solid transparent}
+.nav a:hover{color:var(--txt);border-color:var(--line)}
+main{max-width:1100px;margin:0 auto;padding:20px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:20px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.stat .k{color:var(--dim);font-size:12px}
-.stat .v{font-size:24px;font-weight:800;margin-top:2px;font-family:var(--mono)}
-.stat .v.gold{color:var(--gold)} .stat .v.green{color:var(--green)} .stat .v.red{color:var(--red)} .stat .v.cyan{color:var(--cyan)}
-.stat .s{color:var(--dim2);font-size:11px;margin-top:2px}
-/* tabs */
-.tabs{display:flex;gap:6px;margin:16px 0 12px}
-.tab{padding:8px 18px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--dim);cursor:pointer;font-size:13px;transition:.2s}
-.tab:hover{color:var(--txt)}
-.tab.on{color:var(--gold);border-color:var(--line2);background:var(--card2)}
-.tab .n{font-family:var(--mono);font-size:11px;margin-left:6px;color:var(--dim2)}
-/* 币卡 */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;transition:.2s}
-.card:hover{border-color:var(--line2);transform:translateY(-1px)}
-.card-top{display:flex;align-items:center;gap:10px}
-.card-top img{width:34px;height:34px;border-radius:9px;background:var(--card2)}
-.card-top .nm{font-weight:700;font-size:14px}
-.card-top .launch{color:var(--dim2);font-size:11px}
-.card-top .rank{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--dim2)}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
-.metric .k{color:var(--dim2);font-size:11px}
-.metric .v{font-size:13px;font-weight:600;font-family:var(--mono)}
-.metric .v.gold{color:var(--gold)} .metric .v.green{color:var(--green)} .metric .v.red{color:var(--red)}
-.smart-tag{display:inline-block;background:rgba(240,185,11,.1);border:1px solid rgba(240,185,11,.25);color:var(--gold);font-size:11px;padding:2px 8px;border-radius:6px}
-.risks{margin-top:8px;display:flex;flex-wrap:wrap;gap:5px}
-.risk{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.25);color:var(--red);font-size:11px;padding:2px 8px;border-radius:6px}
-.addr{font-family:var(--mono);font-size:10px;color:var(--dim2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:8px}
-/* 聪明钱列表 */
-.sm-list{display:flex;flex-direction:column;gap:10px}
-.sm{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;display:flex;align-items:center;gap:14px}
-.sm .sym{font-weight:800;font-size:15px;min-width:110px}
-.sm .clu{color:var(--purple);border:1px solid rgba(167,139,250,.35);background:rgba(167,139,250,.1);font-size:11px;padding:2px 8px;border-radius:6px}
-.sm .det{display:flex;gap:18px;flex-wrap:wrap;color:var(--dim);font-size:12px}
-.sm .det b{color:var(--green);font-family:var(--mono)}
-.sm .ts{margin-left:auto;color:var(--dim2);font-size:11px;font-family:var(--mono)}
-footer{margin-top:30px;padding:16px 0;border-top:1px solid var(--line);color:var(--dim2);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-@media(max-width:640px){.metrics{grid-template-columns:repeat(2,1fr)}}
+.stat .k{font-size:12px;color:var(--dim)}
+.stat .v{font-size:22px;font-weight:700;margin:4px 0}
+.stat .s{font-size:11px;color:var(--dim)}
+.green{color:var(--green)}.red{color:var(--red)}.cyan{color:var(--cyan)}.yellow{color:var(--yellow)}.purple{color:var(--purple)}
+.sec{margin-bottom:26px}
+.sec h2{font-size:15px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sec h2 .tag{font-size:11px;color:var(--dim);font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .2s}
+.card:hover{border-color:#33415e}
+.card .top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.card .top img{width:34px;height:34px;border-radius:50%;background:var(--card2);object-fit:cover}
+.card .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
+.card .nm .sym{color:var(--cyan);font-size:12px;margin-left:6px}
+.card .mc{font-size:12px;color:var(--dim)}
+.metrics{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.metric{background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:11px;color:var(--dim)}
+.metric b{color:var(--txt);font-weight:600}
+.social{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.social a{font-size:11px;color:var(--cyan);text-decoration:none;border:1px solid rgba(56,189,248,.3);border-radius:6px;padding:2px 8px}
+.social a:hover{background:rgba(56,189,248,.1)}
+.pad{padding:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:13px;color:var(--dim)}
+.sig-row{display:flex;align-items:center;gap:12px;padding:10px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:8px}
+.sig-row .type{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:600;white-space:nowrap}
+.t12{background:rgba(45,212,167,.12);color:var(--green)}
+.t20{background:rgba(251,191,36,.12);color:var(--yellow)}
+.sig-row .nm{font-weight:700;min-width:90px}
+.sig-row .dt{font-size:12px;color:var(--dim);display:flex;gap:10px;flex-wrap:wrap}
+.sig-row .dt span b{color:var(--txt)}
+.cluster{font-size:10px;color:var(--purple);border:1px solid rgba(167,139,250,.4);border-radius:6px;padding:2px 6px;font-weight:700}
+.passed{font-size:10px;color:var(--green);border:1px solid rgba(45,212,167,.4);border-radius:6px;padding:2px 6px;font-weight:700}
+footer{max-width:1100px;margin:30px auto 0;padding:0 20px}
+.foot{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:12px;color:var(--dim)}
+.foot h3{font-size:13px;color:var(--txt);margin-bottom:10px}
+.foot ul{margin-left:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:4px 20px}
+.foot li{margin-bottom:4px}
+.foot .hl{color:var(--green)}
+#freshness{font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="topbar">
-    <div class="logo">pump<b>.md</b> · 链上监测台</div>
-    <div class="nav">
-      <a href="https://jinse.md/">jinse.md</a>
-      <a href="#" class="on">pump.md</a>
-      <a href="https://arb.md/">arb.md</a>
-      <a href="https://hunt.md/">hunt.md</a>
-      <button class="theme-btn" id="themeBtn" title="切换深浅色">🌙</button>
-    </div>
+<header>
+  <div class="hdr">
+    <div class="logo">pump.<b>md</b></div>
+    <span class="badge live"><span class="dot"></span>LIVE · 15分钟自动刷新</span>
+    <span class="badge" id="freshness">数据更新于 --</span>
+    <span class="badge">GMGN OpenAPI</span>
+    <nav class="nav">
+      <a href="https://jinse.md/">jinse.md 总览</a>
+      <a href="https://arb.md/">arb.md 套利</a>
+      <a href="https://hunt.md/">hunt.md 雷达</a>
+    </nav>
   </div>
-
-  <div class="statusbar">
-    <span><span class="dot"></span>GMGN 链上数据 · <span class="mono" id="scanAt">--</span></span>
-    <span class="badge-24h">24H 更新一次</span>
-  </div>
-
+</header>
+<main>
   <div class="stats" id="stats"></div>
 
-  <div class="tabs">
-    <button class="tab on" data-t="coins">🆕 新币热榜<span class="n" id="nCoins">0</span></button>
-    <button class="tab" data-t="smart">🫀 聪明钱异动<span class="n" id="nSmart">0</span></button>
-  </div>
+  <section class="sec">
+    <h2>🔥 新币热榜 <span class="tag">GMGN trenches · 四重精选 · 最新上架</span></h2>
+    <div class="grid" id="newCoins"></div>
+  </section>
 
-  <div id="view"></div>
+  <section class="sec">
+    <h2>⚡ 实时信号流 <span class="tag">聪明钱 / KOL 买入 · 已过精选</span></h2>
+    <div id="signals"></div>
+  </section>
 
-  <footer>
-    <span>pump.md · © 2026 张诚顺 · GMGN 精华过滤</span>
-    <span class="mono" id="footNote">--</span>
-  </footer>
-</div>
+  <section class="sec">
+    <h2>🫀 聪明钱异动 <span class="tag">追踪钱包买入聚合</span></h2>
+    <div id="smartMoney"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot" id="footNote"></div>
+</footer>
 
 <script>
-/* ===== 数据注入 ===== */
-const PUMP = {"scanned_at": "2026-08-24 11:09 UTC", "chain": "sol", "new_coins": [{"name": "The Starlink Heist", "symbol": "Heist", "address": "3eRRw6YTftaYC7ETBcQYnPotWqU57nERYTzHQY51pump", "price": 3.3675329e-06, "mcap": "$3.4K", "mcap_raw": 3366.69, "vol24h": "$107.4K", "vol24h_raw": 107417.74, "liquidity": "$6.4K", "swaps_24h": 2905, "holders": 54, "smart_degen": 18, "renowned": 4, "progress": 15.3, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/2f27c6020c86f34f83099a6c6aad611b_v2.webp", "age_min": 133, "risk": ["bundler集中"]}, {"name": "Justice for Kim", "symbol": "Kim", "address": "2chKoaAUsyAf4Sx35HcJ8W9552ZBqEpm6HwTZkw4pump", "price": 2.9746041e-06, "mcap": "$3.0K", "mcap_raw": 2974.6, "vol24h": "$82.6K", "vol24h_raw": 82627.17, "liquidity": "$6.0K", "swaps_24h": 2015, "holders": 35, "smart_degen": 11, "renowned": 7, "progress": 7.6, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-va/8d516988ccea85c111bc793bfd045d08_v2.webp", "age_min": 21, "risk": ["bundler集中"]}, {"name": "Pet Rock", "symbol": "Rock", "address": "8UBebNwZTUbQsLBiCa8J1ViReo3mZd9goi2ivyTSpump", "price": 6.7641861e-06, "mcap": "$6.8K", "mcap_raw": 6764.19, "vol24h": "$120.6K", "vol24h_raw": 120596.07, "liquidity": "$8.9K", "swaps_24h": 3342, "holders": 134, "smart_degen": 11, "renowned": 3, "progress": 48.5, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/7e585e5acf2b50dfd14c29dd4b403757_v2.webp", "age_min": 29, "risk": ["bundler集中"]}, {"name": "HODL", "symbol": "HODL", "address": "BQGD5gnrdtbBAgfAjZC3tTxdfWU1uPS8XzWNM1Qvpump", "price": 2.7533733e-06, "mcap": "$2.8K", "mcap_raw": 2753.33, "vol24h": "$52.4K", "vol24h_raw": 52387.41, "liquidity": "$5.8K", "swaps_24h": 1108, "holders": 14, "smart_degen": 11, "renowned": 2, "progress": 2.7, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/5816a0e2598251a5e5e3f1579dd5e0cb_v2.webp", "age_min": 121, "risk": ["bundler集中"]}, {"name": "The Ukraine Girl", "symbol": "Girl", "address": "B334yXhzZMgTgoJTem9ep9ChHpSQqzgUmWZZpu3Xpump", "price": 6.7334266e-06, "mcap": "$6.7K", "mcap_raw": 6733.03, "vol24h": "$123.4K", "vol24h_raw": 123369.13, "liquidity": "$9.1K", "swaps_24h": 2899, "holders": 90, "smart_degen": 10, "renowned": 5, "progress": 50.6, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/d9bac516a758a3e372fce55a38864dfd_v2.webp", "age_min": 9, "risk": ["bundler集中"]}, {"name": "Runni Plushies", "symbol": "Runni", "address": "5wSB91CK2mGmwe3oWK3W8aaDhLhmjrh3m4eqeUFWpump", "price": 4.038595838500864e-06, "mcap": "$4.0K", "mcap_raw": 4038.6, "vol24h": "$69.6K", "vol24h_raw": 69555.67, "liquidity": "$7.2K", "swaps_24h": 1626, "holders": 26, "smart_degen": 8, "renowned": 2, "progress": 25.8, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/3b9ddcef58478fd828c70bf09580f886_v2.webp", "age_min": 85, "risk": ["bundler集中"]}, {"name": "Dog in Bag", "symbol": "DIB", "address": "4NmHsEcw68b9EbEv68CCPqJJaPqfJQFc67UcwUGLpump", "price": 3.9824416e-06, "mcap": "$4.0K", "mcap_raw": 3982.44, "vol24h": "$143.6K", "vol24h_raw": 143595.28, "liquidity": "$7.0K", "swaps_24h": 3039, "holders": 69, "smart_degen": 8, "renowned": 3, "progress": 25.2, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/362aab4a0ff7b13e0e41d0f6d75e3a61_v2.webp", "age_min": 101, "risk": ["bundler集中"]}, {"name": "FOMO Asset", "symbol": "Asset", "address": "FwPYdUydKgCBZzvtAkPquBJPtvLMjrHDyXoKVhpKpump", "price": 4.3030628e-06, "mcap": "$4.3K", "mcap_raw": 4303.06, "vol24h": "$138.6K", "vol24h_raw": 138586.03, "liquidity": "$7.2K", "swaps_24h": 3568, "holders": 78, "smart_degen": 8, "renowned": 7, "progress": 28.7, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/fbd0d23840f6fc8e4858b3ca5e0206e4_v2.webp", "age_min": 107, "risk": ["bundler集中"]}, {"name": "L'Ukraine En Marche", "symbol": "Marche", "address": "C6fgfVpVUZjz2spU8xJgDyy6Ybo3krmJRrsvsPeQpump", "price": 1.449656789488809e-05, "mcap": "$14.5K", "mcap_raw": 14496.57, "vol24h": "$62.8K", "vol24h_raw": 62839.51, "liquidity": "$13.3K", "swaps_24h": 1378, "holders": 236, "smart_degen": 7, "renowned": 3, "progress": 77.5, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/b2ed50cb1eaa48d8c71c8169c8241ea7_v2.webp", "age_min": 8, "risk": ["bundler集中"]}, {"name": "The Ukraine Girl", "symbol": "Girl", "address": "5NkbtLvcRjv2qghVgVQS2GWxMs4Va25DxRkaRXEBpump", "price": 2.8768047e-06, "mcap": "$2.9K", "mcap_raw": 2876.8, "vol24h": "$36.0K", "vol24h_raw": 35968.73, "liquidity": "$5.9K", "swaps_24h": 716, "holders": 16, "smart_degen": 6, "renowned": 2, "progress": 4.5, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/4f6ea25c643b4e652d56a706ba4a1dcd_v2.webp", "age_min": 9, "risk": ["bundler集中"]}, {"name": "For You Token", "symbol": "FYT", "address": "Aa3opbQ6TL9JVSRV2nvvB85Sv5D5mPmgQhvjJCHCpump", "price": 2.8842809e-06, "mcap": "$2.9K", "mcap_raw": 2884.28, "vol24h": "$59.4K", "vol24h_raw": 59377.27, "liquidity": "$5.9K", "swaps_24h": 1105, "holders": 24, "smart_degen": 6, "renowned": 2, "progress": 5.8, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/e2b1a856b58bafea0b637ca42e9e28ad_v2.webp", "age_min": 41, "risk": ["bundler集中"]}, {"name": ":3", "symbol": ":3", "address": "571KaLqHhFt1EDEJ3HtCKvoGvLVKvmPNMoFPxD3pump", "price": 7.7486932e-06, "mcap": "$7.7K", "mcap_raw": 7748.69, "vol24h": "$101.5K", "vol24h_raw": 101524.67, "liquidity": "$9.7K", "swaps_24h": 3634, "holders": 162, "smart_degen": 6, "renowned": 5, "progress": 56.3, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/b3e8f017690db5037b538bfedf71c17a_v2.webp", "age_min": 61, "risk": ["bundler集中"]}], "smart_money": [{"symbol": "Polycat", "address": "B4iCqVsAZv9dBiBVv58GJiBxWGmwkwbtPTn4sUQTpump", "total": "$1.9K", "total_raw": 1867.0, "wallets": 4, "max": "$464", "ts": 1787569761, "launchpad": "pump", "cluster": true}, {"symbol": "Normie", "address": "ibXpR5H6SYv4Gv86CetVivZsrz38qhbF6L5zPDxpump", "total": "$796", "total_raw": 796.4, "wallets": 5, "max": "$477", "ts": 1787569779, "launchpad": "pump", "cluster": true}, {"symbol": "KIM", "address": "7p54ZAUkpPJCkAE4oKQXqqshbBmnFz76ATq4dyUrpump", "total": "$380", "total_raw": 380.2, "wallets": 4, "max": "$140", "ts": 1787569766, "launchpad": "pump", "cluster": true}, {"symbol": "Token", "address": "Hos282xmdMJHwMjhni91fNqdjDsgWjgSckxuGc1Bpump", "total": "$325", "total_raw": 325.2, "wallets": 1, "max": "$279", "ts": 1787569782, "launchpad": "pump", "cluster": false}], "stats": {"new_filtered": 12, "new_raw": 60, "smart_total": 4}};
-
-/* ===== 主题切换 ===== */
-function applyTheme(t){
-  document.documentElement.setAttribute('data-theme', t);
-  document.getElementById('themeBtn').textContent = t === 'dark' ? '☀️' : '🌙';
-}
-const saved = localStorage.getItem('rd-theme') || 'dark';
-applyTheme(saved);
-document.getElementById('themeBtn').addEventListener('click', () => {
-  const cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  applyTheme(cur); localStorage.setItem('rd-theme', cur);
-});
-
-/* ===== 渲染 ===== */
-const $ = s => document.querySelector(s);
+const PUMP = {"scanned_at": "2026-08-24 11:24 UTC", "chain": "sol", "new_coins": [{"name": "LowPoly Cat", "symbol": "Polycat", "address": "BGsLSwUQcxCXzbQ3rHXyaU1LeA2Tj31BaTPXVKprpump", "price": 2.95178e-05, "mcap": "$27.9K", "mcap_raw": 27948.2, "vol24h": "$71.9K", "vol24h_raw": 71879.5, "liquidity": "$10.7K", "swaps_24h": 2041, "holders": 372, "smart_degen": 17, "renowned": 3, "progress": 0, "launchpad": "pump", "logo": "https://gmgn.ai/external-res/0c056ce02459b49c15fdd46ae34f40e2_v2.webp", "age_min": 5, "social": {"twitter": "https://x.com/lugia0x/status/2091846975117304133?s=20", "website": "https://www.tiktok.com/@godxi_cat", "telegram": ""}, "risk": []}, {"name": "シュシュとミコ", "symbol": "Life", "address": "HtQ7K6uph2htAT5YH4oBgwsE3CHeg9MMbtXWHGSHpmke", "price": 3.76819e-05, "mcap": "$36.5K", "mcap_raw": 36453.5, "vol24h": "$30.2K", "vol24h_raw": 30204.3, "liquidity": "$12.4K", "swaps_24h": 583, "holders": 306, "smart_degen": 12, "renowned": 5, "progress": 0, "launchpad": "pump", "logo": "https://gmgn.ai/external-res/b1900ae7100c995f1faf4fbf90209eae_v2.webp", "age_min": 18, "social": {"twitter": "https://x.com/StepCoinsol8/status/2091834117679731002", "website": "https://www.tiktok.com/@stockkarma/photo/7676464550857772296", "telegram": ""}, "risk": []}, {"name": ":3", "symbol": ":3", "address": "571KaLqHhFt1EDEJ3HtCKvoGvLVKvmPNMoFPxD3pump", "price": 1.3568233e-05, "mcap": "$13.6K", "mcap_raw": 13568.23, "vol24h": "$107.5K", "vol24h_raw": 107465.22, "liquidity": "$13.1K", "swaps_24h": 3769, "holders": 180, "smart_degen": 7, "renowned": 5, "progress": 75.3, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res/8a88de1ef3f60dbaa8d47c67f20223dc_v2.webp", "age_min": 76, "social": {"twitter": "keemotrades", "website": "https://knowyourmeme.com/memes/3-cat-face", "telegram": ""}, "risk": []}, {"name": "Wrapped Cat", "symbol": "WCAT", "address": "9j65DB4kDbk7ZZy4xmLE8QUskw1BLkbFV614pWmKpump", "price": 2.4468182e-05, "mcap": "$24.5K", "mcap_raw": 24468.18, "vol24h": "$35.4K", "vol24h_raw": 35390.86, "liquidity": "$17.3K", "swaps_24h": 344, "holders": 92, "smart_degen": 4, "renowned": 0, "progress": 90.8, "launchpad": "Pump.fun", "logo": "https://gmgn.ai/external-res-asia/6b68122487b0280126e846f1726157b9_v2.webp", "age_min": 32, "social": {"twitter": "Kanethecaller", "website": "", "telegram": ""}, "risk": []}], "smart_money": [{"symbol": "Rick", "address": "Dm5A8Bniqh7jM5eNDHc24C3siuPSLoVasht2YrVTpump", "total": "$363", "total_raw": 363.1, "wallets": 1, "max": "$363", "ts": 1787570588, "launchpad": "pump", "cluster": false, "passed": false}], "signals": [{"type": "KOL买入", "symbol": "Polycat", "name": "LowPoly Cat", "address": "BGsLSwUQcxCXzbQ3rHXyaU1LeA2Tj31BaTPXVKprpump", "logo": "https://gmgn.ai/external-res/0c056ce02459b49c15fdd46ae34f40e2_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$31.4K", "mc": "$27.5K", "ath": "$44.7K", "ts": 1787570477}, {"type": "KOL买入", "symbol": "Kim", "name": "Justice for Kim", "address": "2chKoaAUsyAf4Sx35HcJ8W9552ZBqEpm6HwTZkw4pump", "logo": "https://gmgn.ai/external-res/8d516988ccea85c111bc793bfd045d08_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$14.3K", "mc": "$2.9K", "ath": "$30.9K", "ts": 1787568583}, {"type": "聪明钱买入", "symbol": "Juna", "name": "Juna", "address": "96BeHE3X3NSTNSMU3oQUnXJopYQxveUZuwZa54k3b2Tt", "logo": "https://gmgn.ai/external-res/42f344ba12a36a985af2d52706ca8f0f_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$33.6K", "mc": "$15.1K", "ath": "$86.2K", "ts": 1787564032}, {"type": "聪明钱买入", "symbol": "Rilee", "name": "Rilee's Law", "address": "8ziYqQaWbzU99HcJAgMWuYkTHHZSBEmZVf1ndkTGpump", "logo": "https://gmgn.ai/external-res/deb92744eb5e0642a45d8aa712cff346_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$11.9K", "mc": "$2.7K", "ath": "$14.8K", "ts": 1787564004}, {"type": "KOL买入", "symbol": "NOVA", "name": "AI Dog", "address": "HzVyJaFge39qdJHNRGHbCsLSreaoTz9yenNYk154pump", "logo": "https://gmgn.ai/external-res/ff97cfc1b9706a04215ff8271f395053_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$6.3K", "mc": "$2.7K", "ath": "$7.5K", "ts": 1787563224}, {"type": "KOL买入", "symbol": "PURRIE", "name": "Purrie the cat", "address": "CdUDLqW2GwNeuFKqXfo4umbJXfMYpydCCNPuNEMjVwwi", "logo": "https://gmgn.ai/external-res/81633472746bedc220f7c25fc44abb3b_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$21.1K", "mc": "$3.6K", "ath": "$24.5K", "ts": 1787555606}, {"type": "聪明钱买入", "symbol": "HORSE", "name": "Ground Horse", "address": "5te4qXdCWkXPCHQiEtRLGzX6eWnuemJ9Hy2Zp9rYpump", "logo": "https://gmgn.ai/external-res/5fbefa6365710bec5c49fdceb77e5b7f_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$33.1K", "mc": "$4.2K", "ath": "$43.9K", "ts": 1787554706}, {"type": "聪明钱买入", "symbol": "GLOB", "name": "The Globglogabgalab", "address": "CHUUnzp36ZSJbUL6d2xZvu4bgNpuK4s3Q7ECgHZApump", "logo": "https://gmgn.ai/external-res/874c61da2d23febf45f62df11b0e9b2b_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$18.5K", "mc": "$7.8K", "ath": "$52.1K", "ts": 1787554614}, {"type": "聪明钱买入", "symbol": "Cliply", "name": "Cliply", "address": "41G6CueAmnjs6hYWRsgCtQmnXRjnwYJK7kkfpkjKCL1P", "logo": "https://gmgn.ai/external-res/51b90621509438ff4a6efa8678b387a4_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$11.8K", "mc": "$3.5K", "ath": "$56.4K", "ts": 1787546516}, {"type": "聪明钱买入", "symbol": "LaPeace", "name": "La Peace", "address": "CvjSaRcTmcrfutekYzrBEEdTWx1RmRTWDToqtXmCpump", "logo": "https://gmgn.ai/external-res/6aaee4d60bedbaf12c5cf643c0ebde97_v2.webp", "launchpad": "Pump.fun", "trigger_mc": "$315.9K", "mc": "$377.5K", "ath": "$1.1M", "ts": 1787543008}], "stats": {"new_filtered": 4, "smart_total": 1, "signal_total": 10, "filter_breakdown": {"市值过低(<1万)": 57, "信号源:三无(无官网/推特/电报)": 15, "bundler集中": 4, "三无(无官网/推特/电报)": 2, "rug风险0.98": 2, "信号源:rug风险0.50": 2, "信号源:rug风险0.37": 2, "rug风险0.50": 1, "rug风险0.63": 1, "rug风险0.44": 1, "rug风险0.58": 1, "信号源:rug风险1.00": 1, "信号源:rug风险0.98": 1, "信号源:rug风险0.36": 1}}};
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const age = ts => { if(!ts) return '--'; const m = Math.max(0, Math.floor((Date.now()/1000 - ts)/60)); return m < 1 ? '刚刚' : m < 60 ? `${m}分钟前` : `${Math.floor(m/60)}小时前`; };
+const fresh = s => { if(!s) return '--'; const m = Math.max(0, Math.floor((Date.now() - new Date(s.replace('UTC','')+' UTC').getTime())/60000)); return m < 1 ? '刚刚' : m < 60 ? `${m}分钟前` : `${Math.floor(m/60)}小时前`; };
+const socialBtns = s => {
+  if(!s) return '';
+  const b = [];
+  const twUrl = v => (!v ? '' : /^https?:\/\//.test(v) ? v : `https://x.com/${v}`);
+  const tgUrl = v => (!v ? '' : /^https?:\/\//.test(v) ? v : `https://t.me/${v.replace(/^@/,'')}`);
+  const webUrl = v => (!v ? '' : /^https?:\/\//.test(v) ? v : `https://${v}`);
+  if(s.twitter) b.push(`<a href="${esc(twUrl(s.twitter))}" target="_blank" rel="noopener">𝕏 推特</a>`);
+  if(s.website) b.push(`<a href="${esc(webUrl(s.website))}" target="_blank" rel="noopener">🌐 官网</a>`);
+  if(s.telegram) b.push(`<a href="${esc(tgUrl(s.telegram))}" target="_blank" rel="noopener">✈️ 电报</a>`);
+  return b.length ? `<div class="social">${b.join('')}</div>` : '';
+};
 
-function fmtTs(ts){
-  if(!ts) return '--';
-  const d = new Date(ts * 1000);
-  const p = n => String(n).padStart(2,'0');
-  return `${p(d.getMonth()+1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
-}
-
-function renderStats(){
-  const s = PUMP.stats || {};
+// 统计条
+(function(){
+  const st = PUMP.stats || {};
+  const s = document.getElementById('stats');
   const smartTotal = (PUMP.smart_money || []).reduce((a,b)=>a+(b.total_raw||0),0);
-  $('#stats').innerHTML = `
-    <div class="stat"><div class="k">新币精华（过滤后）</div><div class="v gold">${s.new_filtered||0}</div><div class="s">原始 ${s.new_raw||0} 个 → 仅保留 ${s.new_filtered||0}</div></div>
+  const breakdown = st.filter_breakdown || {};
+  const drops = Object.values(breakdown).reduce((a,b)=>a+b,0) || 0;
+  s.innerHTML = `
+    <div class="stat"><div class="k">新币精选</div><div class="v">${st.new_filtered ?? 0}</div><div class="s">四重筛选 · 宁缺毋滥</div></div>
+    <div class="stat"><div class="k">实时信号</div><div class="v purple">${st.signal_total ?? 0}</div><div class="s">聪明钱/KOL 买入</div></div>
     <div class="stat"><div class="k">聪明钱买入额</div><div class="v green">$${(smartTotal/1000).toFixed(1)}K</div><div class="s">${(PUMP.smart_money||[]).length} 个标的</div></div>
+    <div class="stat"><div class="k">已筛除</div><div class="v red">${drops}</div><div class="s">三无/黑幕/权限问题/技术风险</div></div>
     <div class="stat"><div class="k">监控链</div><div class="v cyan">${esc(PUMP.chain||'sol')}</div><div class="s">GMGN OpenAPI</div></div>
   `;
-}
+})();
 
-function renderCoins(){
+// 新币热榜
+(function(){
+  const el = document.getElementById('newCoins');
   const coins = PUMP.new_coins || [];
-  $('#nCoins').textContent = coins.length;
-  $('#view').innerHTML = `<div class="grid">${coins.map((c,i)=>`
+  if(!coins.length){ el.innerHTML = '<div class="pad">当前无通过全部精选的标的 — 宁缺毋滥</div>'; return; }
+  el.innerHTML = coins.map(c => `
     <div class="card">
-      <div class="card-top">
-        <img src="${esc(c.logo)}" onerror="this.style.visibility='hidden'">
+      <div class="top">
+        ${c.logo?`<img src="${esc(c.logo)}" alt="" onerror="this.style.display='none'">`:'<img src="" style="display:none">'}
         <div>
-          <div class="nm">${esc(c.name)} <span class="launch">${esc(c.launchpad)}</span></div>
-          <div class="smart-tag">✦ ${c.smart_degen} 聪明钱关注</div>
+          <div class="nm">${esc(c.name)}<span class="sym">${esc(c.symbol)}</span></div>
+          <div class="mc">市值 ${c.mcap} · 24h量 ${c.vol24h}</div>
         </div>
-        <div class="rank">#${i+1}</div>
       </div>
       <div class="metrics">
-        <div class="metric"><div class="k">市值</div><div class="v">${esc(c.mcap)}</div></div>
-        <div class="metric"><div class="k">24h量</div><div class="v gold">${esc(c.vol24h)}</div></div>
-        <div class="metric"><div class="k">流动性</div><div class="v">${esc(c.liquidity)}</div></div>
-        <div class="metric"><div class="k">24h交易</div><div class="v">${c.swaps_24h||0}</div></div>
-        <div class="metric"><div class="k">持有人</div><div class="v">${c.holders||0}</div></div>
-        <div class="metric"><div class="k">创建</div><div class="v">${c.age_min||'--'}m前</div></div>
+        <span class="metric">池子 <b>${esc(c.liquidity)}</b></span>
+        <span class="metric">聪明钱 <b class="green">${c.smart_degen}</b></span>
+        <span class="metric">持有人 <b>${c.holders}</b></span>
+        <span class="metric">上线 <b>${c.age_min}分钟</b></span>
+        <span class="metric">完成度 <b>${c.progress}%</b></span>
       </div>
-      ${c.risks && c.risks.length ? `<div class="risks">${c.risks.map(r=>`<span class="risk">⚠ ${esc(r)}</span>`).join('')}</div>` : ''}
-      <div class="addr">${esc(c.address||'')}</div>
-    </div>`).join('') || '<div style="color:var(--dim);padding:20px">暂无数据</div>'}</div>`;
-}
+      ${socialBtns(c.social)}
+    </div>`).join('');
+})();
 
-function renderSmart(){
+// 实时信号流
+(function(){
+  const el = document.getElementById('signals');
+  const sigs = PUMP.signals || [];
+  if(!sigs.length){ el.innerHTML = '<div class="pad">近窗口无过筛信号 — 持续监听中</div>'; return; }
+  el.innerHTML = sigs.map(s => `
+    <div class="sig-row">
+      <span class="type ${s.type==='KOL买入'?'t20':'t12'}">${esc(s.type)}</span>
+      <span class="nm">${esc(s.symbol)}${s.name?`<span style="color:var(--dim);font-weight:400;font-size:11px"> · ${esc(s.name)}</span>`:''}</span>
+      <div class="dt">
+        <span>触发市值 <b>${esc(s.trigger_mc)}</b></span>
+        <span>当前 <b>${esc(s.mc)}</b></span>
+        <span>ATH <b>${esc(s.ath)}</b></span>
+        <span>${age(s.ts)}</span>
+      </div>
+    </div>`).join('');
+})();
+
+// 聪明钱异动
+(function(){
+  const el = document.getElementById('smartMoney');
   const sm = PUMP.smart_money || [];
-  $('#nSmart').textContent = sm.length;
-  $('#view').innerHTML = `<div class="sm-list">${sm.map(s=>`
-    <div class="sm">
-      <div class="sym">${esc(s.symbol)}</div>
-      ${s.cluster ? '<span class="clu">CLUSTER 多钱包共振</span>' : ''}
-      <div class="det">
-        <span>买入 <b>${esc(s.total)}</b></span>
-        <span>${s.wallets} 钱包</span>
-        <span>最大单 ${esc(s.max)}</span>
+  if(!sm.length){ el.innerHTML = '<div class="pad">近窗口无聪明钱买入</div>'; return; }
+  el.innerHTML = sm.map(s => `
+    <div class="sig-row">
+      <span class="nm">${esc(s.symbol)}</span>
+      ${s.cluster?'<span class="cluster">🫀 CLUSTER</span>':''}
+      ${s.passed?'<span class="passed">✅ 已过精选</span>':''}
+      <div class="dt">
+        <span>买入 <b class="green">${esc(s.total)}</b></span>
+        <span>钱包 <b>${s.wallets}</b> 个</span>
+        <span>单笔最大 <b>${esc(s.max)}</b></span>
+        <span>${age(s.ts)}</span>
       </div>
-      <div class="ts">${fmtTs(s.ts)}</div>
-    </div>`).join('') || '<div style="color:var(--dim);padding:20px">暂无异动</div>'}</div>`;
-}
+    </div>`).join('');
+})();
 
-$('#stats').innerHTML = '';
-renderStats();
-$('#nSmart').textContent = (PUMP.smart_money || []).length;
-renderCoins();
-$('#footNote').textContent = `过滤规则: smart-money preset + 24h量≥20K + 风控标记 · ${esc(PUMP.scanned_at||'')}`;
-
-document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
-  document.querySelectorAll('.tab').forEach(x => x.classList.remove('on'));
-  t.classList.add('on');
-  t.dataset.t === 'coins' ? renderCoins() : renderSmart();
-}));
+// 页脚：精选规则透明
+(function(){
+  const st = PUMP.stats || {};
+  const bd = st.filter_breakdown || {};
+  const rows = Object.entries(bd).map(([k,v]) => `<li>${esc(k)} × ${v}</li>`).join('');
+  document.getElementById('footNote').innerHTML = `
+    <h3>✅ 精选规则（GMGN 数据 · 四重筛选 · 宁缺毋滥）</h3>
+    <ul>
+      <li><span class="hl">① 有真实身份</span> — 官网 / 推特 / 电报至少一个，三无产品直接筛除</li>
+      <li><span class="hl">② 权限干净</span> — SOL 铸币权+冻结权双放弃；EVM 所有权 renounce、非貔貅盘、合约开源</li>
+      <li><span class="hl">③ 无黑幕</span> — 非洗盘交易、rug风险≤0.3、bundler≤0.3、老鼠仓≤0.3、筹码集中度≤50%</li>
+      <li><span class="hl">④ 无技术问题</span> — 买卖税≤10%、市值≥1万、有真实流动性</li>
+      <li><span class="hl">⑤ 有行为背书</span> — 聪明钱/KOL 买入信号流同样过筛，cluster 信号单独标注</li>
+    </ul>
+    <h3 style="margin-top:10px">📊 本窗口筛除明细</h3>
+    <ul>${rows || '<li>本轮无筛除（或数据为空）</li>'}</ul>
+    <p style="margin-top:10px">数据源: GMGN OpenAPI · 更新于 ${esc(PUMP.scanned_at||'--')} · 每15分钟自动刷新</p>
+  `;
+  document.getElementById('freshness').textContent = '数据更新于 ' + fresh(PUMP.scanned_at);
+})();
 </script>
 </body>
 </html>
