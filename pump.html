@@ -282,6 +282,7 @@ function renderSignals(sigs){
         ${s.wallets ? `<span>钱包 <b>${s.wallets}</b></span>` : ''}
         <span>${age(s.ts)}</span>
       </div>
+      ${socialBtns(s.social)}
       <a class="lnk" href="${gmgnLink(curChain, s.address)}" target="_blank" rel="noopener">GMGN 交易 →</a>
     </div>`).join('');
 }
