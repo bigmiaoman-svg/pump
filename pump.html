@@ -39,6 +39,13 @@ main{max-width:1100px;margin:0 auto;padding:20px}
 .card:hover{border-color:#33415e}
 .card .top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .card .top img{width:34px;height:34px;border-radius:50%;background:var(--card2);object-fit:cover}
+.score-badge{margin-left:auto;display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid;white-space:nowrap;flex-shrink:0}
+.score-badge em{font-style:normal;font-size:10px;font-weight:600;opacity:.85}
+.score-a{color:var(--green);border-color:rgba(45,212,167,.45);background:rgba(45,212,167,.08)}
+.score-b{color:var(--cyan);border-color:rgba(56,189,248,.45);background:rgba(56,189,248,.08)}
+.score-c{color:var(--yellow);border-color:rgba(251,191,36,.45);background:rgba(251,191,36,.08)}
+.score-d{color:var(--dim);border-color:var(--line);background:var(--card2)}
+.sig-row .score-badge{margin-left:8px}
 .card .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
 .card .nm .sym{color:var(--cyan);font-size:12px;margin-left:6px}
 .card .mc{font-size:12px;color:var(--dim)}
@@ -58,6 +65,32 @@ main{max-width:1100px;margin:0 auto;padding:20px}
 .pager button:disabled{opacity:.35;cursor:default}
 .pager .pg{font-size:12px;color:var(--dim)}
 .pad{padding:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:13px;color:var(--dim)}
+@media(max-width:720px){
+  header{padding:10px 14px}
+  .hdr{gap:8px}
+  .logo{font-size:17px}
+  .badge{font-size:11px;padding:3px 8px}
+  .nav{width:100%;justify-content:flex-start}
+  main{padding:14px}
+  .stats{grid-template-columns:repeat(2,1fr);gap:8px}
+  .stat{padding:10px 12px}
+  .stat .v{font-size:18px}
+  .grid{grid-template-columns:1fr;gap:10px}
+  .card{padding:12px 14px}
+  .card .top{flex-wrap:wrap}
+  .card .nm{max-width:100%}
+  .score-badge{margin-left:0}
+  .sig-row{flex-wrap:wrap}
+  .sig-row .dt{width:100%}
+  .chainbar{gap:6px;margin-bottom:12px}
+  .chip{padding:6px 12px;font-size:12px}
+  footer{padding:14px 16px}
+}
+@media(max-width:400px){
+  .stats{grid-template-columns:1fr 1fr}
+  .badge.live{display:none}
+  .nav a{font-size:12px;padding:4px 7px}
+}
 .sig-row{display:flex;align-items:center;gap:12px;padding:10px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;flex-wrap:wrap}
 .sig-row .nm{font-weight:700;min-width:80px}
 .trig{display:flex;gap:5px;flex-wrap:wrap;flex:1;min-width:180px}
@@ -145,6 +178,15 @@ const socialBtns = s => {
   if(s.telegram) b.push(`<a href="${esc(tgUrl(s.telegram))}" target="_blank" rel="noopener">✈️ 电报</a>`);
   return b.length ? `<div class="social">${b.join('')}</div>` : '';
 };
+// v4：12 条评分徽章（score 为自动可算 6 条 + 6 条未知待补；7+ 需 agent 补判才有完整档位）
+const scoreBadge = s => {
+  if(!s) return '';
+  const gradeTxt = {A:'罕见', B:'干净', C:'有风险', D:'待观察'};
+  const g = s.grade || 'D';
+  const cls = g === 'A' ? 'score-a' : g === 'B' ? 'score-b' : g === 'C' ? 'score-c' : 'score-d';
+  const n = s.unknown?.length || 0;
+  return `<span class="score-badge ${cls}" title="12条评分：自动 ${s.score}/${s.auto_total} 分${n ? `，${n} 条待补判` : ''}">🛡 ${s.score}/${s.auto_total}<em>${gradeTxt[g]}</em></span>`;
+};
 
 let curChain = CHAINS[0] || 'sol';
 let coinPage = 1;
@@ -174,11 +216,11 @@ function renderAll(){
   const smartN = (d.signals||[]).filter(s => s.wallets).length;
   const smartWallets = (d.signals||[]).reduce((a,b)=>a+(b.wallets||0),0);
   document.getElementById('stats').innerHTML = `
-    <div class="stat"><div class="k">${esc(curChain.toUpperCase())} 新币精选</div><div class="v">${st.new_filtered ?? d.new_coins.length}</div><div class="s">本轮 · 五重筛选</div></div>
+    <div class="stat"><div class="k">${esc(curChain.toUpperCase())} 新币精选</div><div class="v">${st.new_filtered ?? d.new_coins.length}</div><div class="s">本轮 · 门槛+评分</div></div>
     <div class="stat"><div class="k">实时信号</div><div class="v purple">${st.signal_total ?? d.signals.length}</div><div class="s">聪明钱/KOL × 异动合并</div></div>
     <div class="stat"><div class="k">热榜留存</div><div class="v cyan">${(d.retention||[]).length}</div><div class="s">近24h · 20条分页</div></div>
     <div class="stat"><div class="k">聪明钱钱包</div><div class="v cyan">${smartWallets}</div><div class="s">${smartN} 个标的${smartTotal>0?` · 买入 $${(smartTotal/1000).toFixed(1)}K`:''}</div></div>
-    <div class="stat"><div class="k">全链已筛除</div><div class="v red">${totalDrops}</div><div class="s">三无/黑幕/权限/技术风险</div></div>
+    <div class="stat"><div class="k">全链已筛除</div><div class="v red">${totalDrops}</div><div class="s">缺官网/推特 · 黑幕/权限/技术风险</div></div>
     <div class="stat"><div class="k">全链精选</div><div class="v cyan">${PUMP.stats?.new_filtered ?? 0}</div><div class="s">${(PUMP.chains||[]).join(' · ').toUpperCase()}</div></div>
   `;
   renderCoins(d.retention || []);
@@ -206,6 +248,7 @@ function renderCoins(list){
           <div class="nm">${esc(c.name)}<span class="sym">${esc(c.symbol)}</span></div>
           <div class="mc">市值 ${c.mcap} · 24h量 ${c.vol24h}</div>
         </div>
+        ${scoreBadge(c.score12)}
       </div>
       ${c.latest ? '<span class="badge-new">🆕 本轮精选</span>' : `<span class="badge-old">⏳ 上榜于 ${age(c.last_seen)}</span>`}
       <div class="metrics">
@@ -231,6 +274,7 @@ function renderSignals(sigs){
   el.innerHTML = sigs.map(s => `
     <div class="sig-row">
       <span class="nm">${esc(s.symbol)}${s.name?`<span style="color:var(--dim);font-weight:400;font-size:11px"> · ${esc(s.name)}</span>`:''}</span>
+      ${scoreBadge(s.score12)}
       <div class="trig">${(s.triggers||[]).map(t=>`<span class="tg">${esc(t)}</span>`).join('')}</div>
       <div class="dt">
         <span>市值 <b>${esc(s.mc)}</b></span>
@@ -247,20 +291,20 @@ function renderSignals(sigs){
   const bd = (PUMP.stats||{}).filter_breakdown || {};
   const rows = Object.entries(bd).map(([k,v]) => `<li>${esc(k)} × ${v}</li>`).join('');
   document.getElementById('footNote').innerHTML = `
-    <h3>✅ 精选规则（GMGN 数据 · 五重筛选 · 宁缺毋滥）</h3>
+    <h3>✅ 精选规则（GMGN 数据 · 门槛+评分 · 宁缺毋滥）</h3>
     <ul>
-      <li><span class="hl">① 有真实身份</span> — 官网 / 推特 / 电报至少一个，三无产品直接筛除</li>
+      <li><span class="hl">① 有真实身份（门槛）</span> — 官网 + 推特必须都在（2026-08-27 定案），电报不再算门槛；缺一即筛除</li>
       <li><span class="hl">② 权限干净</span> — SOL 铸币权+冻结权双放弃；EVM 所有权 renounce、非貔貅盘、合约开源</li>
-      <li><span class="hl">③ 无黑幕</span> — 非洗盘交易、rug风险≤0.3、bundler≤0.3、老鼠仓≤0.3、筹码集中度≤50%</li>
-      <li><span class="hl">④ 无技术问题</span> — 买卖税≤10%、市值≥1万、有真实流动性</li>
-      <li><span class="hl">⑤ 有行为背书</span> — 聪明钱/KOL 买入信号与异动聚合合并成统一信号流，同样过筛，触发徽章+强度排序</li>
+      <li><span class="hl">③ 无黑幕</span> — 非洗盘交易、rug风险≤0.3、bundler≤0.3、老鼠仓≤0.3、筹码集中度≤40%</li>
+      <li><span class="hl">④ 无技术问题</span> — 买卖税≤10%、市值 $1万-$1000万、有真实流动性</li>
+      <li><span class="hl">⑤ 12 条评分</span> — 过门槛后自动打分（池子/权限/分布/量比等 6 条自动 + 6 条待补判），🛡 徽章显示当前分</li>
     </ul>
     <h3 style="margin-top:10px">⚡ 信号触发规则（v3 合并版）</h3>
     <ul>
       <li><span class="hl">🐋 聪明钱买入</span> — 24h 窗口内 ≥3 个不同聪明钱钱包买入 = cluster 强信号；1-2 个 = 普通信号</li>
-      <li><span class="hl">💰 小市值加分</span> — 市值低于 $500 万标注（弹性大），低于 $1 万直接排除</li>
+      <li><span class="hl">💰 小市值加分</span> — 市值低于 $500 万标注（弹性大）；市值区间 $1万-$1000万，区间外直接排除</li>
       <li><span class="hl">🆕 新鲜度加分</span> — 上线 24 小时内标注新币</li>
-      <li><span class="hl">✅ 精选背书</span> — 同时通过五重精选的标的加重标记</li>
+      <li><span class="hl">✅ 精选背书</span> — 同时通过门槛+评分的标的加重标记</li>
     </ul>
     <h3 style="margin-top:10px">📊 本轮筛除明细（全链）</h3>
     <ul>${rows || '<li>本轮无筛除（或数据为空）</li>'}</ul>
