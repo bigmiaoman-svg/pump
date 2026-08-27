@@ -1,25 +1,23 @@
 #!/usr/bin/env python3
-"""pump.md 数据管道：GMGN 五链三通道精华过滤版（v3：统一信号流 + 历史留存池）
+"""pump.md 数据管道：GMGN 五链三通道精华过滤版（v4：聪明钱融合评分版）
 通道（每链）：
   1. trenches new_creation（新币池，smart-money preset）→ 严格精选
   2. trending 5m（实时热榜）→ 严格精选
   3. market signal（聪明钱买入12 / KOL买入20）+ track smartmoney（聪明钱聚合）
      → 合并为统一信号流（v3，诚顺 2026-08-24 要求：实时信号与聪明钱异动合并一个版本）
 
-精选过滤（诚顺 2026-08-24 定稿）：
-  ✅ 社交真实存在：官网/推特/电报 至少一个（三无产品直接筛掉）
-  ✅ 权限干净：SOL 铸币权+冻结权双放弃；EVM 所有权 renounce + 非貔貅 + 开源
-  ✅ 无黑幕：非洗盘、rug_ratio≤0.3、bundler≤0.3、老鼠仓≤0.3、筹码不集中(≤50%)
-  ✅ 无技术问题：非 honeypot、税率≤10%、流动性真实
-  ✅ 行为背书：聪明钱/KOL 买入信号流同样过筛
+v4 融合（2026-08-27 诚顺定案）：
+  - 门槛层升级：官网 + 推特 = 双门槛（电报不再算门槛）；市值区间 $1万-$1000万
+  - 12 条评分引擎（token-score12.py）：门槛过后自动算 6 条 + 6 条未知待补
+  - 评分写入 pump_data.json，前端展示 🛡 评分徽章
+  - top10 安全线 40%（<20% 才在评分得分）
 
-v3 新增：
+v3 遗留：
   - 信号合并：实时信号 + 聪明钱异动 → 统一信号流，触发徽章 + score 排序
-    🐋聪明钱×N(≥3=cluster) / 🔥KOL买入 / 💰市值<500万 / 🆕上线<24h / ✅已过五重精选
-  - 历史留存：retention 池每链 ≤20 条，last_seen 超 24h 滑出，跨 run 持久化（读旧数据合并）
-  - robinhood 链纳入默认五链（数据少时前端空态提示）
+  - 历史留存：retention 池每链 ≤20 条，last_seen 超 24h 滑出，跨 run 持久化
+  - robinhood 链纳入默认五链
 
-输出：data/pump/pump_data.json（by_chain + retention + 筛除统计）
+输出：data/pump/pump_data.json（by_chain + retention + 筛除统计 + score12）
 用法: python3 pump_fetch.py [--chains sol,bsc,base,eth,robinhood] [--limit 8]
 """
 import json, os, subprocess, sys, datetime, argparse, time
@@ -27,6 +25,18 @@ import json, os, subprocess, sys, datetime, argparse, time
 BASE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(BASE, "data", "pump")
 os.makedirs(OUT, exist_ok=True)
+
+# 评分引擎（v4 融合）：优先仓库内副本（云端 Actions），回退本地 ~/.hermes/scripts
+_LOCAL_SCORE12 = os.path.expanduser("~/.hermes/scripts/token_score12.py")
+if os.path.exists(os.path.join(BASE, "token_score12.py")):
+    sys.path.insert(0, BASE)
+elif os.path.exists(_LOCAL_SCORE12):
+    sys.path.insert(0, os.path.dirname(_LOCAL_SCORE12))
+import token_score12 as ts12
+
+# 市值区间（2026-08-27 诚顺定：$1万-$1000万）
+MC_MIN = ts12.MC_MIN
+MC_MAX = ts12.MC_MAX
 
 # signal 通道支持的链（GMGN 限定），其他链跳过信号流
 SIGNAL_CHAINS = {"sol", "bsc", "robinhood", "arc"}
@@ -64,49 +74,20 @@ def is_true(v):
 def is_false(v):
     return v in (0, False, "0", "no", "false")
 
-# ===== 精选过滤器 =====
+# ===== 精选过滤器（v4：走评分引擎门槛层）=====
 def quality_filter(c, chain):
-    """返回 (是否通过, 未通过原因列表)。诚顺精选规则：有社交/权限干净/无黑幕/无技术问题"""
-    reasons = []
-    # 1. 三无产品：无官网/推特/电报
-    if not social_any(c) and not c.get("has_at_least_one_social"):
-        reasons.append("三无(无官网/推特/电报)")
-    # 2. 权限问题：铸币权/冻结权/所有权未放弃
-    if chain == "sol":
-        if is_false(c.get("renounced_mint")):
-            reasons.append("铸币权未放弃")
-        if is_false(c.get("renounced_freeze_account")):
-            reasons.append("冻结权未放弃")
-    else:
-        if is_true(c.get("is_honeypot")) or is_true(c.get("honeypot")):
-            reasons.append("貔貅盘")
-        if is_false(c.get("is_renounced")) and is_false(c.get("owner_renounced")):
-            reasons.append("所有权未放弃")
-        if is_false(c.get("is_open_source")) and is_false(c.get("open_source")):
-            reasons.append("合约不开源")
-    # 3. 黑幕：洗盘 / rug / bundler / 老鼠仓 / 筹码集中
-    if is_true(c.get("is_wash_trading")):
-        reasons.append("疑似洗盘")
-    if (c.get("rug_ratio") or 0) > 0.3:
-        reasons.append(f"rug风险{float(c['rug_ratio']):.2f}")
-    if (c.get("bundler_rate") or c.get("bundler_trader_amount_rate") or 0) > 0.3:
-        reasons.append("bundler集中")
-    if (c.get("rat_trader_amount_rate") or 0) > 0.3:
-        reasons.append("老鼠仓占比高")
-    if (c.get("top_10_holder_rate") or 0) > 0.5:
-        reasons.append("筹码高度集中")
-    # 4. 技术问题：高税
-    buy_tax = float(c.get("buy_tax") or 0)
-    sell_tax = float(c.get("sell_tax") or 0)
-    if buy_tax > 0.10 or sell_tax > 0.10:
-        reasons.append("税率过高")
-    return (len(reasons) == 0, reasons)
+    """返回 (是否通过, 未通过原因列表)。门槛层=评分引擎 gates_check：官网+推特 / 权限 / 黑幕 / 技术 / 市值区间"""
+    passed, ok, fail = ts12.gates_check(c, chain)
+    if passed and fail:
+        pass  # fail 不应在 passed 时出现，防御
+    return (passed, fail)
 
 def to_coin(c, chain):
-    """精选通过的 token → 展示结构"""
+    """精选通过的 token → 展示结构（v4：带 12 条评分）"""
     mc = c.get("market_cap") or c.get("usd_market_cap") or 0
     vol = c.get("volume_24h") or c.get("volume") or 0
     created = c.get("created_timestamp") or c.get("creation_timestamp") or int(time.time())
+    s = ts12.score_token(c, chain)
     return {
         "name": c.get("name", "?"),
         "symbol": c.get("symbol", c.get("name", "?")),
@@ -129,6 +110,14 @@ def to_coin(c, chain):
             "telegram": c.get("telegram") or "",
         },
         "risk": [],
+        # v4：12 条评分（自动可算 6 条 + 未知待补 6 条）
+        "score12": {
+            "score": s["score"],
+            "auto_total": s["auto_total"],
+            "unknown": s["unknown"],
+            "grade": s["grade"],
+            "detail": s["detail"],
+        },
     }
 
 def fetch_chain(chain, limit, drop):
@@ -163,8 +152,12 @@ def fetch_chain(chain, limit, drop):
         if not addr or addr in seen:
             continue
         mc = c.get("market_cap") or c.get("usd_market_cap") or 0
-        if mc < 10000:  # 低于 1 万美金市值 = 空气币阶段，直接不进榜
-            note_drops(["市值过低(<1万)"])
+        if not (MC_MIN <= mc <= MC_MAX):
+            # 市值区间外（v4：$1万-$1000万，2026-08-27 诚顺定）
+            if mc < MC_MIN:
+                note_drops(["市值过低(<1万)"])
+            else:
+                note_drops(["市值过高(>1000万)"])
             continue
         ok, reasons = quality_filter(c, chain)
         if not ok:
@@ -180,6 +173,12 @@ def fetch_chain(chain, limit, drop):
 
     def sig_seed(addr, d, s):
         """新建/复用信号条目骨架"""
+        tw = d.get("twitter_handle") or d.get("twitter_username") or d.get("twitter") or ""
+        if tw and ("/status/" in tw or (tw.startswith("http") and "x.com" not in tw and "twitter.com" not in tw)):
+            tw = ""
+        web = d.get("website") or ""
+        if web and ("x.com" in web or "twitter.com" in web):
+            web = ""
         return signals_map.setdefault(addr, {
             "symbol": d.get("symbol") or addr[:6],
             "name": d.get("name", ""),
@@ -192,6 +191,9 @@ def fetch_chain(chain, limit, drop):
             "ath": float(s.get("ath") or 0),
             "ts": int(s.get("trigger_at") or 0) or int(s.get("timestamp") or 0),
             "age_min": None, "passed": False,
+            "social": {"twitter": tw, "website": web},
+            "liquidity": float(d.get("liquidity") or 0),
+            "vol": float(d.get("volume_24h") or d.get("volume") or 0),
         })
 
     if chain in SIGNAL_CHAINS:
@@ -253,6 +255,8 @@ def fetch_chain(chain, limit, drop):
             "launchpad": g["launchpad"], "src": [], "wallets": 0, "buy_total_raw": 0.0,
             "mc_raw": 0.0, "trigger_mc": 0.0, "ath": 0.0,
             "ts": g["ts"], "age_min": None, "passed": False,
+            "social": {"twitter": "", "website": ""},
+            "liquidity": 0.0, "vol": 0.0,
         })
         if "聪明钱聚合" not in ent["src"]:
             ent["src"].append("聪明钱聚合")
@@ -293,6 +297,21 @@ def fetch_chain(chain, limit, drop):
         g["mc"] = fmt_usd(g["mc_raw"])
         g["buy_total"] = fmt_usd(g["buy_total_raw"])
         g["src"] = "/".join(g["src"]) or "未知"
+        # v4：信号流也补 12 条评分（字段缺则自动 unknown，不硬编）
+        s = ts12.score_token({
+            "market_cap": g.get("mc_raw") or 0,
+            "liquidity": g.get("liquidity") or 0,
+            "volume_24h": g.get("vol") or 0,
+            "twitter_handle": (g.get("social") or {}).get("twitter") or "",
+            "website": (g.get("social") or {}).get("website") or "",
+        }, chain)
+        g["score12"] = {
+            "score": s["score"],
+            "auto_total": s["auto_total"],
+            "unknown": s["unknown"],
+            "grade": s["grade"],
+            "detail": s["detail"],
+        }
         signals.append(g)
 
     signals.sort(key=lambda x: (-x["score"], -x["ts"]))
