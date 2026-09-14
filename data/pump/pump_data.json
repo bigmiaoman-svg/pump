@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-09-14 04:00 UTC",
+ "scanned_at": "2026-09-14 06:22 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -12,31 +12,31 @@
    "chain": "sol",
    "new_coins": [
     {
-     "name": "ETAC",
-     "symbol": "ETAC",
-     "address": "7ghKoBZBAjGSgbxix5K5kFhQzu9mxVmbdPxRT8j27eEo",
-     "price": 0.000101665,
-     "mcap": "$101.7K",
-     "mcap_raw": 101665,
-     "vol24h": "$52.0K",
-     "vol24h_raw": 52035.9,
-     "liquidity": "$27.3K",
-     "swaps_24h": 767,
-     "holders": 994,
-     "smart_degen": 32,
-     "renowned": 1,
+     "name": "perpspad",
+     "symbol": "PERPSPAD",
+     "address": "PerPsCe2SJ7Q25CN4R5TTX4fmBdmknE2hQmqCt96fHL",
+     "price": 0.00655803,
+     "mcap": "$4.8M",
+     "mcap_raw": 4814520,
+     "vol24h": "$25.8K",
+     "vol24h_raw": 25774.6,
+     "liquidity": "$291.5K",
+     "swaps_24h": 98,
+     "holders": 5158,
+     "smart_degen": 101,
+     "renowned": 9,
      "progress": 0,
-     "launchpad": "ray_launchpad",
-     "logo": "https://gmgn.ai/external-res/22f8abb33200318d0d271cbb3ded61f4_v2.webp",
-     "age_min": 67,
+     "launchpad": "meteora_virtual_curve",
+     "logo": "https://gmgn.ai/external-res/5ac831fe7ee3cd55f91029aba53aa684_v2.webp",
+     "age_min": 100288,
      "social": {
-      "twitter": "https://x.com/Rileyreid2363",
-      "website": "https://www.stonkfun.xyz/",
-      "telegram": ""
+      "twitter": "https://x.com/perpspadfun",
+      "website": "https://perpspad.fun",
+      "telegram": "https://t.me/perpspad"
      },
      "risk": [],
      "score12": {
-      "score": 4,
+      "score": 3,
       "auto_total": 6,
       "unknown": [
        "流动性锁定",
@@ -46,11 +46,11 @@
        "持有者24h增",
        "一句话故事"
       ],
-      "grade": "B",
+      "grade": "C",
       "detail": [
        {
         "k": "池子>$3万",
-        "v": 0
+        "v": 1
        },
        {
         "k": "铸币权限关闭",
@@ -62,7 +62,7 @@
        },
        {
         "k": "前10持有<20%",
-        "v": 1
+        "v": 0
        },
        {
         "k": "钱包分布干净",
@@ -70,7 +70,7 @@
        },
        {
         "k": "量≥流动性一半",
-        "v": 1
+        "v": 0
        },
        {
         "k": "流动性锁定",
@@ -99,7 +99,7 @@
       ]
      },
      "latest": true,
-     "last_seen": 1789358444
+     "last_seen": 1789366928
     }
    ],
    "signals": [
@@ -112,11 +112,11 @@
      "src": "KOL",
      "wallets": 0,
      "buy_total_raw": 0.0,
-     "mc_raw": 2161.2274704338643,
+     "mc_raw": 2172.436269762713,
      "trigger_mc": 78385.26168248699,
      "ath": 87859.974,
      "ts": 1789322698,
-     "age_min": 613,
+     "age_min": 755,
      "passed": false,
      "social": {
       "twitter": "tokenpackfun",
@@ -127,7 +127,7 @@
      "triggers": [
       "🔥KOL买入",
       "💰市值<500万",
-      "🆕上线613分钟"
+      "🆕上线755分钟"
      ],
      "score": 3,
      "mc": "$2.2K",
@@ -209,7 +209,7 @@
      "trigger_mc": 9641503.602679601,
      "ath": 51027900.16799983,
      "ts": 1789349005,
-     "age_min": 177868,
+     "age_min": 178009,
      "passed": false,
      "social": {
       "twitter": "ManifestingXs",
@@ -294,6 +294,96 @@
    },
    "retention": [
     {
+     "name": "perpspad",
+     "symbol": "PERPSPAD",
+     "address": "PerPsCe2SJ7Q25CN4R5TTX4fmBdmknE2hQmqCt96fHL",
+     "price": 0.00655803,
+     "mcap": "$4.8M",
+     "mcap_raw": 4814520,
+     "vol24h": "$25.8K",
+     "vol24h_raw": 25774.6,
+     "liquidity": "$291.5K",
+     "swaps_24h": 98,
+     "holders": 5158,
+     "smart_degen": 101,
+     "renowned": 9,
+     "progress": 0,
+     "launchpad": "meteora_virtual_curve",
+     "logo": "https://gmgn.ai/external-res/5ac831fe7ee3cd55f91029aba53aa684_v2.webp",
+     "age_min": 100288,
+     "social": {
+      "twitter": "https://x.com/perpspadfun",
+      "website": "https://perpspad.fun",
+      "telegram": "https://t.me/perpspad"
+     },
+     "risk": [],
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 0
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
      "name": "ETAC",
      "symbol": "ETAC",
      "address": "7ghKoBZBAjGSgbxix5K5kFhQzu9mxVmbdPxRT8j27eEo",
@@ -380,7 +470,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1789358444
     },
     {
@@ -525,96 +615,6 @@
        {
         "k": "前10持有<20%",
         "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 0
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1789348191
-    },
-    {
-     "name": "perpspad",
-     "symbol": "PERPSPAD",
-     "address": "PerPsCe2SJ7Q25CN4R5TTX4fmBdmknE2hQmqCt96fHL",
-     "price": 0.00535885,
-     "mcap": "$3.9M",
-     "mcap_raw": 3934150,
-     "vol24h": "$79.2K",
-     "vol24h_raw": 79168.7,
-     "liquidity": "$271.1K",
-     "swaps_24h": 235,
-     "holders": 5204,
-     "smart_degen": 100,
-     "renowned": 9,
-     "progress": 0,
-     "launchpad": "meteora_virtual_curve",
-     "logo": "https://gmgn.ai/external-res/5ac831fe7ee3cd55f91029aba53aa684_v2.webp",
-     "age_min": 99976,
-     "social": {
-      "twitter": "https://x.com/perpspadfun",
-      "website": "https://perpspad.fun",
-      "telegram": "https://t.me/perpspad"
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 1
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 0
        },
        {
         "k": "钱包分布干净",
@@ -2112,7 +2112,7 @@
      "trigger_mc": 12753.37,
      "ath": 13883.073,
      "ts": 1789312921,
-     "age_min": 759,
+     "age_min": 900,
      "passed": false,
      "social": {
       "twitter": "BrokeStonkbsc",
@@ -2123,7 +2123,7 @@
      "triggers": [
       "🔥KOL买入",
       "💰市值<500万",
-      "🆕上线759分钟"
+      "🆕上线900分钟"
      ],
      "score": 3,
      "mc": "$3.5K",
@@ -2202,11 +2202,11 @@
      "src": "KOL",
      "wallets": 0,
      "buy_total_raw": 0.0,
-     "mc_raw": 4059.1462999999994,
+     "mc_raw": 4055.8534999999997,
      "trigger_mc": 19096.529,
      "ath": 21370.657,
      "ts": 1789312043,
-     "age_min": 776,
+     "age_min": 918,
      "passed": false,
      "social": {
       "twitter": "FLAP_RGPU",
@@ -2217,7 +2217,7 @@
      "triggers": [
       "🔥KOL买入",
       "💰市值<500万",
-      "🆕上线776分钟"
+      "🆕上线918分钟"
      ],
      "score": 3,
      "mc": "$4.1K",
@@ -2288,204 +2288,18 @@
      }
     },
     {
-     "symbol": "RELIC",
-     "name": "Relic",
-     "address": "0xd9bac5968f62eda2d5a3f95b114fd959ca767777",
-     "logo": "https://gmgn.ai/external-res/ae2ad77a55adb2cc05828f4443f113c7_v2.webp",
-     "launchpad": "flap",
-     "src": "KOL",
-     "wallets": 0,
-     "buy_total_raw": 0.0,
-     "mc_raw": 3839.1179,
-     "trigger_mc": 27188.900999999998,
-     "ath": 48194.317,
-     "ts": 1789304762,
-     "age_min": 895,
-     "passed": false,
-     "social": {
-      "twitter": "RelicBacked",
-      "website": "https://relic.trade/"
-     },
-     "liquidity": 12360.7047,
-     "vol": 0.0,
-     "triggers": [
-      "🔥KOL买入",
-      "💰市值<500万",
-      "🆕上线895分钟"
-     ],
-     "score": 3,
-     "mc": "$3.8K",
-     "buy_total": "$0",
-     "score12": {
-      "score": 2,
-      "auto_total": 6,
-      "unknown": [
-       "冻结权限关闭(EVM无字段)",
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "C",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 0
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": null
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 0
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     }
-    },
-    {
-     "symbol": "conviction",
+     "symbol": "4Stock",
      "name": "",
-     "address": "0x4f4b8d5cac80e58c774135c7cf4621df5e287777",
-     "logo": "",
-     "launchpad": "flap",
-     "src": "聪明钱聚合",
-     "wallets": 1,
-     "buy_total_raw": 356.5378911878437,
-     "mc_raw": 0.0,
-     "trigger_mc": 0.0,
-     "ath": 0.0,
-     "ts": 1789358393,
-     "age_min": null,
-     "passed": false,
-     "social": {
-      "twitter": "",
-      "website": ""
-     },
-     "liquidity": 0.0,
-     "vol": 0.0,
-     "triggers": [
-      "🐋聪明钱×1"
-     ],
-     "score": 1,
-     "mc": "$0",
-     "buy_total": "$357",
-     "score12": {
-      "score": 2,
-      "auto_total": 6,
-      "unknown": [
-       "冻结权限关闭(EVM无字段)",
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "C",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 0
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": null
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 0
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     }
-    },
-    {
-     "symbol": "conviction",
-     "name": "",
-     "address": "0x8abb7277b417507bd39561455e3bb7e39476ffff",
+     "address": "0xd270d4e1ec6e6e0d28c0ecb8be966ec75997ffff",
      "logo": "",
      "launchpad": "openfour",
      "src": "聪明钱聚合",
      "wallets": 1,
-     "buy_total_raw": 703.7805948901229,
+     "buy_total_raw": 1412.3727732654195,
      "mc_raw": 0.0,
      "trigger_mc": 0.0,
      "ath": 0.0,
-     "ts": 1789358368,
+     "ts": 1789366821,
      "age_min": null,
      "passed": false,
      "social": {
@@ -2499,99 +2313,7 @@
      ],
      "score": 1,
      "mc": "$0",
-     "buy_total": "$704",
-     "score12": {
-      "score": 2,
-      "auto_total": 6,
-      "unknown": [
-       "冻结权限关闭(EVM无字段)",
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "C",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 0
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": null
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 0
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     }
-    },
-    {
-     "symbol": "╭∩╮",
-     "name": "",
-     "address": "0xfb5f5d41eecececbad57741d7c53c29939797777",
-     "logo": "",
-     "launchpad": "flap",
-     "src": "聪明钱聚合",
-     "wallets": 1,
-     "buy_total_raw": 356.4469908960267,
-     "mc_raw": 0.0,
-     "trigger_mc": 0.0,
-     "ath": 0.0,
-     "ts": 1789358293,
-     "age_min": null,
-     "passed": false,
-     "social": {
-      "twitter": "",
-      "website": ""
-     },
-     "liquidity": 0.0,
-     "vol": 0.0,
-     "triggers": [
-      "🐋聪明钱×1"
-     ],
-     "score": 1,
-     "mc": "$0",
-     "buy_total": "$356",
+     "buy_total": "$1.4K",
      "score12": {
       "score": 2,
       "auto_total": 6,
@@ -2660,7 +2382,7 @@
    ],
    "stats": {
     "new_filtered": 0,
-    "signal_total": 6
+    "signal_total": 3
    },
    "retention": [
     {
@@ -3313,33 +3035,41 @@
     "new_filtered": 0,
     "signal_total": 2
    },
-   "retention": [
+   "retention": []
+  },
+  "eth": {
+   "chain": "eth",
+   "new_coins": [],
+   "signals": [
     {
-     "name": "vAPI Network",
-     "symbol": "vAPI",
-     "address": "0x1ea8deb921aa6015f4938010c848140b98108dd2",
-     "price": 0.0745812,
-     "mcap": "$4.9M",
-     "mcap_raw": 4941840,
-     "vol24h": "$34.7K",
-     "vol24h_raw": 34686.5,
-     "liquidity": "$658.0K",
-     "swaps_24h": 5,
-     "holders": 641,
-     "smart_degen": 1,
-     "renowned": 3,
-     "progress": 0,
-     "launchpad": "pool_uniswap",
-     "logo": "https://gmgn.ai/external-res/20cf22c6fb6a79a9f1eed36646ccbb56_v2.webp",
-     "age_min": 18772,
+     "symbol": "AAVE",
+     "name": "",
+     "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+     "logo": "",
+     "launchpad": "",
+     "src": "聪明钱聚合",
+     "wallets": 2,
+     "buy_total_raw": 7651.78930380066,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1789366835,
+     "age_min": null,
+     "passed": false,
      "social": {
-      "twitter": "https://x.com/vAPI_Network",
-      "website": "https://vapinetwork.ai/",
-      "telegram": ""
+      "twitter": "",
+      "website": ""
      },
-     "risk": [],
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×2"
+     ],
+     "score": 2,
+     "mc": "$0",
+     "buy_total": "$7.7K",
      "score12": {
-      "score": 3,
+      "score": 2,
       "auto_total": 6,
       "unknown": [
        "冻结权限关闭(EVM无字段)",
@@ -3354,11 +3084,11 @@
       "detail": [
        {
         "k": "池子>$3万",
-        "v": 1
+        "v": 0
        },
        {
         "k": "铸币权限关闭",
-        "v": 1
+        "v": 0
        },
        {
         "k": "冻结权限关闭",
@@ -3366,7 +3096,7 @@
        },
        {
         "k": "前10持有<20%",
-        "v": 0
+        "v": 1
        },
        {
         "k": "钱包分布干净",
@@ -3401,52 +3131,407 @@
         "v": null
        }
       ]
+     }
+    },
+    {
+     "symbol": "LINK",
+     "name": "",
+     "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+     "logo": "",
+     "launchpad": "",
+     "src": "聪明钱聚合",
+     "wallets": 2,
+     "buy_total_raw": 910.628748035226,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1789366295,
+     "age_min": null,
+     "passed": false,
+     "social": {
+      "twitter": "",
+      "website": ""
      },
-     "latest": false,
-     "last_seen": 1789278871
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×2"
+     ],
+     "score": 2,
+     "mc": "$0",
+     "buy_total": "$911",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
+    },
+    {
+     "symbol": "wstETH",
+     "name": "",
+     "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+     "logo": "",
+     "launchpad": "",
+     "src": "聪明钱聚合",
+     "wallets": 2,
+     "buy_total_raw": 4179.9344820930155,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1789366115,
+     "age_min": null,
+     "passed": false,
+     "social": {
+      "twitter": "",
+      "website": ""
+     },
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×2"
+     ],
+     "score": 2,
+     "mc": "$0",
+     "buy_total": "$4.2K",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
+    },
+    {
+     "symbol": "01",
+     "name": "",
+     "address": "0x32708538a107253b51a735a724330a23106ca4ca",
+     "logo": "",
+     "launchpad": "",
+     "src": "聪明钱聚合",
+     "wallets": 1,
+     "buy_total_raw": 494.0854421778,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1789366691,
+     "age_min": null,
+     "passed": false,
+     "social": {
+      "twitter": "",
+      "website": ""
+     },
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×1"
+     ],
+     "score": 1,
+     "mc": "$0",
+     "buy_total": "$494",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
+    },
+    {
+     "symbol": "SHIB",
+     "name": "",
+     "address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+     "logo": "",
+     "launchpad": "",
+     "src": "聪明钱聚合",
+     "wallets": 1,
+     "buy_total_raw": 353.18455252921996,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1789366295,
+     "age_min": null,
+     "passed": false,
+     "social": {
+      "twitter": "",
+      "website": ""
+     },
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×1"
+     ],
+     "score": 1,
+     "mc": "$0",
+     "buy_total": "$353",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
     }
-   ]
-  },
-  "eth": {
-   "chain": "eth",
-   "new_coins": [],
-   "signals": [],
+   ],
    "stats": {
     "new_filtered": 0,
-    "signal_total": 0
+    "signal_total": 5
    },
    "retention": []
   },
   "robinhood": {
    "chain": "robinhood",
-   "new_coins": [],
-   "signals": [],
-   "stats": {
-    "new_filtered": 0,
-    "signal_total": 0
-   },
-   "retention": [
+   "new_coins": [
     {
-     "name": "PAIR",
-     "symbol": "PAIR",
-     "address": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
-     "price": 0.00542409,
-     "mcap": "$5.4M",
-     "mcap_raw": 5424090,
-     "vol24h": "$23.5K",
-     "vol24h_raw": 23523.7,
-     "liquidity": "$255.2K",
-     "swaps_24h": 54,
-     "holders": 9372,
-     "smart_degen": 139,
-     "renowned": 30,
+     "name": "TWINE",
+     "symbol": "TWINE",
+     "address": "0xe27501d787d647cc82a5b4a7eafd5750386f1b77",
+     "price": 0.00221374,
+     "mcap": "$2.2M",
+     "mcap_raw": 2189110,
+     "vol24h": "$47.4K",
+     "vol24h_raw": 47430.7,
+     "liquidity": "$140.0K",
+     "swaps_24h": 73,
+     "holders": 4328,
+     "smart_degen": 122,
+     "renowned": 11,
      "progress": 0,
-     "launchpad": "pair_fund",
-     "logo": "https://gmgn.ai/external-res/b8173a2ae837a196b979fbde63fc3524_v2.webp",
-     "age_min": 15350,
+     "launchpad": "pons_v2",
+     "logo": "https://gmgn.ai/external-res/14e9b66f6ba45975f7f38820a91b0b45_v2.webp",
+     "age_min": 2085,
      "social": {
-      "twitter": "https://x.com/pairdotfund",
-      "website": "https://pair.fund",
+      "twitter": "https://x.com/twinedotfun",
+      "website": "https://twine.auction/",
       "telegram": ""
      },
      "risk": [],
@@ -3514,30 +3599,121 @@
        }
       ]
      },
-     "latest": false,
-     "last_seen": 1789340675
+     "latest": true,
+     "last_seen": 1789366928
     },
     {
-     "name": "TWINE",
-     "symbol": "TWINE",
-     "address": "0xe27501d787d647cc82a5b4a7eafd5750386f1b77",
-     "price": 0.0058793,
-     "mcap": "$5.8M",
-     "mcap_raw": 5813880,
-     "vol24h": "$147.5K",
-     "vol24h_raw": 147534,
-     "liquidity": "$223.6K",
-     "swaps_24h": 433,
-     "holders": 4436,
-     "smart_degen": 117,
-     "renowned": 10,
+     "name": "Rob Track Record",
+     "symbol": "PNL",
+     "address": "0xbba60ab93fc409b1a34371cbf6c3173795ed2c7e",
+     "price": 0.00061666,
+     "mcap": "$616.7K",
+     "mcap_raw": 616660,
+     "vol24h": "$27.7K",
+     "vol24h_raw": 27728.8,
+     "liquidity": "$73.0K",
+     "swaps_24h": 192,
+     "holders": 1195,
+     "smart_degen": 38,
+     "renowned": 4,
      "progress": 0,
      "launchpad": "pons_v2",
-     "logo": "https://gmgn.ai/external-res/14e9b66f6ba45975f7f38820a91b0b45_v2.webp",
-     "age_min": 1647,
+     "logo": "https://gmgn.ai/external-res/7b127eddf9b6b1e74ebe8f18cc69ef05_v2.webp",
+     "age_min": 118,
      "social": {
-      "twitter": "https://x.com/twinedotfun",
-      "website": "https://twine.auction/",
+      "twitter": "https://x.com/tmachinroBot",
+      "website": "https://pnl.onthechain.lol",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "Synapse Protocol",
+     "symbol": "SYNAPSE",
+     "address": "0xe96184c99b3a3b89c907ea0753c5fde9e3c572ab",
+     "price": 0.000434556,
+     "mcap": "$434.6K",
+     "mcap_raw": 434556,
+     "vol24h": "$54.7K",
+     "vol24h_raw": 54658.5,
+     "liquidity": "$61.3K",
+     "swaps_24h": 259,
+     "holders": 1703,
+     "smart_degen": 34,
+     "renowned": 3,
+     "progress": 0,
+     "launchpad": "pons_v2",
+     "logo": "https://gmgn.ai/external-res/fcffcb7238a10031f6296f45c123abcc_v2.webp",
+     "age_min": 132,
+     "social": {
+      "twitter": "https://x.com/synepsepad",
+      "website": "https://usesynapse.ink/",
       "telegram": ""
      },
      "risk": [],
@@ -3605,27 +3781,209 @@
        }
       ]
      },
-     "latest": false,
-     "last_seen": 1789340675
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "QUACKERCOIN",
+     "symbol": "QUACKERCOIN",
+     "address": "0x3b1b00d96b9ac7aad51ca34d5319415157dd1e18",
+     "price": 2.4473684e-05,
+     "mcap": "$24.5K",
+     "mcap_raw": 24473.68,
+     "vol24h": "$101.0K",
+     "vol24h_raw": 100953.7,
+     "liquidity": "$82",
+     "swaps_24h": 650,
+     "holders": 13,
+     "smart_degen": 22,
+     "renowned": 3,
+     "progress": 0.1,
+     "launchpad": "longxyz",
+     "logo": "https://gmgn.ai/external-res/f605c48fd8984a70892574a525cfa9e2_v2.webp",
+     "age_min": 768,
+     "social": {
+      "twitter": "0xtytebU77y",
+      "website": "https://github.com/anthropics/evals/blob/84fcc677e52e1902d696c32cd1a6b663e70d3993/advanced-ai-risk/lm_generated_evals/myopic-reward.jsonl#L99",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "JUNOCLOCK",
+     "symbol": "JUNOCLOCK",
+     "address": "0x2bf8ce7d31f5856aca4bd8d4e3a99e336a0c1e18",
+     "price": 0.000199333,
+     "mcap": "$199.3K",
+     "mcap_raw": 199333,
+     "vol24h": "$55.5K",
+     "vol24h_raw": 55534.4,
+     "liquidity": "$36.6K",
+     "swaps_24h": 482,
+     "holders": 205,
+     "smart_degen": 19,
+     "renowned": 3,
+     "progress": 0,
+     "launchpad": "longxyz",
+     "logo": "https://gmgn.ai/external-res/a7e689e5a327744ba25232189c17527a_v2.webp",
+     "age_min": 1,
+     "social": {
+      "twitter": "https://x.com/junosclock",
+      "website": "https://junosclock.com/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 5,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
     },
     {
      "name": "ChatJiPiT",
      "symbol": "CHATJIPLT",
      "address": "0x3ef0c86d650edb9f55439f3812f73ce97dac1e18",
-     "price": 2.1285576e-05,
-     "mcap": "$21.3K",
-     "mcap_raw": 21285.58,
+     "price": 2.0981616e-05,
+     "mcap": "$21.0K",
+     "mcap_raw": 20981.62,
      "vol24h": "$27.8K",
-     "vol24h_raw": 27796.22,
-     "liquidity": "$52",
-     "swaps_24h": 184,
-     "holders": 9,
+     "vol24h_raw": 27799.18,
+     "liquidity": "$46",
+     "swaps_24h": 185,
+     "holders": 8,
      "smart_degen": 12,
      "renowned": 2,
      "progress": 0.0,
      "launchpad": "longxyz",
      "logo": "https://gmgn.ai/external-res/3efa22b5cadff766def2153be26bfa95_v2.webp",
-     "age_min": 736,
+     "age_min": 1174,
      "social": {
       "twitter": "ord1nary_fella",
       "website": "https://chatjipiti-game-fabian.fabianchua6.chatgpt.site/#chat",
@@ -3696,8 +4054,8 @@
        }
       ]
      },
-     "latest": false,
-     "last_seen": 1789340675
+     "latest": true,
+     "last_seen": 1789366928
     },
     {
      "name": "Kill Switch",
@@ -3716,7 +4074,7 @@
      "progress": 0.1,
      "launchpad": "longxyz",
      "logo": "https://gmgn.ai/external-res/d117e2906f398a6efb0b7c8cd5c1f0a5_v2.webp",
-     "age_min": 151,
+     "age_min": 589,
      "social": {
       "twitter": "bbaoo777",
       "website": "https://www.cbsnews.com/news/anthropic-ceo-dario-amodei-on-ai-risks/#:~:text=to%20a%20mandatory%20%22-,kill%20switch,-%22%20that%20could%20shut",
@@ -3787,27 +4145,27 @@
        }
       ]
      },
-     "latest": false,
-     "last_seen": 1789340675
+     "latest": true,
+     "last_seen": 1789366928
     },
     {
      "name": "ANTHROPIC",
      "symbol": "FLOWER",
      "address": "0x7c407ea4563172ac91b8d58c5a80c08730e51e18",
-     "price": 2.4024309e-05,
-     "mcap": "$24.0K",
-     "mcap_raw": 24024.31,
+     "price": 2.4330521e-05,
+     "mcap": "$24.3K",
+     "mcap_raw": 24330.52,
      "vol24h": "$42.2K",
-     "vol24h_raw": 42212.52,
-     "liquidity": "$73",
-     "swaps_24h": 322,
-     "holders": 11,
+     "vol24h_raw": 42218.1,
+     "liquidity": "$64",
+     "swaps_24h": 324,
+     "holders": 9,
      "smart_degen": 9,
      "renowned": 5,
-     "progress": 0.1,
+     "progress": 0.0,
      "launchpad": "longxyz",
      "logo": "https://gmgn.ai/external-res/c4a02515c58fa9101b37789642793744_v2.webp",
-     "age_min": 394,
+     "age_min": 831,
      "social": {
       "twitter": "ddddddd8a",
       "website": "https://polymarket.com/event/what-will-anthropics-public-ticker-be",
@@ -3851,6 +4209,927 @@
        {
         "k": "量≥流动性一半",
         "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    }
+   ],
+   "signals": [
+    {
+     "symbol": "NGX",
+     "name": "Nigerian Oil",
+     "address": "0x72d031993bcb1a1e6bda3133e2ff1a9d2e021e18",
+     "logo": "https://gmgn.ai/external-res/efa5a10b2fe5ad998732b0d900df36fb_v2.webp",
+     "launchpad": "longxyz",
+     "src": "聪明钱",
+     "wallets": 0,
+     "buy_total_raw": 0.0,
+     "mc_raw": 20314.217999999997,
+     "trigger_mc": 33511.638,
+     "ath": 39031.478,
+     "ts": 1789345843,
+     "age_min": 352,
+     "passed": false,
+     "social": {
+      "twitter": "DangoteGroup",
+      "website": "https://dangote.com/"
+     },
+     "liquidity": 4910.193309986039,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱买入",
+      "💰市值<500万",
+      "🆕上线352分钟"
+     ],
+     "score": 4,
+     "mc": "$20.3K",
+     "buy_total": "$0",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
+    }
+   ],
+   "stats": {
+    "new_filtered": 8,
+    "signal_total": 1
+   },
+   "retention": [
+    {
+     "name": "TWINE",
+     "symbol": "TWINE",
+     "address": "0xe27501d787d647cc82a5b4a7eafd5750386f1b77",
+     "price": 0.00221374,
+     "mcap": "$2.2M",
+     "mcap_raw": 2189110,
+     "vol24h": "$47.4K",
+     "vol24h_raw": 47430.7,
+     "liquidity": "$140.0K",
+     "swaps_24h": 73,
+     "holders": 4328,
+     "smart_degen": 122,
+     "renowned": 11,
+     "progress": 0,
+     "launchpad": "pons_v2",
+     "logo": "https://gmgn.ai/external-res/14e9b66f6ba45975f7f38820a91b0b45_v2.webp",
+     "age_min": 2085,
+     "social": {
+      "twitter": "https://x.com/twinedotfun",
+      "website": "https://twine.auction/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "Rob Track Record",
+     "symbol": "PNL",
+     "address": "0xbba60ab93fc409b1a34371cbf6c3173795ed2c7e",
+     "price": 0.00061666,
+     "mcap": "$616.7K",
+     "mcap_raw": 616660,
+     "vol24h": "$27.7K",
+     "vol24h_raw": 27728.8,
+     "liquidity": "$73.0K",
+     "swaps_24h": 192,
+     "holders": 1195,
+     "smart_degen": 38,
+     "renowned": 4,
+     "progress": 0,
+     "launchpad": "pons_v2",
+     "logo": "https://gmgn.ai/external-res/7b127eddf9b6b1e74ebe8f18cc69ef05_v2.webp",
+     "age_min": 118,
+     "social": {
+      "twitter": "https://x.com/tmachinroBot",
+      "website": "https://pnl.onthechain.lol",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "Synapse Protocol",
+     "symbol": "SYNAPSE",
+     "address": "0xe96184c99b3a3b89c907ea0753c5fde9e3c572ab",
+     "price": 0.000434556,
+     "mcap": "$434.6K",
+     "mcap_raw": 434556,
+     "vol24h": "$54.7K",
+     "vol24h_raw": 54658.5,
+     "liquidity": "$61.3K",
+     "swaps_24h": 259,
+     "holders": 1703,
+     "smart_degen": 34,
+     "renowned": 3,
+     "progress": 0,
+     "launchpad": "pons_v2",
+     "logo": "https://gmgn.ai/external-res/fcffcb7238a10031f6296f45c123abcc_v2.webp",
+     "age_min": 132,
+     "social": {
+      "twitter": "https://x.com/synepsepad",
+      "website": "https://usesynapse.ink/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 5,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "QUACKERCOIN",
+     "symbol": "QUACKERCOIN",
+     "address": "0x3b1b00d96b9ac7aad51ca34d5319415157dd1e18",
+     "price": 2.4473684e-05,
+     "mcap": "$24.5K",
+     "mcap_raw": 24473.68,
+     "vol24h": "$101.0K",
+     "vol24h_raw": 100953.7,
+     "liquidity": "$82",
+     "swaps_24h": 650,
+     "holders": 13,
+     "smart_degen": 22,
+     "renowned": 3,
+     "progress": 0.1,
+     "launchpad": "longxyz",
+     "logo": "https://gmgn.ai/external-res/f605c48fd8984a70892574a525cfa9e2_v2.webp",
+     "age_min": 768,
+     "social": {
+      "twitter": "0xtytebU77y",
+      "website": "https://github.com/anthropics/evals/blob/84fcc677e52e1902d696c32cd1a6b663e70d3993/advanced-ai-risk/lm_generated_evals/myopic-reward.jsonl#L99",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "JUNOCLOCK",
+     "symbol": "JUNOCLOCK",
+     "address": "0x2bf8ce7d31f5856aca4bd8d4e3a99e336a0c1e18",
+     "price": 0.000199333,
+     "mcap": "$199.3K",
+     "mcap_raw": 199333,
+     "vol24h": "$55.5K",
+     "vol24h_raw": 55534.4,
+     "liquidity": "$36.6K",
+     "swaps_24h": 482,
+     "holders": 205,
+     "smart_degen": 19,
+     "renowned": 3,
+     "progress": 0,
+     "launchpad": "longxyz",
+     "logo": "https://gmgn.ai/external-res/a7e689e5a327744ba25232189c17527a_v2.webp",
+     "age_min": 1,
+     "social": {
+      "twitter": "https://x.com/junosclock",
+      "website": "https://junosclock.com/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 5,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "ChatJiPiT",
+     "symbol": "CHATJIPLT",
+     "address": "0x3ef0c86d650edb9f55439f3812f73ce97dac1e18",
+     "price": 2.0981616e-05,
+     "mcap": "$21.0K",
+     "mcap_raw": 20981.62,
+     "vol24h": "$27.8K",
+     "vol24h_raw": 27799.18,
+     "liquidity": "$46",
+     "swaps_24h": 185,
+     "holders": 8,
+     "smart_degen": 12,
+     "renowned": 2,
+     "progress": 0.0,
+     "launchpad": "longxyz",
+     "logo": "https://gmgn.ai/external-res/3efa22b5cadff766def2153be26bfa95_v2.webp",
+     "age_min": 1174,
+     "social": {
+      "twitter": "ord1nary_fella",
+      "website": "https://chatjipiti-game-fabian.fabianchua6.chatgpt.site/#chat",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "Kill Switch",
+     "symbol": "SWITCH",
+     "address": "0xcb4dc5cfc1579e25a69b6b157a366e0fd5f11e18",
+     "price": 2.6311697e-05,
+     "mcap": "$26.3K",
+     "mcap_raw": 26311.7,
+     "vol24h": "$30.6K",
+     "vol24h_raw": 30635.04,
+     "liquidity": "$108",
+     "swaps_24h": 279,
+     "holders": 9,
+     "smart_degen": 11,
+     "renowned": 1,
+     "progress": 0.1,
+     "launchpad": "longxyz",
+     "logo": "https://gmgn.ai/external-res/d117e2906f398a6efb0b7c8cd5c1f0a5_v2.webp",
+     "age_min": 589,
+     "social": {
+      "twitter": "bbaoo777",
+      "website": "https://www.cbsnews.com/news/anthropic-ceo-dario-amodei-on-ai-risks/#:~:text=to%20a%20mandatory%20%22-,kill%20switch,-%22%20that%20could%20shut",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "ANTHROPIC",
+     "symbol": "FLOWER",
+     "address": "0x7c407ea4563172ac91b8d58c5a80c08730e51e18",
+     "price": 2.4330521e-05,
+     "mcap": "$24.3K",
+     "mcap_raw": 24330.52,
+     "vol24h": "$42.2K",
+     "vol24h_raw": 42218.1,
+     "liquidity": "$64",
+     "swaps_24h": 324,
+     "holders": 9,
+     "smart_degen": 9,
+     "renowned": 5,
+     "progress": 0.0,
+     "launchpad": "longxyz",
+     "logo": "https://gmgn.ai/external-res/c4a02515c58fa9101b37789642793744_v2.webp",
+     "age_min": 831,
+     "social": {
+      "twitter": "ddddddd8a",
+      "website": "https://polymarket.com/event/what-will-anthropics-public-ticker-be",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1789366928
+    },
+    {
+     "name": "PAIR",
+     "symbol": "PAIR",
+     "address": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
+     "price": 0.00542409,
+     "mcap": "$5.4M",
+     "mcap_raw": 5424090,
+     "vol24h": "$23.5K",
+     "vol24h_raw": 23523.7,
+     "liquidity": "$255.2K",
+     "swaps_24h": 54,
+     "holders": 9372,
+     "smart_degen": 139,
+     "renowned": 30,
+     "progress": 0,
+     "launchpad": "pair_fund",
+     "logo": "https://gmgn.ai/external-res/b8173a2ae837a196b979fbde63fc3524_v2.webp",
+     "age_min": 15350,
+     "social": {
+      "twitter": "https://x.com/pairdotfund",
+      "website": "https://pair.fund",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
        },
        {
         "k": "流动性锁定",
@@ -4153,97 +5432,6 @@
      },
      "latest": false,
      "last_seen": 1789340675
-    },
-    {
-     "name": "QUACKERCOIN",
-     "symbol": "QUACKERCOIN",
-     "address": "0x3b1b00d96b9ac7aad51ca34d5319415157dd1e18",
-     "price": 2.5247186e-05,
-     "mcap": "$25.2K",
-     "mcap_raw": 25247.19,
-     "vol24h": "$100.9K",
-     "vol24h_raw": 100949.53,
-     "liquidity": "$103",
-     "swaps_24h": 648,
-     "holders": 15,
-     "smart_degen": 22,
-     "renowned": 3,
-     "progress": 0.1,
-     "launchpad": "longxyz",
-     "logo": "https://gmgn.ai/external-res/f605c48fd8984a70892574a525cfa9e2_v2.webp",
-     "age_min": 202,
-     "social": {
-      "twitter": "0xtytebU77y",
-      "website": "https://github.com/anthropics/evals/blob/84fcc677e52e1902d696c32cd1a6b663e70d3993/advanced-ai-risk/lm_generated_evals/myopic-reward.jsonl#L99",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "冻结权限关闭(EVM无字段)",
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": null
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1789332959
     },
     {
      "name": "Freedom",
@@ -4972,307 +6160,32 @@
      },
      "latest": false,
      "last_seen": 1789323216
-    },
-    {
-     "name": "Large Language Model",
-     "symbol": "LLM",
-     "address": "0x6f1a924b217e7bb254605662c4223b604b7e07ff",
-     "price": 0.000689878,
-     "mcap": "$689.9K",
-     "mcap_raw": 689878,
-     "vol24h": "$23.0K",
-     "vol24h_raw": 22974.1,
-     "liquidity": "$78.0K",
-     "swaps_24h": 79,
-     "holders": 1522,
-     "smart_degen": 88,
-     "renowned": 8,
-     "progress": 0,
-     "launchpad": "pons_v2",
-     "logo": "https://gmgn.ai/external-res/ff280a75f3208ebde00acc1209a6beb4_v2.webp",
-     "age_min": 536,
-     "social": {
-      "twitter": "https://x.com/launchLLMs",
-      "website": "https://llmtokens.fun/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "冻结权限关闭(EVM无字段)",
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 1
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": null
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 0
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1789278871
-    },
-    {
-     "name": "iNu",
-     "symbol": "INU",
-     "address": "0x63ee32ac3077d1fbd8a77ebba2a6ed4b8e9c1e18",
-     "price": 0.00420573,
-     "mcap": "$4.2M",
-     "mcap_raw": 4205320,
-     "vol24h": "$34.5K",
-     "vol24h_raw": 34473.9,
-     "liquidity": "$575.2K",
-     "swaps_24h": 36,
-     "holders": 1704,
-     "smart_degen": 58,
-     "renowned": 8,
-     "progress": 0,
-     "launchpad": "longxyz",
-     "logo": "https://gmgn.ai/external-res/fdf65db428356a0624654e84de62bced_v2.webp",
-     "age_min": 2766,
-     "social": {
-      "twitter": "https://x.com/inuapple?s=21",
-      "website": "https://inuapple.com/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 3,
-      "auto_total": 6,
-      "unknown": [
-       "冻结权限关闭(EVM无字段)",
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "C",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 1
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": null
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 0
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 0
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1789278871
-    },
-    {
-     "name": "Doomerism",
-     "symbol": "DOOMERISM",
-     "address": "0x7b9e99db0d685909f997f772f2fb8bbdaa751e18",
-     "price": 2.2711866e-05,
-     "mcap": "$22.7K",
-     "mcap_raw": 22711.87,
-     "vol24h": "$140.4K",
-     "vol24h_raw": 140368.43,
-     "liquidity": "$236",
-     "swaps_24h": 851,
-     "holders": 9,
-     "smart_degen": 27,
-     "renowned": 6,
-     "progress": 0.2,
-     "launchpad": "longxyz",
-     "logo": "https://gmgn.ai/external-res/fbb6a10b039f5105703c33e45f5129e1_v2.webp",
-     "age_min": 951,
-     "social": {
-      "twitter": "whathehell125",
-      "website": "https://www.gamestonk.site/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "冻结权限关闭(EVM无字段)",
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": null
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1789278871
     }
    ]
   }
  },
  "stats": {
-  "new_filtered": 1,
-  "signal_total": 10,
-  "retention_total": 46,
+  "new_filtered": 9,
+  "signal_total": 13,
+  "retention_total": 45,
   "filter_breakdown": {
-   "市值过低(<1万)": 73,
-   "信号源:缺官网或推特 (无官网) (无推特)": 44,
-   "信号源:缺官网或推特 (无推特)": 42,
-   "缺官网或推特 (无官网) (无推特)": 11,
-   "市值过高(>1000万)": 8,
-   "bundler集中": 7,
-   "缺官网或推特 (无官网)": 7,
-   "缺官网或推特 (无推特)": 4,
+   "信号源:缺官网或推特 (无官网) (无推特)": 79,
+   "市值过低(<1万)": 69,
+   "信号源:缺官网或推特 (无推特)": 51,
+   "缺官网或推特 (无官网)": 29,
+   "缺官网或推特 (无官网) (无推特)": 21,
+   "市值过高(>1000万)": 15,
+   "缺官网或推特 (无推特)": 5,
+   "筹码集中>40%": 5,
+   "信号源:缺官网或推特 (无官网)": 4,
    "信号源:rug风险0.98": 3,
-   "信号源:缺官网或推特 (无官网)": 2,
-   "信号源:rug风险0.70": 2,
-   "rug风险0.50": 1,
-   "rug风险0.98": 1,
-   "rug风险0.48": 1,
-   "rug风险0.47": 1,
+   "rug风险1.00": 1,
+   "rug风险0.40": 1,
    "信号源:rug风险0.31": 1,
    "信号源:rug风险0.75": 1,
+   "信号源:rug风险0.70": 1,
    "老鼠仓占比高": 1,
-   "筹码集中>40%": 1
+   "貔貅盘": 1
   }
  }
 }
