@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-04 23:30 UTC",
+ "scanned_at": "2026-10-05 02:00 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -12,31 +12,31 @@
    "chain": "sol",
    "new_coins": [
     {
-     "name": "Agent Clone",
-     "symbol": "CLONE",
-     "address": "3eQSKbRyeKfDkHXPLGBt4uP2fiBBL5tiyNd8hqDLpump",
-     "price": 1.1397898e-05,
-     "mcap": "$11.4K",
-     "mcap_raw": 11397.9,
-     "vol24h": "$40.2K",
-     "vol24h_raw": 40164.27,
+     "name": "Flume",
+     "symbol": "FLUME",
+     "address": "BukX7ybJBAsnLAJra51ZzsJkds5jkMAnRpbiZFoMvFLM",
+     "price": 2.6589843e-05,
+     "mcap": "$25.6K",
+     "mcap_raw": 25612.53,
+     "vol24h": "$56.5K",
+     "vol24h_raw": 56510.17,
      "liquidity": "$13.4K",
-     "swaps_24h": 600,
-     "holders": 77,
-     "smart_degen": 2,
-     "renowned": 0,
-     "progress": 61.6,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-asia/179e15957580d7a71395cac6ff9dfe4b_v2.webp",
-     "age_min": 34,
+     "swaps_24h": 691,
+     "holders": 81,
+     "smart_degen": 7,
+     "renowned": 1,
+     "progress": 65.1,
+     "launchpad": "meteora_virtual_curve",
+     "logo": "https://gmgn.ai/external-res/5e33d9b9ecca4d26001a098e654975b4_v2.webp",
+     "age_min": 25,
      "social": {
-      "twitter": "AgentsClone",
-      "website": "https://www.agentsclone.si/",
-      "telegram": "https://t.me/AgentsClone"
+      "twitter": "flumedotio",
+      "website": "https://flumeapp.io/",
+      "telegram": ""
      },
      "risk": [],
      "score12": {
-      "score": 4,
+      "score": 3,
       "auto_total": 6,
       "unknown": [
        "流动性锁定",
@@ -46,7 +46,7 @@
        "持有者24h增",
        "一句话故事"
       ],
-      "grade": "B",
+      "grade": "C",
       "detail": [
        {
         "k": "池子>$3万",
@@ -62,7 +62,7 @@
        },
        {
         "k": "前10持有<20%",
-        "v": 1
+        "v": 0
        },
        {
         "k": "钱包分布干净",
@@ -99,7 +99,7 @@
       ]
      },
      "latest": true,
-     "last_seen": 1791156636
+     "last_seen": 1791165631
     }
    ],
    "signals": [],
@@ -108,6 +108,96 @@
     "signal_total": 0
    },
    "retention": [
+    {
+     "name": "Flume",
+     "symbol": "FLUME",
+     "address": "BukX7ybJBAsnLAJra51ZzsJkds5jkMAnRpbiZFoMvFLM",
+     "price": 2.6589843e-05,
+     "mcap": "$25.6K",
+     "mcap_raw": 25612.53,
+     "vol24h": "$56.5K",
+     "vol24h_raw": 56510.17,
+     "liquidity": "$13.4K",
+     "swaps_24h": 691,
+     "holders": 81,
+     "smart_degen": 7,
+     "renowned": 1,
+     "progress": 65.1,
+     "launchpad": "meteora_virtual_curve",
+     "logo": "https://gmgn.ai/external-res/5e33d9b9ecca4d26001a098e654975b4_v2.webp",
+     "age_min": 25,
+     "social": {
+      "twitter": "flumedotio",
+      "website": "https://flumeapp.io/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 0
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1791165631
+    },
     {
      "name": "Agent Clone",
      "symbol": "CLONE",
@@ -195,7 +285,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1791156636
     },
     {
@@ -1817,96 +1907,6 @@
      },
      "latest": false,
      "last_seen": 1791118042
-    },
-    {
-     "name": "Agentic Arena ",
-     "symbol": "ARENA",
-     "address": "287w94VmkRi54fsvfBP97fwDbftNFAXkAD2hQsHjpump",
-     "price": 1.62e-05,
-     "mcap": "$15.1K",
-     "mcap_raw": 15133.4,
-     "vol24h": "$26.8K",
-     "vol24h_raw": 26845,
-     "liquidity": "$7.5K",
-     "swaps_24h": 614,
-     "holders": 337,
-     "smart_degen": 14,
-     "renowned": 2,
-     "progress": 0,
-     "launchpad": "pump",
-     "logo": "https://gmgn.ai/external-res/056931329dfcf82b6651aebc89958c89_v2.webp",
-     "age_min": 6,
-     "social": {
-      "twitter": "https://x.com/AgenticArena",
-      "website": "https://theagenticarena.xyz/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 5,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1791115232
     }
    ]
   },
@@ -2322,11 +2322,10 @@
   "retention_total": 24,
   "filter_breakdown": {
    "市值过低(<1万)": 53,
-   "bundler集中": 5,
+   "bundler集中": 4,
    "缺官网或推特 (无官网)": 1,
-   "缺官网或推特 (无官网) (无推特)": 1,
-   "rug风险0.66": 1,
-   "rug风险0.98": 1
+   "缺官网或推特 (无推特)": 1,
+   "缺官网或推特 (无官网) (无推特)": 1
   }
  }
 }
