@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-16 21:15 UTC",
+ "scanned_at": "2026-10-16 23:41 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -12,31 +12,31 @@
    "chain": "sol",
    "new_coins": [
     {
-     "name": "Pumpers",
-     "symbol": "Pumpers",
-     "address": "D7mXWmYtrQ1QxDTdHNCgrgkvag2jr6KVsPsxT69Tpump",
-     "price": 2.6925758e-05,
-     "mcap": "$26.9K",
-     "mcap_raw": 26925.76,
-     "vol24h": "$62.3K",
-     "vol24h_raw": 62320.78,
-     "liquidity": "$13.0K",
-     "swaps_24h": 1141,
-     "holders": 108,
-     "smart_degen": 9,
-     "renowned": 2,
-     "progress": 88.7,
+     "name": "GrailStone",
+     "symbol": "GRAILS",
+     "address": "GysVd8CyRvYn6yVp5zGzmbsW9zVkTQCjVE5pMb68pump",
+     "price": 2.0933099e-05,
+     "mcap": "$20.2K",
+     "mcap_raw": 20168.41,
+     "vol24h": "$34.2K",
+     "vol24h_raw": 34159.3,
+     "liquidity": "$10.6K",
+     "swaps_24h": 543,
+     "holders": 74,
+     "smart_degen": 3,
+     "renowned": 0,
+     "progress": 83.9,
      "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-asia/6be61ee33059e6e23ee0154bd0a08245_v2.webp",
-     "age_min": 25,
+     "logo": "https://gmgn.ai/external-res/d8b4021794a5b35212400f0d550e9cfc_v2.webp",
+     "age_min": 70,
      "social": {
-      "twitter": "BoltricksDev",
-      "website": "https://www.reddit.com/r/pumpfun/",
+      "twitter": "playgrailstone",
+      "website": "https://grailst.one/",
       "telegram": ""
      },
      "risk": [],
      "score12": {
-      "score": 4,
+      "score": 3,
       "auto_total": 6,
       "unknown": [
        "流动性锁定",
@@ -46,7 +46,7 @@
        "持有者24h增",
        "一句话故事"
       ],
-      "grade": "B",
+      "grade": "C",
       "detail": [
        {
         "k": "池子>$3万",
@@ -66,7 +66,7 @@
        },
        {
         "k": "钱包分布干净",
-        "v": 1
+        "v": 0
        },
        {
         "k": "量≥流动性一半",
@@ -99,7 +99,7 @@
       ]
      },
      "latest": true,
-     "last_seen": 1792185311
+     "last_seen": 1792194106
     }
    ],
    "signals": [],
@@ -108,6 +108,96 @@
     "signal_total": 0
    },
    "retention": [
+    {
+     "name": "GrailStone",
+     "symbol": "GRAILS",
+     "address": "GysVd8CyRvYn6yVp5zGzmbsW9zVkTQCjVE5pMb68pump",
+     "price": 2.0933099e-05,
+     "mcap": "$20.2K",
+     "mcap_raw": 20168.41,
+     "vol24h": "$34.2K",
+     "vol24h_raw": 34159.3,
+     "liquidity": "$10.6K",
+     "swaps_24h": 543,
+     "holders": 74,
+     "smart_degen": 3,
+     "renowned": 0,
+     "progress": 83.9,
+     "launchpad": "Pump.fun",
+     "logo": "https://gmgn.ai/external-res/d8b4021794a5b35212400f0d550e9cfc_v2.webp",
+     "age_min": 70,
+     "social": {
+      "twitter": "playgrailstone",
+      "website": "https://grailst.one/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 0
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1792194106
+    },
     {
      "name": "Pumpers",
      "symbol": "Pumpers",
@@ -195,7 +285,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1792185311
     },
     {
@@ -1817,96 +1907,6 @@
      },
      "latest": false,
      "last_seen": 1792125743
-    },
-    {
-     "name": "Tangibles",
-     "symbol": "TANG",
-     "address": "GKboyzRdB93iEpfr6Gjs8A2wXe7Tp4kVD5WwkNfepump",
-     "price": 0.000800395,
-     "mcap": "$758.4K",
-     "mcap_raw": 758436,
-     "vol24h": "$34.0K",
-     "vol24h_raw": 33992.8,
-     "liquidity": "$95.4K",
-     "swaps_24h": 216,
-     "holders": 1651,
-     "smart_degen": 100,
-     "renowned": 9,
-     "progress": 0,
-     "launchpad": "pump",
-     "logo": "https://gmgn.ai/external-res/538a775d88e39edfadfd73741c57f119_v2.webp",
-     "age_min": 14998,
-     "social": {
-      "twitter": "https://www.x.com/tangiblesgame",
-      "website": "https://www.tangibles.fun",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 5,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 1
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 0
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1792125743
     }
    ]
   },
@@ -2139,11 +2139,12 @@
   "signal_total": 0,
   "retention_total": 22,
   "filter_breakdown": {
-   "市值过低(<1万)": 55,
-   "bundler集中": 3,
-   "缺官网或推特 (无官网)": 3,
-   "rug风险0.94": 1,
-   "rug风险0.48": 1
+   "市值过低(<1万)": 56,
+   "缺官网或推特 (无官网)": 1,
+   "rug风险0.50": 1,
+   "rug风险1.00": 1,
+   "rug风险0.48": 1,
+   "bundler集中": 1
   }
  }
 }
