@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-18 07:00 UTC",
+ "scanned_at": "2026-10-18 09:00 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -10,31 +10,36 @@
  "by_chain": {
   "sol": {
    "chain": "sol",
-   "new_coins": [
+   "new_coins": [],
+   "signals": [
     {
-     "name": "Bison and Cuddles",
-     "symbol": "BAC",
-     "address": "A25qSmSKGgVmvU8qNxzSq7UjF3RSE9YVu54LFoYrpump",
-     "price": 1.1105168882711207e-05,
-     "mcap": "$11.1K",
-     "mcap_raw": 11105.17,
-     "vol24h": "$58.9K",
-     "vol24h_raw": 58873.11,
-     "liquidity": "$12.2K",
-     "swaps_24h": 1406,
-     "holders": 120,
-     "smart_degen": 7,
-     "renowned": 0,
-     "progress": 66.0,
+     "symbol": "SLOPCORE",
+     "name": "SLOPCORE",
+     "address": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+     "logo": "https://gmgn.ai/external-res/e911180fd04bf81670dad8b055ae1418_v2.webp",
      "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-eu/27b3b7aec2b8da32a5a4277d0600f2ac_v2.webp",
-     "age_min": 29,
+     "src": "聪明钱",
+     "wallets": 0,
+     "buy_total_raw": 0.0,
+     "mc_raw": 517073.5773030258,
+     "trigger_mc": 460748.2698861926,
+     "ath": 4377002.2249975195,
+     "ts": 1792291999,
+     "age_min": 29336,
+     "passed": false,
      "social": {
-      "twitter": "D1Fox02",
-      "website": "https://www.tiktok.com/@horizon.rescue.re/video/7694664707830975765?_r=1&_t=ZT-9AeEpnlmQIw",
-      "telegram": ""
+      "twitter": "slopcoresolana",
+      "website": "https://slopcore.fun/"
      },
-     "risk": [],
+     "liquidity": 85998.0766246324,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱买入",
+      "💰市值<500万"
+     ],
+     "score": 3,
+     "mc": "$517.1K",
+     "buy_total": "$0",
      "score12": {
       "score": 3,
       "auto_total": 6,
@@ -50,27 +55,27 @@
       "detail": [
        {
         "k": "池子>$3万",
-        "v": 0
+        "v": 1
        },
        {
         "k": "铸币权限关闭",
-        "v": 1
+        "v": 0
        },
        {
         "k": "冻结权限关闭",
-        "v": 1
+        "v": 0
        },
        {
         "k": "前10持有<20%",
-        "v": 0
+        "v": 1
        },
        {
         "k": "钱包分布干净",
-        "v": 0
+        "v": 1
        },
        {
         "k": "量≥流动性一半",
-        "v": 1
+        "v": 0
        },
        {
         "k": "流动性锁定",
@@ -97,15 +102,194 @@
         "v": null
        }
       ]
+     }
+    },
+    {
+     "symbol": "MSFTx",
+     "name": "",
+     "address": "XspzcW1PRtgf6Wj92HCiZdjzKCyFekVD8P5Ueh3dRMX",
+     "logo": "",
+     "launchpad": "stonkfun",
+     "src": "聪明钱聚合",
+     "wallets": 1,
+     "buy_total_raw": 309.086155,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1792314015,
+     "age_min": null,
+     "passed": false,
+     "social": {
+      "twitter": "",
+      "website": ""
      },
-     "latest": true,
-     "last_seen": 1792306852
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×1"
+     ],
+     "score": 1,
+     "mc": "$0",
+     "buy_total": "$309",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 0
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
+    },
+    {
+     "symbol": "REXCOIN",
+     "name": "",
+     "address": "72bBC6JoWu45rMuVrLz8XEybTy4vxQn1ADoAVuYupump",
+     "logo": "",
+     "launchpad": "pump",
+     "src": "聪明钱聚合",
+     "wallets": 1,
+     "buy_total_raw": 308.5207487607669,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1792314015,
+     "age_min": null,
+     "passed": false,
+     "social": {
+      "twitter": "",
+      "website": ""
+     },
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×1"
+     ],
+     "score": 1,
+     "mc": "$0",
+     "buy_total": "$309",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 0
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
     }
    ],
-   "signals": [],
    "stats": {
-    "new_filtered": 1,
-    "signal_total": 0
+    "new_filtered": 0,
+    "signal_total": 3
    },
    "retention": [
     {
@@ -195,7 +379,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1792306852
     },
     {
@@ -2044,15 +2228,25 @@
   }
  },
  "stats": {
-  "new_filtered": 1,
-  "signal_total": 0,
+  "new_filtered": 0,
+  "signal_total": 3,
   "retention_total": 21,
   "filter_breakdown": {
-   "市值过低(<1万)": 54,
-   "bundler集中": 5,
-   "rug风险0.38": 2,
-   "缺官网或推特 (无官网)": 1,
-   "缺官网或推特 (无官网) (无推特)": 1
+   "市值过低(<1万)": 58,
+   "信号源:缺官网或推特 (无官网) (无推特)": 23,
+   "信号源:缺官网或推特 (无推特)": 16,
+   "信号源:rug风险0.56": 5,
+   "bundler集中": 4,
+   "缺官网或推特 (无官网)": 3,
+   "信号源:rug风险1.00": 3,
+   "缺官网或推特 (无官网) (无推特)": 2,
+   "rug风险0.98": 1,
+   "rug风险0.33": 1,
+   "缺官网或推特 (无推特)": 1,
+   "rug风险0.31": 1,
+   "rug风险0.54": 1,
+   "信号源:rug风险0.32": 1,
+   "信号源:市值超区间($7K)": 1
   }
  }
 }
