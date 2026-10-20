@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-20 22:00 UTC",
+ "scanned_at": "2026-10-20 22:42 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -10,98 +10,7 @@
  "by_chain": {
   "sol": {
    "chain": "sol",
-   "new_coins": [
-    {
-     "name": "The Official Dogcoin",
-     "symbol": "Dogcoin",
-     "address": "93i48W1dUC851LihD8D2Xhuz1Q3uFzh7sbaXLcJwpump",
-     "price": 1.2817213460836004e-05,
-     "mcap": "$12.5K",
-     "mcap_raw": 12532.84,
-     "vol24h": "$124.0K",
-     "vol24h_raw": 123961.52,
-     "liquidity": "$13.4K",
-     "swaps_24h": 2885,
-     "holders": 192,
-     "smart_degen": 9,
-     "renowned": 1,
-     "progress": 69.9,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res/38191fc9937a662c7171c5c65c82c3a6_v2.webp",
-     "age_min": 67,
-     "social": {
-      "twitter": "PumpFun711",
-      "website": "https://theofficialdogcoin.com/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": true,
-     "last_seen": 1792533648
-    }
-   ],
+   "new_coins": [],
    "signals": [
     {
      "symbol": "Onion",
@@ -112,11 +21,11 @@
      "src": "聪明钱",
      "wallets": 0,
      "buy_total_raw": 0.0,
-     "mc_raw": 86257.575582764,
+     "mc_raw": 48427.749863992794,
      "trigger_mc": 180351.68177323538,
      "ath": 553998.15,
      "ts": 1792520460,
-     "age_min": 1908,
+     "age_min": 1949,
      "passed": false,
      "social": {
       "twitter": "foronionfutures",
@@ -129,7 +38,7 @@
       "💰市值<500万"
      ],
      "score": 3,
-     "mc": "$86.3K",
+     "mc": "$48.4K",
      "buy_total": "$0",
      "score12": {
       "score": 3,
@@ -196,18 +105,18 @@
      }
     },
     {
-     "symbol": "WIPD",
+     "symbol": "bcat",
      "name": "",
-     "address": "8tWatwDBrfVy7ebJmH6kDEzdF23Cicn9xXvQxYLepump",
+     "address": "2MGFAp6DWqTZEE6jwcjMwWod5qYzCY5TzuGV8rnxpump",
      "logo": "",
      "launchpad": "pump",
      "src": "聪明钱聚合",
      "wallets": 1,
-     "buy_total_raw": 317.30165082894,
+     "buy_total_raw": 314.04266663098,
      "mc_raw": 0.0,
      "trigger_mc": 0.0,
      "ath": 0.0,
-     "ts": 1792533641,
+     "ts": 1792536134,
      "age_min": null,
      "passed": false,
      "social": {
@@ -221,7 +130,7 @@
      ],
      "score": 1,
      "mc": "$0",
-     "buy_total": "$317",
+     "buy_total": "$314",
      "score12": {
       "score": 2,
       "auto_total": 6,
@@ -288,7 +197,7 @@
     }
    ],
    "stats": {
-    "new_filtered": 1,
+    "new_filtered": 0,
     "signal_total": 2
    },
    "retention": [
@@ -379,7 +288,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1792533648
     },
     {
@@ -2410,27 +2319,29 @@
   }
  },
  "stats": {
-  "new_filtered": 1,
+  "new_filtered": 0,
   "signal_total": 2,
   "retention_total": 23,
   "filter_breakdown": {
-   "市值过低(<1万)": 56,
-   "信号源:缺官网或推特 (无推特)": 25,
-   "信号源:缺官网或推特 (无官网) (无推特)": 19,
-   "缺官网或推特 (无官网) (无推特)": 6,
-   "bundler集中": 4,
-   "缺官网或推特 (无推特)": 4,
-   "rug风险0.79": 2,
+   "市值过低(<1万)": 77,
+   "信号源:缺官网或推特 (无推特)": 26,
+   "信号源:缺官网或推特 (无官网) (无推特)": 18,
+   "bundler集中": 15,
+   "缺官网或推特 (无官网) (无推特)": 10,
+   "缺官网或推特 (无推特)": 5,
+   "市值过高(>1000万)": 4,
+   "缺官网或推特 (无官网)": 3,
+   "筹码集中>40%": 2,
+   "老鼠仓占比高": 2,
    "信号源:缺官网或推特 (无官网)": 2,
    "rug风险0.98": 1,
-   "rug风险0.33": 1,
-   "rug风险0.31": 1,
-   "rug风险0.35": 1,
-   "rug风险0.38": 1,
-   "rug风险0.37": 1,
-   "rug风险0.75": 1,
-   "rug风险0.42": 1,
+   "rug风险0.32": 1,
+   "rug风险0.45": 1,
+   "rug风险0.74": 1,
+   "rug风险1.00": 1,
    "rug风险0.40": 1,
+   "rug风险0.51": 1,
+   "rug风险0.68": 1,
    "信号源:bundler集中": 1,
    "信号源:rug风险0.33": 1,
    "信号源:rug风险0.34": 1
