@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-21 01:02 UTC",
+ "scanned_at": "2026-10-21 04:00 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -1546,186 +1546,6 @@
      },
      "latest": false,
      "last_seen": 1792473855
-    },
-    {
-     "name": "SOLSEEK",
-     "symbol": "SEEK",
-     "address": "5YHejuDXHa5CEt8f7Ebnfc1ai6r5MBdLtpi8muM4SEEK",
-     "price": 1.1887053203308615e-05,
-     "mcap": "$11.9K",
-     "mcap_raw": 11887.05,
-     "vol24h": "$61.6K",
-     "vol24h_raw": 61645.97,
-     "liquidity": "$12.7K",
-     "swaps_24h": 1481,
-     "holders": 114,
-     "smart_degen": 4,
-     "renowned": 0,
-     "progress": 67.9,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res/980be0dfabaafcd8e7ea44bdc87a4f16_v2.webp",
-     "age_min": 26,
-     "social": {
-      "twitter": "SOLSEEKmp3",
-      "website": "https://solseek.fun/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 3,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "C",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 0
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1792465249
-    },
-    {
-     "name": "FYP",
-     "symbol": "FYP",
-     "address": "EdwVSdZUad6CF5YNBSwSYj3oyS4VRSEhnEHekYw7pump",
-     "price": 1.2900085285463963e-05,
-     "mcap": "$12.9K",
-     "mcap_raw": 12896.66,
-     "vol24h": "$36.3K",
-     "vol24h_raw": 36260.15,
-     "liquidity": "$13.2K",
-     "swaps_24h": 616,
-     "holders": 76,
-     "smart_degen": 2,
-     "renowned": 0,
-     "progress": 70.8,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res/4150cb80afcb022acce24988db26bce7_v2.webp",
-     "age_min": 19,
-     "social": {
-      "twitter": "fypdotpage",
-      "website": "https://fyp.page/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1792465249
     }
    ]
   },
@@ -1956,7 +1776,15 @@
  "stats": {
   "new_filtered": 0,
   "signal_total": 0,
-  "retention_total": 21,
-  "filter_breakdown": {}
+  "retention_total": 19,
+  "filter_breakdown": {
+   "市值过低(<1万)": 52,
+   "缺官网或推特 (无官网)": 5,
+   "bundler集中": 4,
+   "rug风险0.92": 1,
+   "rug风险0.44": 1,
+   "缺官网或推特 (无推特)": 1,
+   "筹码集中>40%": 1
+  }
  }
 }
