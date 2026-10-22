@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-22 07:28 UTC",
+ "scanned_at": "2026-10-22 10:01 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -10,33 +10,39 @@
  "by_chain": {
   "sol": {
    "chain": "sol",
-   "new_coins": [
+   "new_coins": [],
+   "signals": [
     {
-     "name": "Trump In Cage",
-     "symbol": "TIC",
-     "address": "FNYypaetZfYxzckihZRWuX9Kimf1DVxV2ogXWXvLpump",
-     "price": 1.202552e-05,
-     "mcap": "$12.0K",
-     "mcap_raw": 12025.52,
-     "vol24h": "$86.1K",
-     "vol24h_raw": 86094.23,
-     "liquidity": "$12.7K",
-     "swaps_24h": 1697,
-     "holders": 72,
-     "smart_degen": 11,
-     "renowned": 2,
-     "progress": 68.9,
+     "symbol": "TIB",
+     "name": "Trump In Box",
+     "address": "2X9zE3LQxCjcFRiqhuBjZi2pxeYQk8vbJh1bakijpump",
+     "logo": "https://gmgn.ai/external-res/ba3096458123602dd412f816b77b9c90_v2.webp",
      "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-asia/d3162453713e4b68bc4cdb3ed57e2c24_v2.webp",
-     "age_min": 71,
+     "src": "聪明钱",
+     "wallets": 0,
+     "buy_total_raw": 0.0,
+     "mc_raw": 4210.359827334807,
+     "trigger_mc": 11974.32241676786,
+     "ath": 59395.459,
+     "ts": 1792653739,
+     "age_min": 269,
+     "passed": false,
      "social": {
-      "twitter": "0xVamonos",
-      "website": "https://www.instagram.com/p/DewWu6Pg8SW/",
-      "telegram": ""
+      "twitter": "i/communities/2024433991072567657",
+      "website": "https://www.instagram.com/p/DewWu6Pg8SW/"
      },
-     "risk": [],
+     "liquidity": 4389.85771534576,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱买入",
+      "💰市值<500万",
+      "🆕上线269分钟"
+     ],
+     "score": 4,
+     "mc": "$4.2K",
+     "buy_total": "$0",
      "score12": {
-      "score": 3,
+      "score": 2,
       "auto_total": 6,
       "unknown": [
        "流动性锁定",
@@ -54,23 +60,23 @@
        },
        {
         "k": "铸币权限关闭",
-        "v": 1
+        "v": 0
        },
        {
         "k": "冻结权限关闭",
-        "v": 1
+        "v": 0
        },
        {
         "k": "前10持有<20%",
-        "v": 0
+        "v": 1
        },
        {
         "k": "钱包分布干净",
-        "v": 0
+        "v": 1
        },
        {
         "k": "量≥流动性一半",
-        "v": 1
+        "v": 0
        },
        {
         "k": "流动性锁定",
@@ -97,15 +103,12 @@
         "v": null
        }
       ]
-     },
-     "latest": true,
-     "last_seen": 1792654078
+     }
     }
    ],
-   "signals": [],
    "stats": {
-    "new_filtered": 1,
-    "signal_total": 0
+    "new_filtered": 0,
+    "signal_total": 1
    },
    "retention": [
     {
@@ -195,7 +198,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1792654078
     },
     {
@@ -2317,16 +2320,21 @@
   }
  },
  "stats": {
-  "new_filtered": 1,
-  "signal_total": 0,
+  "new_filtered": 0,
+  "signal_total": 1,
   "retention_total": 24,
   "filter_breakdown": {
-   "市值过低(<1万)": 53,
-   "bundler集中": 4,
-   "rug风险1.00": 1,
-   "rug风险0.52": 1,
+   "市值过低(<1万)": 59,
+   "信号源:缺官网或推特 (无推特)": 25,
+   "信号源:缺官网或推特 (无官网) (无推特)": 17,
+   "信号源:缺官网或推特 (无官网)": 7,
+   "市值过高(>1000万)": 3,
+   "bundler集中": 3,
+   "缺官网或推特 (无推特)": 2,
+   "缺官网或推特 (无官网) (无推特)": 1,
    "缺官网或推特 (无官网)": 1,
-   "rug风险0.72": 1
+   "rug风险0.59": 1,
+   "rug风险0.61": 1
   }
  }
 }
