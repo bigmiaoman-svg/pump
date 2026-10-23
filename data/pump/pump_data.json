@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-23 03:01 UTC",
+ "scanned_at": "2026-10-23 05:00 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -10,13 +10,194 @@
  "by_chain": {
   "sol": {
    "chain": "sol",
-   "new_coins": [],
+   "new_coins": [
+    {
+     "name": "KOL Brain",
+     "symbol": "BRAIN",
+     "address": "Dgc7ZeiCtDj4X5hoBpyZhig2BS7tekccZzKGBsm7pump",
+     "price": 2.4293347974829343e-05,
+     "mcap": "$24.3K",
+     "mcap_raw": 24293.35,
+     "vol24h": "$61.0K",
+     "vol24h_raw": 60986.13,
+     "liquidity": "$17.7K",
+     "swaps_24h": 1246,
+     "holders": 190,
+     "smart_degen": 3,
+     "renowned": 0,
+     "progress": 88.6,
+     "launchpad": "Pump.fun",
+     "logo": "https://gmgn.ai/external-res/6f0b36ff05c773c82e66ad0f825f518f_v2.webp",
+     "age_min": 38,
+     "social": {
+      "twitter": "kolbrainfun",
+      "website": "https://kolbrain.fun",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 0
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1792731646
+    }
+   ],
    "signals": [],
    "stats": {
-    "new_filtered": 0,
+    "new_filtered": 1,
     "signal_total": 0
    },
    "retention": [
+    {
+     "name": "KOL Brain",
+     "symbol": "BRAIN",
+     "address": "Dgc7ZeiCtDj4X5hoBpyZhig2BS7tekccZzKGBsm7pump",
+     "price": 2.4293347974829343e-05,
+     "mcap": "$24.3K",
+     "mcap_raw": 24293.35,
+     "vol24h": "$61.0K",
+     "vol24h_raw": 60986.13,
+     "liquidity": "$17.7K",
+     "swaps_24h": 1246,
+     "holders": 190,
+     "smart_degen": 3,
+     "renowned": 0,
+     "progress": 88.6,
+     "launchpad": "Pump.fun",
+     "logo": "https://gmgn.ai/external-res/6f0b36ff05c773c82e66ad0f825f518f_v2.webp",
+     "age_min": 38,
+     "social": {
+      "twitter": "kolbrainfun",
+      "website": "https://kolbrain.fun",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 0
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1792731646
+    },
     {
      "name": "Shyft",
      "symbol": "SHYFT",
@@ -1096,186 +1277,6 @@
      },
      "latest": false,
      "last_seen": 1792652465
-    },
-    {
-     "name": "Pretty Unreal Massive Pair",
-     "symbol": "PUMP",
-     "address": "AUsNAncoUQZQJFg5TBohiyTWcuLyKEx7RCzfc8fPpump",
-     "price": 1.3388015e-05,
-     "mcap": "$13.4K",
-     "mcap_raw": 13384.44,
-     "vol24h": "$153.9K",
-     "vol24h_raw": 153913.39,
-     "liquidity": "$7.2K",
-     "swaps_24h": 4220,
-     "holders": 176,
-     "smart_degen": 17,
-     "renowned": 6,
-     "progress": 70.8,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res/5a5d7df7bf7ad9cfe1a2ea0b185607c8_v2.webp",
-     "age_min": 43,
-     "social": {
-      "twitter": "esotericpigeon",
-      "website": "https://pump.fun/profile/5YRgrP3mjGzrzirYYN5HAQH19cTYREYwGxW6XRJQUzij",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 3,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "C",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 0
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1792641663
-    },
-    {
-     "name": "Billy Badass",
-     "symbol": "Billy",
-     "address": "9JE8ezAfLc3ymR3uTM4ZyQUGJqDUgMrHKx8ptQ9Ppump",
-     "price": 1.212983e-05,
-     "mcap": "$12.1K",
-     "mcap_raw": 12129.83,
-     "vol24h": "$64.4K",
-     "vol24h_raw": 64415.25,
-     "liquidity": "$12.9K",
-     "swaps_24h": 1763,
-     "holders": 152,
-     "smart_degen": 2,
-     "renowned": 0,
-     "progress": 68.5,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res/e4544b6d40e0b6d2de07c2b7648be0ca_v2.webp",
-     "age_min": 41,
-     "social": {
-      "twitter": "Bilibadass42069",
-      "website": "https://www.tiktok.com/@billy.badass42069?_r=1&_t=ZT-9AkpxpRMjYz",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1792641663
     }
    ]
   },
@@ -1321,21 +1322,14 @@
   }
  },
  "stats": {
-  "new_filtered": 0,
+  "new_filtered": 1,
   "signal_total": 0,
-  "retention_total": 14,
+  "retention_total": 13,
   "filter_breakdown": {
-   "市值过低(<1万)": 58,
-   "信号源:缺官网或推特 (无推特)": 28,
-   "信号源:缺官网或推特 (无官网) (无推特)": 22,
-   "缺官网或推特 (无推特)": 5,
-   "bundler集中": 5,
-   "缺官网或推特 (无官网)": 3,
-   "rug风险0.94": 1,
-   "rug风险0.41": 1,
-   "缺官网或推特 (无官网) (无推特)": 1,
-   "rug风险0.62": 1,
-   "老鼠仓占比高": 1
+   "市值过低(<1万)": 55,
+   "缺官网或推特 (无官网)": 2,
+   "bundler集中": 2,
+   "rug风险0.35": 1
   }
  }
 }
