@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-24 08:01 UTC",
+ "scanned_at": "2026-10-24 10:47 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -10,7 +10,98 @@
  "by_chain": {
   "sol": {
    "chain": "sol",
-   "new_coins": [],
+   "new_coins": [
+    {
+     "name": "CPLAN",
+     "symbol": "CPLAN",
+     "address": "Af9SeKFgydXhLVnMisrDoAkbXcFyXkSozKtcyusypump",
+     "price": 1.278756e-05,
+     "mcap": "$12.8K",
+     "mcap_raw": 12787.56,
+     "vol24h": "$61.3K",
+     "vol24h_raw": 61285.53,
+     "liquidity": "$12.8K",
+     "swaps_24h": 1492,
+     "holders": 196,
+     "smart_degen": 4,
+     "renowned": 0,
+     "progress": 71.5,
+     "launchpad": "Pump.fun",
+     "logo": "https://gmgn.ai/external-res-eu/b7080e7150c194374a6d406f7a464d91_v2.webp",
+     "age_min": 165,
+     "social": {
+      "twitter": "Solana_Planes",
+      "website": "https://solanaplanes.fun/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1792838833
+    }
+   ],
    "signals": [
     {
      "symbol": "RETICLE",
@@ -21,11 +112,11 @@
      "src": "聪明钱",
      "wallets": 0,
      "buy_total_raw": 0.0,
-     "mc_raw": 3063.272648071977,
+     "mc_raw": 2890.6296830255733,
      "trigger_mc": 37837.58087149545,
      "ath": 112350.48,
      "ts": 1792794578,
-     "age_min": 623,
+     "age_min": 790,
      "passed": false,
      "social": {
       "twitter": "ReticleChain",
@@ -36,10 +127,10 @@
      "triggers": [
       "🐋聪明钱买入",
       "💰市值<500万",
-      "🆕上线623分钟"
+      "🆕上线790分钟"
      ],
      "score": 4,
-     "mc": "$3.1K",
+     "mc": "$2.9K",
      "buy_total": "$0",
      "score12": {
       "score": 2,
@@ -114,11 +205,11 @@
      "src": "聪明钱",
      "wallets": 0,
      "buy_total_raw": 0.0,
-     "mc_raw": 52158.71582584608,
+     "mc_raw": 55351.2548976304,
      "trigger_mc": 437393.7162678472,
      "ath": 955864.77,
      "ts": 1792789753,
-     "age_min": 690,
+     "age_min": 856,
      "passed": false,
      "social": {
       "twitter": "0xLogie",
@@ -129,10 +220,10 @@
      "triggers": [
       "🐋聪明钱买入",
       "💰市值<500万",
-      "🆕上线690分钟"
+      "🆕上线856分钟"
      ],
      "score": 4,
-     "mc": "$52.2K",
+     "mc": "$55.4K",
      "buy_total": "$0",
      "score12": {
       "score": 3,
@@ -197,13 +288,285 @@
        }
       ]
      }
+    },
+    {
+     "symbol": "ELIZABETH",
+     "name": "",
+     "address": "Biiv46yBzZwwdg3HvYQ52yPXmnMb5EnF8dboTx2qpump",
+     "logo": "",
+     "launchpad": "pump",
+     "src": "聪明钱聚合",
+     "wallets": 1,
+     "buy_total_raw": 401.32371459138,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1792838809,
+     "age_min": null,
+     "passed": false,
+     "social": {
+      "twitter": "",
+      "website": ""
+     },
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×1"
+     ],
+     "score": 1,
+     "mc": "$0",
+     "buy_total": "$401",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 0
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
+    },
+    {
+     "symbol": "OpenSolana",
+     "name": "",
+     "address": "Cggjah6mVhhh6uwCbjGUfPLnapsBbzUL2aAZokHo3iYT",
+     "logo": "",
+     "launchpad": "pump",
+     "src": "聪明钱聚合",
+     "wallets": 1,
+     "buy_total_raw": 503.63705299798,
+     "mc_raw": 0.0,
+     "trigger_mc": 0.0,
+     "ath": 0.0,
+     "ts": 1792838762,
+     "age_min": null,
+     "passed": false,
+     "social": {
+      "twitter": "",
+      "website": ""
+     },
+     "liquidity": 0.0,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱×1"
+     ],
+     "score": 1,
+     "mc": "$0",
+     "buy_total": "$504",
+     "score12": {
+      "score": 2,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 0
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
     }
    ],
    "stats": {
-    "new_filtered": 0,
-    "signal_total": 2
+    "new_filtered": 1,
+    "signal_total": 4
    },
    "retention": [
+    {
+     "name": "CPLAN",
+     "symbol": "CPLAN",
+     "address": "Af9SeKFgydXhLVnMisrDoAkbXcFyXkSozKtcyusypump",
+     "price": 1.278756e-05,
+     "mcap": "$12.8K",
+     "mcap_raw": 12787.56,
+     "vol24h": "$61.3K",
+     "vol24h_raw": 61285.53,
+     "liquidity": "$12.8K",
+     "swaps_24h": 1492,
+     "holders": 196,
+     "smart_degen": 4,
+     "renowned": 0,
+     "progress": 71.5,
+     "launchpad": "Pump.fun",
+     "logo": "https://gmgn.ai/external-res-eu/b7080e7150c194374a6d406f7a464d91_v2.webp",
+     "age_min": 165,
+     "social": {
+      "twitter": "Solana_Planes",
+      "website": "https://solanaplanes.fun/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1792838833
+    },
     {
      "name": "Hindsight",
      "symbol": "HIND",
@@ -1463,96 +1826,6 @@
      },
      "latest": false,
      "last_seen": 1792760465
-    },
-    {
-     "name": "Grass",
-     "symbol": "草",
-     "address": "2CENVmUPguD4Gau8GaXriDKKXXtYw4M9D8KcGJ1dpump",
-     "price": 1.5095119e-05,
-     "mcap": "$15.1K",
-     "mcap_raw": 15095.12,
-     "vol24h": "$52.1K",
-     "vol24h_raw": 52110.86,
-     "liquidity": "$7.9K",
-     "swaps_24h": 1023,
-     "holders": 103,
-     "smart_degen": 14,
-     "renowned": 1,
-     "progress": 78.8,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-asia/7d7f78e24e5d1c51fa40cdaaad1ad074_v2.webp",
-     "age_min": 59,
-     "social": {
-      "twitter": "Tigesol4",
-      "website": "https://coincommunities.org/communities/3N1PYJxY3szsskZjD2w3y83H88j1uG6g3SSDtVRBpump",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 3,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "C",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 0
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1792750106
     }
    ]
   },
@@ -1781,19 +2054,23 @@
   }
  },
  "stats": {
-  "new_filtered": 0,
-  "signal_total": 2,
+  "new_filtered": 1,
+  "signal_total": 4,
   "retention_total": 17,
   "filter_breakdown": {
-   "市值过低(<1万)": 82,
-   "信号源:缺官网或推特 (无官网) (无推特)": 25,
-   "信号源:缺官网或推特 (无推特)": 23,
-   "bundler集中": 5,
-   "缺官网或推特 (无官网)": 2,
-   "缺官网或推特 (无官网) (无推特)": 2,
-   "rug风险0.36": 1,
-   "缺官网或推特 (无推特)": 1,
-   "rug风险0.44": 1
+   "市值过低(<1万)": 58,
+   "信号源:缺官网或推特 (无推特)": 24,
+   "信号源:缺官网或推特 (无官网) (无推特)": 24,
+   "缺官网或推特 (无官网) (无推特)": 3,
+   "bundler集中": 3,
+   "rug风险1.00": 2,
+   "rug风险0.54": 1,
+   "缺官网或推特 (无官网)": 1,
+   "rug风险0.53": 1,
+   "rug风险0.72": 1,
+   "rug风险0.99": 1,
+   "rug风险0.37": 1,
+   "筹码集中>40%": 1
   }
  }
 }
