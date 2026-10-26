@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-26 03:01 UTC",
+ "scanned_at": "2026-10-26 05:27 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -1366,126 +1366,30 @@
      },
      "latest": false,
      "last_seen": 1792915264
-    },
-    {
-     "name": "Timechain.fun",
-     "symbol": "TIMECHAIN",
-     "address": "VzZW19bKsLydbc21u3KJUhpaMSYveLxransncR5RUNE",
-     "price": 1.4275690461999761e-05,
-     "mcap": "$14.3K",
-     "mcap_raw": 14275.69,
-     "vol24h": "$53.6K",
-     "vol24h_raw": 53572.84,
-     "liquidity": "$13.5K",
-     "swaps_24h": 902,
-     "holders": 102,
-     "smart_degen": 1,
-     "renowned": 0,
-     "progress": 74.8,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res/975b737c77885f35b02c698d644438fb_v2.webp",
-     "age_min": 72,
-     "social": {
-      "twitter": "TimechainSolana",
-      "website": "https://timechain.lol/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 3,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "C",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 0
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1792905158
     }
    ]
   },
   "bsc": {
    "chain": "bsc",
-   "new_coins": [],
-   "signals": [],
-   "stats": {
-    "new_filtered": 0,
-    "signal_total": 0
-   },
-   "retention": [
+   "new_coins": [
     {
      "name": "Group number:1098777202",
      "symbol": "Binance Legend",
      "address": "0x10ef0a0119ab1f25203f45619989fa9917147777",
-     "price": 1.8059751e-05,
-     "mcap": "$18.1K",
-     "mcap_raw": 18059.75,
-     "vol24h": "$25.9K",
-     "vol24h_raw": 25873.1,
-     "liquidity": "$10.0K",
-     "swaps_24h": 1435,
-     "holders": 14559,
+     "price": 3.2101809e-05,
+     "mcap": "$32.1K",
+     "mcap_raw": 32101.81,
+     "vol24h": "$114.2K",
+     "vol24h_raw": 114230.36,
+     "liquidity": "$16.3K",
+     "swaps_24h": 5984,
+     "holders": 66842,
      "smart_degen": 3,
      "renowned": 0,
-     "progress": 42.2,
+     "progress": 68.8,
      "launchpad": "flap",
      "logo": "https://gmgn.ai/external-res-eu/e20556a97eb7f476c67896f16aac69a6_v2.webp",
-     "age_min": 367,
+     "age_min": 813,
      "social": {
       "twitter": "cz_binance",
       "website": "https://m.debox.pro/group?id=kr8p23go&code=j9gs9mht",
@@ -1556,8 +1460,106 @@
        }
       ]
      },
-     "latest": false,
-     "last_seen": 1792965666
+     "latest": true,
+     "last_seen": 1792992437
+    }
+   ],
+   "signals": [],
+   "stats": {
+    "new_filtered": 1,
+    "signal_total": 0
+   },
+   "retention": [
+    {
+     "name": "Group number:1098777202",
+     "symbol": "Binance Legend",
+     "address": "0x10ef0a0119ab1f25203f45619989fa9917147777",
+     "price": 3.2101809e-05,
+     "mcap": "$32.1K",
+     "mcap_raw": 32101.81,
+     "vol24h": "$114.2K",
+     "vol24h_raw": 114230.36,
+     "liquidity": "$16.3K",
+     "swaps_24h": 5984,
+     "holders": 66842,
+     "smart_degen": 3,
+     "renowned": 0,
+     "progress": 68.8,
+     "launchpad": "flap",
+     "logo": "https://gmgn.ai/external-res-eu/e20556a97eb7f476c67896f16aac69a6_v2.webp",
+     "age_min": 813,
+     "social": {
+      "twitter": "cz_binance",
+      "website": "https://m.debox.pro/group?id=kr8p23go&code=j9gs9mht",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "冻结权限关闭(EVM无字段)",
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": null
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1792992437
     }
    ]
   },
@@ -1593,9 +1595,27 @@
   }
  },
  "stats": {
-  "new_filtered": 0,
+  "new_filtered": 1,
   "signal_total": 0,
-  "retention_total": 17,
-  "filter_breakdown": {}
+  "retention_total": 16,
+  "filter_breakdown": {
+   "市值过低(<1万)": 72,
+   "信号源:缺官网或推特 (无推特)": 22,
+   "信号源:缺官网或推特 (无官网) (无推特)": 20,
+   "bundler集中": 3,
+   "信号源:缺官网或推特 (无官网)": 3,
+   "缺官网或推特 (无官网) (无推特)": 2,
+   "信号源:rug风险0.64": 2,
+   "缺官网或推特 (无推特)": 1,
+   "rug风险0.51": 1,
+   "缺官网或推特 (无官网)": 1,
+   "rug风险0.60": 1,
+   "老鼠仓占比高": 1,
+   "rug风险0.69": 1,
+   "筹码集中>40%": 1,
+   "信号源:rug风险0.65": 1,
+   "信号源:rug风险0.31": 1,
+   "信号源:rug风险0.50": 1
+  }
  }
 }
