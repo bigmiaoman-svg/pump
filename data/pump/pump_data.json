@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-27 06:45 UTC",
+ "scanned_at": "2026-10-27 09:01 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -10,13 +10,194 @@
  "by_chain": {
   "sol": {
    "chain": "sol",
-   "new_coins": [],
+   "new_coins": [
+    {
+     "name": "Go-Pad",
+     "symbol": "GOPAD",
+     "address": "GVEQKeEm2MeSVYQP3FM39xMnqqTdPaxLQaQrwbodpump",
+     "price": 3.3021659e-05,
+     "mcap": "$33.0K",
+     "mcap_raw": 33021.66,
+     "vol24h": "$112.4K",
+     "vol24h_raw": 112394.47,
+     "liquidity": "$20.7K",
+     "swaps_24h": 2432,
+     "holders": 244,
+     "smart_degen": 8,
+     "renowned": 2,
+     "progress": 95.9,
+     "launchpad": "Pump.fun",
+     "logo": "https://gmgn.ai/external-res/53b5a7b0153c8035012255ed5f3629b0_v2.webp",
+     "age_min": 56,
+     "social": {
+      "twitter": "useGopad",
+      "website": "https://go-pad.fun/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 0
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1793091663
+    }
+   ],
    "signals": [],
    "stats": {
-    "new_filtered": 0,
+    "new_filtered": 1,
     "signal_total": 0
    },
    "retention": [
+    {
+     "name": "Go-Pad",
+     "symbol": "GOPAD",
+     "address": "GVEQKeEm2MeSVYQP3FM39xMnqqTdPaxLQaQrwbodpump",
+     "price": 3.3021659e-05,
+     "mcap": "$33.0K",
+     "mcap_raw": 33021.66,
+     "vol24h": "$112.4K",
+     "vol24h_raw": 112394.47,
+     "liquidity": "$20.7K",
+     "swaps_24h": 2432,
+     "holders": 244,
+     "smart_degen": 8,
+     "renowned": 2,
+     "progress": 95.9,
+     "launchpad": "Pump.fun",
+     "logo": "https://gmgn.ai/external-res/53b5a7b0153c8035012255ed5f3629b0_v2.webp",
+     "age_min": 56,
+     "social": {
+      "twitter": "useGopad",
+      "website": "https://go-pad.fun/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 0
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1793091663
+    },
     {
      "name": "Pickles The Seal",
      "symbol": "Pickles",
@@ -1726,96 +1907,6 @@
      },
      "latest": false,
      "last_seen": 1793034070
-    },
-    {
-     "name": "Onchain Intelligence",
-     "symbol": "ORYN",
-     "address": "8PfdYsRhvAAi7jCo1CKMEGVhx14w2c2wVKy1TGEXpump",
-     "price": 2.3341355497952055e-05,
-     "mcap": "$23.3K",
-     "mcap_raw": 23341.36,
-     "vol24h": "$21.3K",
-     "vol24h_raw": 21256.17,
-     "liquidity": "$17.4K",
-     "swaps_24h": 228,
-     "holders": 83,
-     "smart_degen": 1,
-     "renowned": 0,
-     "progress": 88.2,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-eu/5fa0e5d34da9c44fb5e0f3af29bdaf3f_v2.webp",
-     "age_min": 5,
-     "social": {
-      "twitter": "orynagent",
-      "website": "https://orynagent.fun/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 5,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1793023265
     }
    ]
   },
@@ -1953,15 +2044,18 @@
   }
  },
  "stats": {
-  "new_filtered": 0,
+  "new_filtered": 1,
   "signal_total": 0,
   "retention_total": 21,
   "filter_breakdown": {
-   "市值过低(<1万)": 56,
+   "市值过低(<1万)": 59,
+   "缺官网或推特 (无官网)": 2,
    "bundler集中": 2,
-   "rug风险0.31": 1,
-   "缺官网或推特 (无官网)": 1,
-   "rug风险1.00": 1
+   "筹码集中>40%": 2,
+   "市值过高(>1000万)": 1,
+   "缺官网或推特 (无推特)": 1,
+   "rug风险0.98": 1,
+   "老鼠仓占比高": 1
   }
  }
 }
