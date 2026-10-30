@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-29 23:31 UTC",
+ "scanned_at": "2026-10-30 02:01 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -10,101 +10,10 @@
  "by_chain": {
   "sol": {
    "chain": "sol",
-   "new_coins": [
-    {
-     "name": "longit",
-     "symbol": "longit",
-     "address": "387AKE5T853Me3qaUNYumQAtNSLkiR7rKv5rGbMDpump",
-     "price": 3.3817578e-05,
-     "mcap": "$33.8K",
-     "mcap_raw": 33817.58,
-     "vol24h": "$93.9K",
-     "vol24h_raw": 93873.73,
-     "liquidity": "$20.6K",
-     "swaps_24h": 2237,
-     "holders": 374,
-     "smart_degen": 4,
-     "renowned": 0,
-     "progress": 97.1,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res/376c8dc8c707133a16ab50cf296f2dd4_v2.webp",
-     "age_min": 18,
-     "social": {
-      "twitter": "uselongit",
-      "website": "https://longit.trade/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": true,
-     "last_seen": 1793316672
-    }
-   ],
+   "new_coins": [],
    "signals": [],
    "stats": {
-    "new_filtered": 1,
+    "new_filtered": 0,
     "signal_total": 0
    },
    "retention": [
@@ -195,7 +104,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1793316672
     },
     {
@@ -2044,15 +1953,9 @@
   }
  },
  "stats": {
-  "new_filtered": 1,
+  "new_filtered": 0,
   "signal_total": 0,
   "retention_total": 21,
-  "filter_breakdown": {
-   "市值过低(<1万)": 57,
-   "bundler集中": 2,
-   "缺官网或推特 (无官网)": 1,
-   "rug风险0.93": 1,
-   "rug风险0.98": 1
-  }
+  "filter_breakdown": {}
  }
 }
