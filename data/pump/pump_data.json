@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-10-31 03:01 UTC",
+ "scanned_at": "2026-10-31 06:01 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -12,26 +12,26 @@
    "chain": "sol",
    "new_coins": [
     {
-     "name": "RAYCAT",
-     "symbol": "RAYCAT",
-     "address": "AFeroa9ZPHKDi4XTPd3N1aZgnUyPzsckCYkv9JomU5Le",
-     "price": 3.9549844e-05,
-     "mcap": "$39.5K",
-     "mcap_raw": 39549.18,
-     "vol24h": "$23.1K",
-     "vol24h_raw": 23100.66,
-     "liquidity": "$18.5K",
-     "swaps_24h": 305,
-     "holders": 76,
-     "smart_degen": 4,
-     "renowned": 1,
-     "progress": 22.9,
+     "name": "Kapow",
+     "symbol": "KAP",
+     "address": "EnxDRnMz9tZ8UM8f2JNfKGdeMsPJaga6dycapGtm4CfU",
+     "price": 1.4611393061086906e-05,
+     "mcap": "$14.6K",
+     "mcap_raw": 14578.5,
+     "vol24h": "$62.8K",
+     "vol24h_raw": 62785.49,
+     "liquidity": "$8.0K",
+     "swaps_24h": 1521,
+     "holders": 172,
+     "smart_degen": 10,
+     "renowned": 0,
+     "progress": 48.8,
      "launchpad": "ray_launchpad",
-     "logo": "https://gmgn.ai/external-res/4ab6975b2b79c3868134d8adc8a9ad07_v2.webp",
-     "age_min": 13,
+     "logo": "https://gmgn.ai/external-res/3e204c5bbdbed45e4d985f9357404f22_v2.webp",
+     "age_min": 55,
      "social": {
-      "twitter": "Raydium",
-      "website": "https://www.floatlaunch.xyz/",
+      "twitter": "Kapowdotmeme",
+      "website": "https://kapow.meme/",
       "telegram": ""
      },
      "risk": [],
@@ -62,11 +62,11 @@
        },
        {
         "k": "前10持有<20%",
-        "v": 1
+        "v": 0
        },
        {
         "k": "钱包分布干净",
-        "v": 0
+        "v": 1
        },
        {
         "k": "量≥流动性一半",
@@ -99,29 +99,29 @@
       ]
      },
      "latest": true,
-     "last_seen": 1793415662
+     "last_seen": 1793426463
     },
     {
-     "name": "High Yield Pussy Economy",
-     "symbol": "HYPE",
-     "address": "omsNfMWaokvaK2po2rQDcE6W7SrAsMeqfjfr9ghpump",
-     "price": 2.0739841e-05,
-     "mcap": "$20.6K",
-     "mcap_raw": 20636.14,
-     "vol24h": "$21.8K",
-     "vol24h_raw": 21835.89,
-     "liquidity": "$16.0K",
-     "swaps_24h": 403,
-     "holders": 112,
-     "smart_degen": 1,
+     "name": "PairBot",
+     "symbol": "PAIRBOT",
+     "address": "Bb8z8QJogSpAWuqiacJmKG1HkpuS693QGXN3ZYuVpump",
+     "price": 1.5735108e-05,
+     "mcap": "$15.7K",
+     "mcap_raw": 15735.11,
+     "vol24h": "$51.7K",
+     "vol24h_raw": 51722.28,
+     "liquidity": "$8.3K",
+     "swaps_24h": 1021,
+     "holders": 118,
+     "smart_degen": 2,
      "renowned": 0,
-     "progress": 83.4,
+     "progress": 76.1,
      "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-asia/2768a5245dfd2f7bde6055e83012101e_v2.webp",
-     "age_min": 20,
+     "logo": "https://gmgn.ai/external-res/b54cb5dd0ad48b527a0ca50e2e609e9d_v2.webp",
+     "age_min": 69,
      "social": {
-      "twitter": "HighYieldPussy",
-      "website": "https://highyieldpussy.fun/",
+      "twitter": "pairbotfun",
+      "website": "https://pairbot.fun",
       "telegram": ""
      },
      "risk": [],
@@ -189,7 +189,7 @@
       ]
      },
      "latest": true,
-     "last_seen": 1793415662
+     "last_seen": 1793426463
     }
    ],
    "signals": [],
@@ -199,6 +199,186 @@
    },
    "retention": [
     {
+     "name": "Kapow",
+     "symbol": "KAP",
+     "address": "EnxDRnMz9tZ8UM8f2JNfKGdeMsPJaga6dycapGtm4CfU",
+     "price": 1.4611393061086906e-05,
+     "mcap": "$14.6K",
+     "mcap_raw": 14578.5,
+     "vol24h": "$62.8K",
+     "vol24h_raw": 62785.49,
+     "liquidity": "$8.0K",
+     "swaps_24h": 1521,
+     "holders": 172,
+     "smart_degen": 10,
+     "renowned": 0,
+     "progress": 48.8,
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/3e204c5bbdbed45e4d985f9357404f22_v2.webp",
+     "age_min": 55,
+     "social": {
+      "twitter": "Kapowdotmeme",
+      "website": "https://kapow.meme/",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 4,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "B",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1793426463
+    },
+    {
+     "name": "PairBot",
+     "symbol": "PAIRBOT",
+     "address": "Bb8z8QJogSpAWuqiacJmKG1HkpuS693QGXN3ZYuVpump",
+     "price": 1.5735108e-05,
+     "mcap": "$15.7K",
+     "mcap_raw": 15735.11,
+     "vol24h": "$51.7K",
+     "vol24h_raw": 51722.28,
+     "liquidity": "$8.3K",
+     "swaps_24h": 1021,
+     "holders": 118,
+     "smart_degen": 2,
+     "renowned": 0,
+     "progress": 76.1,
+     "launchpad": "Pump.fun",
+     "logo": "https://gmgn.ai/external-res/b54cb5dd0ad48b527a0ca50e2e609e9d_v2.webp",
+     "age_min": 69,
+     "social": {
+      "twitter": "pairbotfun",
+      "website": "https://pairbot.fun",
+      "telegram": ""
+     },
+     "risk": [],
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 0
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 1
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 1
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 0
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 0
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 1
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     },
+     "latest": true,
+     "last_seen": 1793426463
+    },
+    {
      "name": "RAYCAT",
      "symbol": "RAYCAT",
      "address": "AFeroa9ZPHKDi4XTPd3N1aZgnUyPzsckCYkv9JomU5Le",
@@ -285,7 +465,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1793415662
     },
     {
@@ -375,7 +555,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1793415662
     },
     {
@@ -1817,186 +1997,6 @@
      },
      "latest": false,
      "last_seen": 1793361664
-    },
-    {
-     "name": "NiggaWifHat",
-     "symbol": "NIG",
-     "address": "2xkczG594A3iYjpJdECVSZooukxu13GwRgGxVTJvpump",
-     "price": 1.9409716385307558e-05,
-     "mcap": "$19.4K",
-     "mcap_raw": 19409.72,
-     "vol24h": "$52.6K",
-     "vol24h_raw": 52641.04,
-     "liquidity": "$15.8K",
-     "swaps_24h": 321,
-     "holders": 89,
-     "smart_degen": 2,
-     "renowned": 0,
-     "progress": 82.7,
-     "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-asia/b59fc45c9f4218a64c755798e3abc616_v2.webp",
-     "age_min": 11,
-     "social": {
-      "twitter": "NiggaWifHatX",
-      "website": "https://niggawifhat.com/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 5,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 1
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1793361664
-    },
-    {
-     "name": "Halo",
-     "symbol": "HALO",
-     "address": "7TVP7e511bZpjh2md7nRc7NWqRMHs6p125EU17SkC3ZY",
-     "price": 2.6099474e-05,
-     "mcap": "$26.0K",
-     "mcap_raw": 25991.66,
-     "vol24h": "$21.7K",
-     "vol24h_raw": 21652.87,
-     "liquidity": "$12.0K",
-     "swaps_24h": 293,
-     "holders": 57,
-     "smart_degen": 2,
-     "renowned": 0,
-     "progress": 20.7,
-     "launchpad": "meteora_virtual_curve",
-     "logo": "https://gmgn.ai/external-res/978077d3f76ac2d60597bddc558e8d77_v2.webp",
-     "age_min": 120,
-     "social": {
-      "twitter": "halocurvexyz",
-      "website": "https://halocurve.xyz/",
-      "telegram": ""
-     },
-     "risk": [],
-     "score12": {
-      "score": 4,
-      "auto_total": 6,
-      "unknown": [
-       "流动性锁定",
-       "开发者无弃币史",
-       "社交>1周",
-       "粉丝真实",
-       "持有者24h增",
-       "一句话故事"
-      ],
-      "grade": "B",
-      "detail": [
-       {
-        "k": "池子>$3万",
-        "v": 0
-       },
-       {
-        "k": "铸币权限关闭",
-        "v": 1
-       },
-       {
-        "k": "冻结权限关闭",
-        "v": 1
-       },
-       {
-        "k": "前10持有<20%",
-        "v": 1
-       },
-       {
-        "k": "钱包分布干净",
-        "v": 0
-       },
-       {
-        "k": "量≥流动性一半",
-        "v": 1
-       },
-       {
-        "k": "流动性锁定",
-        "v": null
-       },
-       {
-        "k": "开发者无弃币史",
-        "v": null
-       },
-       {
-        "k": "社交>1周",
-        "v": null
-       },
-       {
-        "k": "粉丝真实",
-        "v": null
-       },
-       {
-        "k": "持有者24h增",
-        "v": null
-       },
-       {
-        "k": "一句话故事",
-        "v": null
-       }
-      ]
-     },
-     "latest": false,
-     "last_seen": 1793354060
     }
    ]
   },
@@ -2138,14 +2138,9 @@
   "signal_total": 0,
   "retention_total": 21,
   "filter_breakdown": {
-   "市值过低(<1万)": 52,
-   "bundler集中": 5,
-   "缺官网或推特 (无官网)": 1,
-   "rug风险1.00": 1,
-   "缺官网或推特 (无官网) (无推特)": 1,
-   "rug风险0.97": 1,
-   "rug风险0.76": 1,
-   "rug风险0.50": 1
+   "市值过低(<1万)": 56,
+   "bundler集中": 1,
+   "缺官网或推特 (无官网)": 1
   }
  }
 }
