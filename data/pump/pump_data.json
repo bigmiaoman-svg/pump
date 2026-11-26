@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-26 05:29 UTC",
+ "scanned_at": "2026-11-26 15:42 UTC",
  "chains": [
   "sol",
   "bsc",
@@ -10,31 +10,37 @@
  "by_chain": {
   "sol": {
    "chain": "sol",
-   "new_coins": [
+   "new_coins": [],
+   "signals": [
     {
-     "name": "Block0 Fun",
-     "symbol": "BLOCK0",
-     "address": "3EoToNPW4mifRCZrNFkk7pLe86vmeBqdqbW1TLPoqst5",
-     "price": 1.7241421961011718e-05,
-     "mcap": "$17.2K",
-     "mcap_raw": 17241.42,
-     "vol24h": "$41.0K",
-     "vol24h_raw": 40978.42,
-     "liquidity": "$12.5K",
-     "swaps_24h": 1231,
-     "holders": 196,
-     "smart_degen": 2,
-     "renowned": 0,
-     "progress": 89.3,
+     "symbol": "Zero",
+     "name": "ZeroSumEnjoyer",
+     "address": "DTSkmo3sCCKLCh91dJLiWCpwcKtK3yDBZMqZGSV1pump",
+     "logo": "https://gmgn.ai/external-res/718e47adb604af75714cdb998dda9354_v2.webp",
      "launchpad": "Pump.fun",
-     "logo": "https://gmgn.ai/external-res-asia/cf36f0ff149b491fbf618f42b84e1e49_v2.webp",
-     "age_min": 14,
+     "src": "聪明钱",
+     "wallets": 0,
+     "buy_total_raw": 0.0,
+     "mc_raw": 179671.1637928045,
+     "trigger_mc": 896517.0973480943,
+     "ath": 1301747.1,
+     "ts": 1795660364,
+     "age_min": 931,
+     "passed": false,
      "social": {
-      "twitter": "BlockZero_Fun",
-      "website": "https://block0pad.fun/",
-      "telegram": ""
+      "twitter": "ZeroSumEnjoyer",
+      "website": "https://fomo.family/profile/ZeroSumEnjoyer"
      },
-     "risk": [],
+     "liquidity": 74857.5716625472,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱买入",
+      "💰市值<500万",
+      "🆕上线931分钟"
+     ],
+     "score": 4,
+     "mc": "$179.7K",
+     "buy_total": "$0",
      "score12": {
       "score": 3,
       "auto_total": 6,
@@ -50,27 +56,27 @@
       "detail": [
        {
         "k": "池子>$3万",
-        "v": 0
+        "v": 1
        },
        {
         "k": "铸币权限关闭",
-        "v": 1
+        "v": 0
        },
        {
         "k": "冻结权限关闭",
-        "v": 1
+        "v": 0
        },
        {
         "k": "前10持有<20%",
-        "v": 0
+        "v": 1
        },
        {
         "k": "钱包分布干净",
-        "v": 0
+        "v": 1
        },
        {
         "k": "量≥流动性一半",
-        "v": 1
+        "v": 0
        },
        {
         "k": "流动性锁定",
@@ -97,15 +103,105 @@
         "v": null
        }
       ]
+     }
+    },
+    {
+     "symbol": "4chanpump",
+     "name": "4chanpump.fun",
+     "address": "GFmaQAffLD1B4BxJuuQHmqxHqWavaSJGrYFCXQAypump",
+     "logo": "https://gmgn.ai/external-res/3ce2c5e18cd0208843415aca889459c0_v2.webp",
+     "launchpad": "Pump.fun",
+     "src": "聪明钱",
+     "wallets": 0,
+     "buy_total_raw": 0.0,
+     "mc_raw": 3601.0408670171237,
+     "trigger_mc": 285785.77282615786,
+     "ath": 308845.39,
+     "ts": 1795644061,
+     "age_min": 1092,
+     "passed": false,
+     "social": {
+      "twitter": "4chanpump",
+      "website": "https://4chanpump.fun/"
      },
-     "latest": true,
-     "last_seen": 1795670959
+     "liquidity": 40661.6483240649,
+     "vol": 0.0,
+     "triggers": [
+      "🐋聪明钱买入",
+      "💰市值<500万",
+      "🆕上线1092分钟"
+     ],
+     "score": 4,
+     "mc": "$3.6K",
+     "buy_total": "$0",
+     "score12": {
+      "score": 3,
+      "auto_total": 6,
+      "unknown": [
+       "流动性锁定",
+       "开发者无弃币史",
+       "社交>1周",
+       "粉丝真实",
+       "持有者24h增",
+       "一句话故事"
+      ],
+      "grade": "C",
+      "detail": [
+       {
+        "k": "池子>$3万",
+        "v": 1
+       },
+       {
+        "k": "铸币权限关闭",
+        "v": 0
+       },
+       {
+        "k": "冻结权限关闭",
+        "v": 0
+       },
+       {
+        "k": "前10持有<20%",
+        "v": 1
+       },
+       {
+        "k": "钱包分布干净",
+        "v": 1
+       },
+       {
+        "k": "量≥流动性一半",
+        "v": 0
+       },
+       {
+        "k": "流动性锁定",
+        "v": null
+       },
+       {
+        "k": "开发者无弃币史",
+        "v": null
+       },
+       {
+        "k": "社交>1周",
+        "v": null
+       },
+       {
+        "k": "粉丝真实",
+        "v": null
+       },
+       {
+        "k": "持有者24h增",
+        "v": null
+       },
+       {
+        "k": "一句话故事",
+        "v": null
+       }
+      ]
+     }
     }
    ],
-   "signals": [],
    "stats": {
-    "new_filtered": 1,
-    "signal_total": 0
+    "new_filtered": 0,
+    "signal_total": 2
    },
    "retention": [
     {
@@ -195,7 +291,7 @@
        }
       ]
      },
-     "latest": true,
+     "latest": false,
      "last_seen": 1795670959
     }
    ]
@@ -242,13 +338,18 @@
   }
  },
  "stats": {
-  "new_filtered": 1,
-  "signal_total": 0,
+  "new_filtered": 0,
+  "signal_total": 2,
   "retention_total": 1,
   "filter_breakdown": {
-   "市值过低(<1万)": 55,
-   "缺官网或推特 (无官网)": 3,
-   "bundler集中": 3
+   "市值过低(<1万)": 53,
+   "信号源:缺官网或推特 (无官网) (无推特)": 30,
+   "bundler集中": 14,
+   "信号源:缺官网或推特 (无推特)": 14,
+   "缺官网或推特 (无推特)": 6,
+   "缺官网或推特 (无官网) (无推特)": 5,
+   "缺官网或推特 (无官网)": 2,
+   "信号源:缺官网或推特 (无官网)": 1
   }
  }
 }
